@@ -1,4 +1,3 @@
-package bookshop;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -44,9 +43,9 @@ public class DBManager implements AutoCloseable {
      *         exist in the database.
      * @throws SQLException If somthing fails with the DB.
      */
-    public int getStock(Book book) throws SQLException {
-        return getStock(book.getId());
-    }
+//    public int getStock(User user) throws SQLException {
+//        return getStock(user.getId());
+//    }
 
     /**
      * Return the number of units in stock of the given book.
@@ -55,18 +54,18 @@ public class DBManager implements AutoCloseable {
      * @return The number of units in stock, or 0 if the book does not
      *         exist in the database.
      */
-    public int getStock(int bookId) throws SQLException {
-        // TODO: program this method DONE
-	int stock = 0;
-	try(Statement stmt = connection.createStatement()){
-		ResultSet rs = stmt.executeQuery("SELECT libros_almacenados FROM Stock WHERE id_libro="+bookId);
-		if (rs.next()){
-		    stock = rs.getInt("libros_almacenados");
-		}
-		
-	    }
-        return stock;
-    }
+//    public int getStock(int bookId) throws SQLException {
+//        // TODO: program this method DONE
+//	int stock = 0;
+//	try(Statement stmt = connection.createStatement()){
+//		ResultSet rs = stmt.executeQuery("SELECT libros_almacenados FROM Stock WHERE id_libro="+bookId);
+//		if (rs.next()){
+//		    stock = rs.getInt("libros_almacenados");
+//		}
+//		
+//	    }
+//        return stock;
+//    }
 
     /**
      * Search book by ISBN.
@@ -75,11 +74,13 @@ public class DBManager implements AutoCloseable {
      * @return The Book object, or null if not found.
      * @throws SQLException If somthing fails with the DB.
      */
-    public Book searchBook(String isbn) throws SQLException {
+    public User searchUser(String name) throws SQLException {
         // TODO: program this method DONE
-	Book libro;
+	User user;
 	try(Statement stmt = connection.createStatement()){
-		ResultSet rs = stmt.executeQuery("SELECT BooksDB.title, BooksDB.year, BooksDB.id, Authors.autor FROM BooksDB INNER JOIN Authors INNER JOIN BookAuthor ON BookAuthor.id_autor=Authors.id AND BooksDB.id=BookAuthor.id_libro WHERE BooksDB.ISBN='"+isbn+"'");
+		//ResultSet rs = stmt.executeQuery("SELECT BooksDB.title, BooksDB.year, BooksDB.id, Authors.autor FROM BooksDB INNER JOIN Authors INNER JOIN BookAuthor ON BookAuthor.id_autor=Authors.id AND BooksDB.id=BookAuthor.id_libro WHERE BooksDB.ISBN='"+isbn+"'");
+		
+		ResultSet rs = stmt.executeQuery(""); // TODO
 
 		// while (rs.next()){
 		//     String title = rs.getString("BooksDB.title");
@@ -88,24 +89,24 @@ public class DBManager implements AutoCloseable {
 		//     int year = rs.getDate("BooksDB.year");
 		// }
 
-		// Se podría considerar mayor complejidad comprobando que rs, efectivamente, no sea una lista si no una
+		// Se podr�a considerar mayor complejidad comprobando que rs, efectivamente, no sea una lista si no una
 		// única fila
 
 		if (rs.next()){ //Tenemos que recordar que el primer valor inicial que devuelve executeQuery no es válido
-		    libro = new Book();
-		    String title = rs.getString("BooksDB.title");
-		    String author = rs.getString("Authors.autor");
-		    int id = rs.getInt("BooksDB.id");
-		    int year = rs.getInt("BooksDB.year");
-		    libro.setTitle(title);
-			libro.setIsbn(isbn);
-			libro.setYear(year);
-			libro.setId(id);
+		    user = new User();
+//		    String title = rs.getString("BooksDB.title");
+//		    String author = rs.getString("Authors.autor");
+//		    int id = rs.getInt("BooksDB.id");
+//		    int year = rs.getInt("BooksDB.year");
+//		    libro.setTitle(title);
+//			libro.setIsbn(isbn);
+//			libro.setYear(year);
+//			libro.setId(id);
 		} else {
-		    libro = null;
+		    user = null;
 		}
 	    }
-        return libro;
+        return user;
     }
 
     /**
@@ -117,9 +118,9 @@ public class DBManager implements AutoCloseable {
      *         (e.g. when the stock of the book is not big enough).
      * @throws SQLException If somthing fails with the DB.
      */
-    public boolean sellBook(Book book, int units) throws SQLException {
-        return sellBook(book.getId(), units);
-    }
+//    public boolean sellBook(Book book, int units) throws SQLException {
+//        return sellBook(book.getId(), units);
+//    }
 
     /**
      * Sell a book.
@@ -130,52 +131,52 @@ public class DBManager implements AutoCloseable {
      *         (e.g. when the stock of the book is not big enough).
      * @throws SQLException If something fails with the DB.
      */
-    public boolean sellBook(int book, int units) throws SQLException {
-        // TODO: program this method
-	boolean success = false;
-	int stock = getStock(book);
-	if (stock > 0){
-
-	    // Preparamos la conexión de forma adecuada, controlando los commits y haciéndola segura
-	    
-	    connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
-	    connection.setAutoCommit(false);
-	    
-	    // Otro grado de complejidad para seguridad con SQL Injection
-		    
-	    // try(PreparedStatement pstmt = connection.prepareStatement("")){ //INSERT venta
-
-	    // 	    //pstmt.set
-		
-	    // 	}
-	    // try(PreparedStatement pstmt = connection.prepareStatement("")){ //UPDATE stock
-
-	    // 	    //pstmt.set
-		
-	    // 	}
-
-	    try(Statement stmt = connection.createStatement()){
-
-		    int changes = stmt.executeUpdate("UPDATE Stock SET libros_almacenados=libros_almacenados-"+units+" WHERE id_libro="+book); //UPDATE stock
-
-		    stmt.executeUpdate("INSERT TO Sells (fecha_hora, id_libro, cantidad) VALUES (NOW(), "+book+", "+units+")"); //INSERT venta
-		    
-		    if (changes>0)
-		    	success=true;
-
-		} finally {
-
-		if (success)
-		    connection.commit();
-		else
-		    connection.rollback();
-		
-	    }
-	    connection.setAutoCommit(true);
-	}
-
-        return success;
-    }
+//    public boolean sellBook(int book, int units) throws SQLException {
+//        // TODO: program this method
+//	boolean success = false;
+//	int stock = getStock(book);
+//	if (stock > 0){
+//
+//	    // Preparamos la conexión de forma adecuada, controlando los commits y haciéndola segura
+//	    
+//	    connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
+//	    connection.setAutoCommit(false);
+//	    
+//	    // Otro grado de complejidad para seguridad con SQL Injection
+//		    
+//	    // try(PreparedStatement pstmt = connection.prepareStatement("")){ //INSERT venta
+//
+//	    // 	    //pstmt.set
+//		
+//	    // 	}
+//	    // try(PreparedStatement pstmt = connection.prepareStatement("")){ //UPDATE stock
+//
+//	    // 	    //pstmt.set
+//		
+//	    // 	}
+//
+//	    try(Statement stmt = connection.createStatement()){
+//
+//		    int changes = stmt.executeUpdate("UPDATE Stock SET libros_almacenados=libros_almacenados-"+units+" WHERE id_libro="+book); //UPDATE stock
+//
+//		    stmt.executeUpdate("INSERT TO Sells (fecha_hora, id_libro, cantidad) VALUES (NOW(), "+book+", "+units+")"); //INSERT venta
+//		    
+//		    if (changes>0)
+//		    	success=true;
+//
+//		} finally {
+//
+//		if (success)
+//		    connection.commit();
+//		else
+//		    connection.rollback();
+//		
+//	    }
+//	    connection.setAutoCommit(true);
+//	}
+//
+//        return success;
+//    }
 
     /**
      * Return a list with all the books in the database.
@@ -183,23 +184,23 @@ public class DBManager implements AutoCloseable {
      * @return List with all the books.
      * @throws SQLException If something fails with the DB.
      */
-    public List<Book> listBooks() throws SQLException {
+    public List<User> listUsers() throws SQLException {
         // TODO: program this method DONE
-	List<Book> libros = new ArrayList<Book>();
+	List<User> libros = new ArrayList<User>();
 	try(Statement stmt = connection.createStatement()){
-		String query = "SELECT id, title, isbn, year FROM BooksDB";
+		String query = "";
 		ResultSet rs = stmt.executeQuery(query);
-		Book nodo = new Book();
+		User nodo = new User();
 		while (rs.next()){
 			int id = rs.getInt("id");
 		    String title = rs.getString("title");
 		    String isbn = rs.getString("isbn");
 		    int year = rs.getInt("year");
 	    	
-		    nodo.setTitle(title);
-			nodo.setIsbn(isbn);
-			nodo.setYear(year);
-			nodo.setId(id);
+//		    nodo.setTitle(title);
+//			nodo.setIsbn(isbn);
+//			nodo.setYear(year);
+//			nodo.setId(id);
 			
 		    if(!libros.add(nodo)){
 		    	throw new SQLException();
