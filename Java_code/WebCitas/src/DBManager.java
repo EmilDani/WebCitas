@@ -1,5 +1,6 @@
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -19,7 +20,7 @@ public class DBManager implements AutoCloseable {
 
     private void connect() throws SQLException {
         // TODO: program this method
-    	String url = "jdbc:mysql://mysql.lab.it.uc3m.es/16_compweb_24b";
+    	String url = "jdbc:mysql://mysql.lab.it.uc3m.es/16_compweb_24c";
         connection = DriverManager.getConnection(url, "16_compweb_24","FTgv7f2B");
 		    
     }
@@ -89,7 +90,7 @@ public class DBManager implements AutoCloseable {
 		//     int year = rs.getDate("BooksDB.year");
 		// }
 
-		// Se podr�a considerar mayor complejidad comprobando que rs, efectivamente, no sea una lista si no una
+		// Se podr�a considerar mayor complejidad comprobando que rs, efectivamente, no sea una lista si no una
 		// única fila
 
 		if (rs.next()){ //Tenemos que recordar que el primer valor inicial que devuelve executeQuery no es válido
@@ -186,27 +187,60 @@ public class DBManager implements AutoCloseable {
      */
     public List<User> listUsers() throws SQLException {
         // TODO: program this method DONE
-	List<User> libros = new ArrayList<User>();
+	List<User> usuarios = new ArrayList<User>();
 	try(Statement stmt = connection.createStatement()){
 		String query = "";
 		ResultSet rs = stmt.executeQuery(query);
 		User nodo = new User();
 		while (rs.next()){
-			int id = rs.getInt("id");
-		    String title = rs.getString("title");
-		    String isbn = rs.getString("isbn");
-		    int year = rs.getInt("year");
-	    	
-//		    nodo.setTitle(title);
-//			nodo.setIsbn(isbn);
-//			nodo.setYear(year);
-//			nodo.setId(id);
 			
-		    if(!libros.add(nodo)){
+			//int id = rs.getInt("id"); Le metemos al objeto usuario la ID que genera la base de datos
+			//o es inseguro?
+			
+		    String nickname = rs.getString("Usuario.nombre");
+		    Date year = rs.getDate("Usuario.year");
+		    String sexo = rs.getString("Usuario.sexo");
+		    String text = rs.getString("Usuario.texto");
+		    String pic = rs.getString("Usuario.foto");
+		    String desired_sex = rs.getString("Gustos.sexo");
+		    Date yearMx = rs.getDate("Gustos.yearMax");
+		    Date yearMn = rs.getDate("yearMin");
+		    
+		    nodo.setNickname(nickname);
+		    nodo.setYear(year);
+		    nodo.setSex(sex.valueOf(sexo));
+		    nodo.setDtext(text);
+		    nodo.setPic(pic);
+		    nodo.setDesired_sex(sex.valueOf(desired_sex));
+		    nodo.setDesired_year_max(yearMx);
+		    nodo.setDesired_year_min(yearMn);
+			
+		    if(!usuarios.add(nodo)){
 		    	throw new SQLException();
 		    }
 		}
 	    }
-        return libros;
+        return usuarios;
     }
+    
+    public List<DinnerDate> listDatesPropOf(User user) throws SQLException {
+    	
+    	List<DinnerDate> citas = new ArrayList<DinnerDate>();
+    	try(Statement stmt = connection.createStatement()){
+    		String query = "SELECT Citas.EstadoProp";
+    		//"SELECT BooksDB.title, BooksDB.year, BooksDB.id, Authors.autor FROM BooksDB INNER JOIN Authors INNER JOIN BookAuthor ON BookAuthor.id_autor=Authors.id AND BooksDB.id=BookAuthor.id_libro WHERE BooksDB.ISBN='"+isbn+"'"
+    		ResultSet rs = stmt.executeQuery(query);
+    		DinnerDate nodo = new DinnerDate();
+    		while (rs.next()){
+    			
+    			String state = rs.getString("EstadoProp");
+    			String receiver = rs.getString("");
+    			
+    		}
+    	}
+    	
+    	return citas;
+    
+    }
+    
 }

@@ -60,6 +60,8 @@ public class User {
 		this.desired_year_min = desired_year_min;
 	}
 	
+	//public DinnerDate?
+	
 	
 
 }
