@@ -7,7 +7,7 @@ public class DinnerDate {
 	private User receiver;
 	private Date proposal_sello;
 	private Date response_sello;
-	private Date fecha;
+	private int id_cita;
 	
 	public meetState getState() {
 		return state;
@@ -39,11 +39,11 @@ public class DinnerDate {
 	public void setResponse_sello(Date response_sello) {
 		this.response_sello = response_sello;
 	}
-	public Date getFecha() {
-		return fecha;
+	public int getId() {
+		return id_cita;
 	}
-	public void setFecha(Date fecha) {
-		this.fecha = fecha;
+	public void setId(int id) {
+		this.id_cita = id_cita;
 	}
 
 }
