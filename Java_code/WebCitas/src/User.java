@@ -10,6 +10,7 @@ public class User {
 	private sex desired_sex;
 	private Date desired_year_max;
 	private Date desired_year_min;
+	private int id;
 	
 	public String getNickname() {
 		return nickname;
@@ -58,6 +59,12 @@ public class User {
 	}
 	public void setDesired_year_min(Date desired_year_min) {
 		this.desired_year_min = desired_year_min;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 	//public DinnerDate?

@@ -205,6 +205,7 @@ public class DBManager implements AutoCloseable {
 		    String desired_sex = rs.getString("Gustos.sexo");
 		    Date yearMx = rs.getDate("Gustos.yearMax");
 		    Date yearMn = rs.getDate("yearMin");
+		    int id = rs.getInt("id");
 		    
 		    nodo.setNickname(nickname);
 		    nodo.setYear(year);
@@ -214,6 +215,7 @@ public class DBManager implements AutoCloseable {
 		    nodo.setDesired_sex(sex.valueOf(desired_sex));
 		    nodo.setDesired_year_max(yearMx);
 		    nodo.setDesired_year_min(yearMn);
+		    nodo.setId(id);
 			
 		    if(!usuarios.add(nodo)){
 		    	throw new SQLException();
@@ -225,11 +227,12 @@ public class DBManager implements AutoCloseable {
     
     public List<DinnerDate> listDatesPropOf(User user) throws SQLException {
     	
-    	List<DinnerDate> citas = new ArrayList<DinnerDate>();
+    	List<DinnerDate> citas; // Mejor no inicializar hasta estar seguro de que funciona
     	try(Statement stmt = connection.createStatement()){
-    		String query = "SELECT Citas.EstadoProp";
+    		String query = "SELECT EstadoProp, FechaProp, FechaResp, Usuario.nombre, Usuario.year, Ususario.sexo, Usuario.texto, Usuario.foto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idRec AND Usuario.idGustos=Gustos.id WHERE idProp='"+user.getId()+"'";
     		//"SELECT BooksDB.title, BooksDB.year, BooksDB.id, Authors.autor FROM BooksDB INNER JOIN Authors INNER JOIN BookAuthor ON BookAuthor.id_autor=Authors.id AND BooksDB.id=BookAuthor.id_libro WHERE BooksDB.ISBN='"+isbn+"'"
     		ResultSet rs = stmt.executeQuery(query);
+    		citas = new ArrayList<DinnerDate>();
     		DinnerDate nodo = new DinnerDate();
     		while (rs.next()){
     			
@@ -241,6 +244,30 @@ public class DBManager implements AutoCloseable {
     	
     	return citas;
     
+    }
+    
+    /**
+     * @param id
+     * @return
+     * @throws SQLException
+     * 
+     * A lo mejor no necesitamos esta función
+     */
+    
+    public User searchUser(int id) throws SQLException {
+    	
+    	User user;
+    	
+    	try (Statement stmt = connection.createStatement()){
+    		String query = "";
+    		ResultSet rs = stmt.executeQuery(query);
+    		user = new User();
+    		
+    		
+    	}
+    	
+    	return user;
+    	
     }
     
 }
