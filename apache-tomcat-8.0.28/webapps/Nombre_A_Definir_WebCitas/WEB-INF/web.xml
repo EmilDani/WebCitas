@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- 
+
+-->
+
+<web-app xlmns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+  version="3.1"
+  metadata-complete="true">
+
+  <display-name></display-name>
+
+  <description></description>
+<!--
+<filter>
+
+  <filter-name>Timing Filter</filter-name>
+  <filter-class>filters.ExampleFilter</filter-class>
+  <init-param>
+    <param-name>attribute</param-name>
+    <param-value>filters.ExampleFilter</param-value>
+  </init-param> 
+
+</filter>
+-->
+
+<!--
+    <filter-mapping>
+      <filter-name>Compression Filter</filter-name>
+      <url-pattern>/CompressionTest</url-pattern>
+    </filter-mapping>
+-->
+
+    <!-- Define example application events listeners -->
+    <!-- <listener> -->
+    <!--     <listener-class>listeners.ContextListener</listener-class> -->
+    <!-- </listener> -->
+    <!-- <listener> -->
+    <!--     <listener-class>listeners.SessionListener</listener-class> -->
+    <!-- </listener> -->
+
+
+    <!-- Define servlets that are included in the example application -->
+
+    <!-- <servlet> -->
+    <!--   <servlet-name>ServletToJsp</servlet-name> -->
+    <!--   <servlet-class>ServletToJsp</servlet-class> -->
+    <!-- </servlet> -->
+
+    <!-- <servlet-mapping> -->
+    <!--   <servlet-name>ChatServlet</servlet-name> -->
+    <!--   <url-pattern>/servlets/chat/chat</url-pattern> -->
+    <!-- </servlet-mapping> -->
+
+
+
+</web-app>
