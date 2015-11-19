@@ -340,6 +340,7 @@ public class DBManager implements AutoCloseable {
     
     }
     
+    
     public boolean setDate(DinnerDate date) throws SQLException{
     	boolean achieved = false;
     	connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
@@ -361,7 +362,7 @@ public class DBManager implements AutoCloseable {
     	return achieved;
     	
     }
-    
+
     public boolean answerDate(DinnerDate date) throws SQLException{
     	boolean achieved = false;
     	
@@ -369,7 +370,8 @@ public class DBManager implements AutoCloseable {
     	connection.setAutoCommit(false);
     	
     	try (Statement stmt = connection.createStatement()) {
-    		int changes = stmt.executeUpdate("UPDATE");
+    		// "UPDATE Stock SET libros_almacenados=libros_almacenados-"+units+" WHERE id_libro="+book
+    		int changes = stmt.executeUpdate("UPDATE Citas SET EstadoProp="+date.getState().toString()+" WHERE idProp="+date.getId());
     		if (changes > 0)
     			achieved = true;
     		
