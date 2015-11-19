@@ -1,0 +1,49 @@
+
+
+CREATE TABLE Usuario
+(id INT NOT NULL auto_increment,
+nombre VARCHAR(255) NOT NULL,
+year DATE NOT NULL,
+sexo ENUM ('MALE', 'FEMALE') NOT NULL,
+texto TEXT,
+nickUser VARCHAR(64) NOT NULL,
+pass VARCHAR(64) NOT NULL,
+PRIMARY KEY (id)
+) ENGINE=INNODB;
+
+
+CREATE TABLE Gustos
+(idUsuario INT NOT NULL auto_increment,
+sexo ENUM ('MALE', 'FEMALE') NOT NULL,
+yearMax YEAR NOT NULL,
+yearMin YEAR NOT NULL,
+CONSTRAINT FOREIGN KEY (idUsuario) REFERENCES Usuario(id) ON UPDATE CASCADE
+) ENGINE = INNODB;
+
+
+INSERT INTO Usuario
+(nombre, year, sexo, texto, nickUser, pass)
+VALUES
+('Emilio', '1994-11-13', 'MALE', 'Hola soy Emilio y me gustan los deportes', 'emartinmayor@gmail.com', 'emilio'),
+('Daniel', '1993-05-26', 'MALE', 'Soy un niño reshulón que ha hecho esta web con Emilio', 'danielmoremanza@gmail.com', 'daniel'),
+('María', '1994-11-15', 'FEMALE', 'Hola, soy María y como mocos', 'marialoquitar@gmail.com', 'maria'),
+('Josefina', '1993-05-28', 'FEMALE', 'Nací en Mordor y nadie me quiere. Soy un orco.', 'josefinashgul@gmail.com', 'josefina');
+
+
+INSERT INTO Gustos
+(idUsuario, sexo, yearMax, yearMin)
+VALUES
+((SELECT id
+FROM Usuario
+WHERE nombre = 'Emilio'), 'FEMALE', '1990', '1997'),
+((SELECT id
+FROM Usuario
+WHERE nombre = 'Daniel'), 'FEMALE', '1980', '2000'),
+((SELECT id
+FROM Usuario
+WHERE nombre = 'María'), 'FEMALE', '1985', '1994'),
+((SELECT id
+FROM Usuario
+WHERE nombre = 'Josefina'), 'MALE', '1975', '2003');
+
+
