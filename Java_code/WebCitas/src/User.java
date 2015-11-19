@@ -11,6 +11,8 @@ public class User {
 	private Date desired_year_max;
 	private Date desired_year_min;
 	private int id;
+	private String nickuser;
+	private String pass;
 	
 	public String getNickname() {
 		return nickname;
@@ -66,8 +68,22 @@ public class User {
 	public void setId(int id) {
 		this.id = id;
 	}
+	public String getNickuser() {
+		return nickuser;
+	}
+	public void setNickuser(String nickuser) {
+		this.nickuser = nickuser;
+	}
+	public String getPass() {
+		return pass;
+	}
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
 	
-	//public DinnerDate?
+	
+	// public createPic
+	
 	
 	
 

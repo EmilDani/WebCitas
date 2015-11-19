@@ -12,20 +12,21 @@ import javax.naming.NamingException;
 public class mainView extends HttpServlet {
 	
 	
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
-	throws IOException, ServletException
-    {  	
-    	try {
-	    DBManager manager = new DBManager();
-//	    List<Book> books = manager.listBooks();
-//	    request.setAttribute("libros", books);
-//	    RequestDispatcher rd = request.getRequestDispatcher("catalogo.jsp");
-//	    rd.forward(request, response);
-	    //  for (Book libro: books) {
-	    //    System.out.println(libro);
-	    //}
-	} catch (SQLException | NamingException e) {
-	    e.printStackTrace();
-	}
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException
+	{  	
+		try {
+			DBManager manager = new DBManager();
+			//	    List<Book> books = manager.listBooks();
+			//	    request.setAttribute("libros", books);
+			//	    RequestDispatcher rd = request.getRequestDispatcher("catalogo.jsp");
+			//	    rd.forward(request, response);
+			//  for (Book libro: books) {
+			//    System.out.println(libro);
+			//}
+		} catch (SQLException | NamingException e) {
+			e.printStackTrace();
+		}
+	}	
 
 }

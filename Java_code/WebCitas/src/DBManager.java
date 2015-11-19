@@ -118,75 +118,7 @@ public class DBManager implements AutoCloseable {
         return user;
     }
 
-    /**
-     * Sell a book.
-     *
-     * @param book The book.
-     * @param units Number of units that are being sold.
-     * @return True if the operation succeeds, or false otherwise
-     *         (e.g. when the stock of the book is not big enough).
-     * @throws SQLException If somthing fails with the DB.
-     */
-//    public boolean sellBook(Book book, int units) throws SQLException {
-//        return sellBook(book.getId(), units);
-//    }
-
-    /**
-     * Sell a book.
-     *
-     * @param book The book's identifier.
-     * @param units Number of units that are being sold.
-     * @return True if the operation succeeds, or false otherwise
-     *         (e.g. when the stock of the book is not big enough).
-     * @throws SQLException If something fails with the DB.
-     */
-//    public boolean sellBook(int book, int units) throws SQLException {
-//        // TODO: program this method
-//	boolean success = false;
-//	int stock = getStock(book);
-//	if (stock > 0){
-//
-//	    // Preparamos la conexión de forma adecuada, controlando los commits y haciéndola segura
-//	    
-//	    connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
-//	    connection.setAutoCommit(false);
-//	    
-//	    // Otro grado de complejidad para seguridad con SQL Injection
-//		    
-//	    // try(PreparedStatement pstmt = connection.prepareStatement("")){ //INSERT venta
-//
-//	    // 	    //pstmt.set
-//		
-//	    // 	}
-//	    // try(PreparedStatement pstmt = connection.prepareStatement("")){ //UPDATE stock
-//
-//	    // 	    //pstmt.set
-//		
-//	    // 	}
-//
-//	    try(Statement stmt = connection.createStatement()){
-//
-//		    int changes = stmt.executeUpdate("UPDATE Stock SET libros_almacenados=libros_almacenados-"+units+" WHERE id_libro="+book); //UPDATE stock
-//
-//		    stmt.executeUpdate("INSERT TO Sells (fecha_hora, id_libro, cantidad) VALUES (NOW(), "+book+", "+units+")"); //INSERT venta
-//		    
-//		    if (changes>0)
-//		    	success=true;
-//
-//		} finally {
-//
-//		if (success)
-//		    connection.commit();
-//		else
-//		    connection.rollback();
-//		
-//	    }
-//	    connection.setAutoCommit(true);
-//	}
-//
-//        return success;
-//    }
-
+  
     /**
      * Return a list with all the books in the database.
      *
@@ -209,21 +141,26 @@ public class DBManager implements AutoCloseable {
 		    Date year = rs.getDate("Usuario.year");
 		    String sexo = rs.getString("Usuario.sexo");
 		    String text = rs.getString("Usuario.texto");
-		    String pic = rs.getString("Usuario.foto");
+		    //String pic = rs.getString("Usuario.foto");
 		    String desired_sex = rs.getString("Gustos.sexo");
 		    Date yearMx = rs.getDate("Gustos.yearMax");
 		    Date yearMn = rs.getDate("yearMin");
 		    int id = rs.getInt("id");
+		    String nickuser = rs.getString("nickUser");
+		    String pass = rs.getString("pass");
+		    
 		    
 		    nodo.setNickname(nickname);
 		    nodo.setYear(year);
 		    nodo.setSex(sex.valueOf(sexo));
 		    nodo.setDtext(text);
-		    nodo.setPic(pic);
+		    //nodo.setPic(pic);
 		    nodo.setDesired_sex(sex.valueOf(desired_sex));
 		    nodo.setDesired_year_max(yearMx);
 		    nodo.setDesired_year_min(yearMn);
 		    nodo.setId(id);
+		    nodo.setNickuser(nickuser);
+		    nodo.setPass(pass);
 			
 		    if(!usuarios.add(nodo)){
 		    	throw new SQLException();
@@ -237,7 +174,7 @@ public class DBManager implements AutoCloseable {
     	
     	List<DinnerDate> citas; // Mejor no inicializar hasta estar seguro de que funciona
     	try(Statement stmt = connection.createStatement()){
-    		String query = "SELECT idCita, EstadoProp, FechaProp, FechaResp, Usuario.id, Usuario.nombre, Usuario.year, Ususario.sexo, Usuario.texto, Usuario.foto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idRec AND Usuario.idGustos=Gustos.id WHERE idProp='"+user.getId()+"'";
+    		String query = "SELECT idCita, EstadoProp, FechaProp, FechaResp, Usuario.id, Usuario.nombre, Usuario.year, Ususario.sexo, Usuario.texto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idRec AND Usuario.id=Gustos.idUsuario WHERE idProp='"+user.getId()+"'";
     		//"SELECT BooksDB.title, BooksDB.year, BooksDB.id, Authors.autor FROM BooksDB INNER JOIN Authors INNER JOIN BookAuthor ON BookAuthor.id_autor=Authors.id AND BooksDB.id=BookAuthor.id_libro WHERE BooksDB.ISBN='"+isbn+"'"
     		ResultSet rs = stmt.executeQuery(query);
     		citas = new ArrayList<DinnerDate>();
@@ -254,11 +191,13 @@ public class DBManager implements AutoCloseable {
     		    Date year = rs.getDate("Usuario.year");
     		    String sexo = rs.getString("Usuario.sexo");
     		    String text = rs.getString("Usuario.texto");
-    		    String pic = rs.getString("Usuario.foto");
+    		    //String pic = rs.getString("Usuario.foto");
     		    String desired_sex = rs.getString("Gustos.sexo");
     		    Date yearMx = rs.getDate("Gustos.yearMax");
     		    Date yearMn = rs.getDate("Gustos.yearMin");
     		    int id = rs.getInt("Usuario.id"); 
+    		    String nickuser = rs.getString("nickUser");
+    		    String pass = rs.getString("pass");
     		    
     		    // Generamos al usuario que recibe la cita
     			
@@ -266,11 +205,13 @@ public class DBManager implements AutoCloseable {
     		    receiver.setYear(year);
     		    receiver.setSex(sex.valueOf(sexo));
     		    receiver.setDtext(text);
-    		    receiver.setPic(pic);
+    		    //receiver.setPic(pic);
     		    receiver.setDesired_sex(sex.valueOf(desired_sex));
     		    receiver.setDesired_year_max(yearMx);
     		    receiver.setDesired_year_min(yearMn);
     		    receiver.setId(id);
+    		    receiver.setNickuser(nickuser);
+    		    receiver.setPass(pass);
     		    
     		    // Construimos la cita
     		    
@@ -295,7 +236,7 @@ public class DBManager implements AutoCloseable {
     	
     	List<DinnerDate> citas; // Mejor no inicializar hasta estar seguro de que funciona
     	try(Statement stmt = connection.createStatement()){
-    		String query = "SELECT idCita, EstadoProp, FechaProp, FechaResp, Usuario.id, Usuario.nombre, Usuario.year, Ususario.sexo, Usuario.texto, Usuario.foto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idProp AND Usuario.idGustos=Gustos.id WHERE idRec='"+user.getId()+"'";
+    		String query = "SELECT idCita, EstadoProp, FechaProp, FechaResp, Usuario.id, Usuario.nombre, Usuario.year, Ususario.sexo, Usuario.texto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idProp AND Usuario.id=Gustos.idUsuario WHERE idRec='"+user.getId()+"'";
     		//"SELECT BooksDB.title, BooksDB.year, BooksDB.id, Authors.autor FROM BooksDB INNER JOIN Authors INNER JOIN BookAuthor ON BookAuthor.id_autor=Authors.id AND BooksDB.id=BookAuthor.id_libro WHERE BooksDB.ISBN='"+isbn+"'"
     		ResultSet rs = stmt.executeQuery(query);
     		citas = new ArrayList<DinnerDate>();
@@ -316,7 +257,9 @@ public class DBManager implements AutoCloseable {
     		    String desired_sex = rs.getString("Gustos.sexo");
     		    Date yearMx = rs.getDate("Gustos.yearMax");
     		    Date yearMn = rs.getDate("Gustos.yearMin");
-    		    int id = rs.getInt("Usuario.id"); 
+    		    int id = rs.getInt("Usuario.id");
+    		    String nickuser = rs.getString("nickUser");
+    		    String pass = rs.getString("pass");
     		    
     		    // Generamos al usuario que propone la cita
     			
@@ -329,6 +272,8 @@ public class DBManager implements AutoCloseable {
     		    proposer.setDesired_year_max(yearMx);
     		    proposer.setDesired_year_min(yearMn);
     		    proposer.setId(id);
+    		    proposer.setNickuser(nickuser);
+    		    proposer.setPass(pass);
     		    
     		    // Construimos la cita
     		    
