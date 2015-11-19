@@ -1,26 +1,35 @@
 
 import java.sql.Connection;
 import java.sql.Date;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.naming.*;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
 
 public class DBManager implements AutoCloseable {
 
     private Connection connection;
 
-    public DBManager() throws SQLException {
+    public DBManager() throws SQLException ,NamingException {
         connect();
     }
 
-    private void connect() throws SQLException {
+    private void connect() throws SQLException , NamingException {
         // TODO: program this method
-    	String url = "jdbc:mysql://mysql.lab.it.uc3m.es/16_compweb_24c";
-        connection = DriverManager.getConnection(url, "16_compweb_24","FTgv7f2B");
+    	
+    	Context initCtx = new InitialContext();
+    	Context envCtx = (Context) initCtx.lookup("java:comp/env");
+    	DataSource ds = (DataSource) envCtx.lookup("jdbc/BaseDatos");
+    	connection = ds.getConnection();
+    	
+    	//String url = "jdbc:mysql://mysql.lab.it.uc3m.es/16_compweb_24c";
+        //connection = DriverManager.getConnection(url, "16_compweb_24","FTgv7f2B");
 		    
     }
 
@@ -341,16 +350,14 @@ public class DBManager implements AutoCloseable {
     }
     
     
-    public boolean setDate(DinnerDate date) throws SQLException{
+    public boolean setDate(DinnerDate date) throws SQLException {
     	boolean achieved = false;
     	connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
     	connection.setAutoCommit(false);
     	try (Statement stmt = connection.createStatement()){
     		// "INSERT TO Sells (fecha_hora, id_libro, cantidad) VALUES (NOW(), "+book+", "+units+")"
-    		stmt.executeUpdate("INSERT TO Citas (idProp, idRec, FechaProp) VALUES ("+date.getProposer().getId()+", "+date.getReceiver().getId()+", NOW())");
-    		
-    		// PREGUNTAR SI ESTA ES LA FORMA ADECUADA...
-    		
+    		stmt.executeUpdate("INSERT INTO Citas (idProp, idRec, FechaProp) VALUES ("+date.getProposer().getId()+", "+date.getReceiver().getId()+", NOW())");	
+    	  		
     	} finally {
     		
     		connection.commit();
