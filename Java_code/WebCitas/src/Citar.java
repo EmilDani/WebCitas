@@ -17,17 +17,32 @@ public class Citar extends HttpServlet {
 //		
 //	}
 	
+	public boolean isLogged (HttpSession session, DBManager manager)
+			throws SQLException{
+		boolean logged = false;
+		User user = (User) session.getAttribute("user");
+		if (user != null){
+			// NO SÉ SI El if A CONTINUACIÓN ES REALMENTE ÚTIL
+			if (manager.searchUser(user.getNickuser()) != null)
+				logged = true;
+		}
+		return logged;
+	}
+	
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 		
 		HttpSession session = request.getSession();
 		try (DBManager manager = new DBManager()){
-			DinnerDate date= new DinnerDate();
-			date=(DinnerDate)session.getAttribute("citas");
-		// Variable citas a crear en el JSP de citas (Servlet)
-			
-			manager.setDate(date);
-			
+			if (isLogged (session, manager)){
+				
+				DinnerDate date= new DinnerDate();
+				date = (DinnerDate) session.getAttribute("citas");
+			// Variable citas a crear en el JSP de citas (Servlet)
+				
+				manager.setDate(date);
+			}
+
 		} catch (SQLException | NamingException e) {
 			
 			PrintWriter out = response.getWriter();

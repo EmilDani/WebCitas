@@ -45,45 +45,13 @@ public class DBManager implements AutoCloseable {
     }
 
     /**
-     * Return the number of units in stock of the given book.
-     *
-     * @param book The book object.
-     * @return The number of units in stock, or 0 if the book does not
-     *         exist in the database.
-     * @throws SQLException If somthing fails with the DB.
-     */
-//    public int getStock(User user) throws SQLException {
-//        return getStock(user.getId());
-//    }
-
-    /**
-     * Return the number of units in stock of the given book.
-     *
-     * @param bookId The book identifier in the database.
-     * @return The number of units in stock, or 0 if the book does not
-     *         exist in the database.
-     */
-//    public int getStock(int bookId) throws SQLException {
-//        // TODO: program this method DONE
-//	int stock = 0;
-//	try(Statement stmt = connection.createStatement()){
-//		ResultSet rs = stmt.executeQuery("SELECT libros_almacenados FROM Stock WHERE id_libro="+bookId);
-//		if (rs.next()){
-//		    stock = rs.getInt("libros_almacenados");
-//		}
-//		
-//	    }
-//        return stock;
-//    }
-
-    /**
      * Search book by ISBN.
      *
      * @param isbn The ISBN of the book.
      * @return The Book object, or null if not found.
      * @throws SQLException If somthing fails with the DB.
      */
-    public User searchUser(String name) throws SQLException {
+    public User searchUser(String nickUser) throws SQLException {
         // TODO: program this method DONE
 	User user;
 	try(Statement stmt = connection.createStatement()){
