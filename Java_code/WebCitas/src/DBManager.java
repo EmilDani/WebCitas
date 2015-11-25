@@ -45,12 +45,12 @@ public class DBManager implements AutoCloseable {
         connection = null;
     }
 
-    public User searchUser(String nickUser) throws SQLException {
+    public User searchUser(String nickUser, String password) throws SQLException {
     	// TODO: program this method DONE
     	User user;
     	try(Statement stmt = connection.createStatement()){
     		
-    		String query="SELECT * FROM Usuario INNER JOIN Gustos ON id=idUsuario WHERE nickUser='"+nickUser+"'"; 
+    		String query="SELECT * FROM Usuario INNER JOIN Gustos ON id=idUsuario WHERE nickUser='"+nickUser+"' AND pass='"+password+"'"; 
     		ResultSet rs = stmt.executeQuery(query);
 
     		// Se podría considerar mayor complejidad comprobando que rs, efectivamente, no sea una lista si no una

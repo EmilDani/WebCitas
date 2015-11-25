@@ -27,6 +27,26 @@ public class mainView extends HttpServlet {
 		} catch (SQLException | NamingException e) {
 			e.printStackTrace();
 		}
-	}	
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException
+	{
+		try{
+			DBManager manager = new DBManager();
+			String nickUser = request.getParameter("usuario");
+			String password = request.getParameter("password");
+			User usuario = manager.searchUser(nickUser, password);
+			if (usuario == null){
+				response.sendRedirect("error-login.jsp");
+			} else {
+				HttpSession session = request.getSession();
+				session.setAttribute("usuario", usuario);
+				request.getRequestDispatcher("mainView.jsp").forward(request, response);
+			}
+		} catch (SQLException | NamingException e){
+			e.printStackTrace();
+		}
+	}
 
 }
