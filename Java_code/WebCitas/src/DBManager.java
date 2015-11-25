@@ -57,6 +57,8 @@ public class DBManager implements AutoCloseable {
 	try(Statement stmt = connection.createStatement()){
 		//ResultSet rs = stmt.executeQuery("SELECT BooksDB.title, BooksDB.year, BooksDB.id, Authors.autor FROM BooksDB INNER JOIN Authors INNER JOIN BookAuthor ON BookAuthor.id_autor=Authors.id AND BooksDB.id=BookAuthor.id_libro WHERE BooksDB.ISBN='"+isbn+"'");
 		
+		//String query="SELECT * FROM Usuario INNER JOIN Gustos ON '" + (Usuario.nickUser=nickUser)+ "' AND '"+ (Usuario.pass=pass)"'"; 
+		
 		ResultSet rs = stmt.executeQuery(""); // TODO
 
 		// while (rs.next()){
