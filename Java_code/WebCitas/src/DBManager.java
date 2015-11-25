@@ -1,6 +1,7 @@
 
 import java.sql.Connection;
 import java.sql.Date;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -44,57 +45,51 @@ public class DBManager implements AutoCloseable {
         connection = null;
     }
 
-    /**
-     * Search book by ISBN.
-     *
-     * @param isbn The ISBN of the book.
-     * @return The Book object, or null if not found.
-     * @throws SQLException If somthing fails with the DB.
-     */
     public User searchUser(String nickUser) throws SQLException {
-        // TODO: program this method DONE
-	User user;
-	try(Statement stmt = connection.createStatement()){
-		//ResultSet rs = stmt.executeQuery("SELECT BooksDB.title, BooksDB.year, BooksDB.id, Authors.autor FROM BooksDB INNER JOIN Authors INNER JOIN BookAuthor ON BookAuthor.id_autor=Authors.id AND BooksDB.id=BookAuthor.id_libro WHERE BooksDB.ISBN='"+isbn+"'");
-		
-		//String query="SELECT * FROM Usuario INNER JOIN Gustos ON '" + (Usuario.nickUser=nickUser)+ "' AND '"+ (Usuario.pass=pass)"'"; 
-		
-		ResultSet rs = stmt.executeQuery(""); // TODO
+    	// TODO: program this method DONE
+    	User user;
+    	try(Statement stmt = connection.createStatement()){
+    		
+    		String query="SELECT * FROM Usuario INNER JOIN Gustos ON id=idUsuario WHERE nickUser='"+nickUser+"'"; 
+    		ResultSet rs = stmt.executeQuery(query);
 
-		// while (rs.next()){
-		//     String title = rs.getString("BooksDB.title");
-		//     String author = rs.getString("Authors.autor");
-		//     int id = rs.getInt("BooksDB.id");
-		//     int year = rs.getDate("BooksDB.year");
-		// }
+    		// Se podría considerar mayor complejidad comprobando que rs, efectivamente, no sea una lista si no una
+    		// única fila
 
-		// Se podr�a considerar mayor complejidad comprobando que rs, efectivamente, no sea una lista si no una
-		// única fila
+    		if (rs.next()){ //Tenemos que recordar que el primer valor inicial que devuelve executeQuery no es válido
+    			user = new User();
 
-		if (rs.next()){ //Tenemos que recordar que el primer valor inicial que devuelve executeQuery no es válido
-		    user = new User();
-//		    String title = rs.getString("BooksDB.title");
-//		    String author = rs.getString("Authors.autor");
-//		    int id = rs.getInt("BooksDB.id");
-//		    int year = rs.getInt("BooksDB.year");
-//		    libro.setTitle(title);
-//			libro.setIsbn(isbn);
-//			libro.setYear(year);
-//			libro.setId(id);
-		} else {
-		    user = null;
-		}
-	    }
-        return user;
+    			String nickname = rs.getString("Usuario.nombre");
+    			Date year = rs.getDate("Usuario.year");
+    			String sexo = rs.getString("Usuario.sexo");
+    			String text = rs.getString("Usuario.texto");
+    			//String pic = rs.getString("Usuario.foto");
+    			String desired_sex = rs.getString("Gustos.sexo");
+    			Date yearMx = rs.getDate("Gustos.yearMax");
+    			Date yearMn = rs.getDate("yearMin");
+    			int id = rs.getInt("id");
+    			String nickuser = rs.getString("nickUser");
+    			String pass = rs.getString("pass");
+
+
+    			user.setNickname(nickname);
+    			user.setYear(year);
+    			user.setSex(sex.valueOf(sexo));
+    			user.setDtext(text);
+    			//user.setPic(pic);
+    			user.setDesired_sex(sex.valueOf(desired_sex));
+    			user.setDesired_year_max(yearMx);
+    			user.setDesired_year_min(yearMn);
+    			user.setId(id);
+    			user.setNickuser(nickuser);
+    			user.setPass(pass);
+    		} else {
+    			user = null;
+    		}
+    	}
+    	return user;
     }
 
-  
-    /**
-     * Return a list with all the books in the database.
-     *
-     * @return List with all the books.
-     * @throws SQLException If something fails with the DB.
-     */
     public List<User> listUsers() throws SQLException {
         // TODO: program this method DONE
 	List<User> usuarios = new ArrayList<User>();
@@ -269,10 +264,13 @@ public class DBManager implements AutoCloseable {
     	boolean achieved = false;
     	connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
     	connection.setAutoCommit(false);
-    	try (Statement stmt = connection.createStatement()){
-    		// "INSERT TO Sells (fecha_hora, id_libro, cantidad) VALUES (NOW(), "+book+", "+units+")"
-    		stmt.executeUpdate("INSERT INTO Citas (idProp, idRec, FechaProp) VALUES ("+date.getProposer().getId()+", "+date.getReceiver().getId()+", NOW())");	
-    	  		
+//    	try (Statement stmt = connection.createStatement()){
+//    		stmt.executeUpdate("INSERT INTO Citas (idProp, idRec, FechaProp) VALUES ("+date.getProposer().getId()+", "+date.getReceiver().getId()+", NOW())");	
+//    	 
+    	try (PreparedStatement stmt = connection.prepareStatement("INSERT INTO Citas (idProp, idRec, FechaProp) VALUES (?, ?, NOW())")){
+    		stmt.setInt(1, date.getProposer().getId());
+    		stmt.setInt(2, date.getReceiver().getId());
+    		stmt.executeUpdate();
     	} finally {
     		
     		connection.commit();
@@ -291,9 +289,12 @@ public class DBManager implements AutoCloseable {
     	connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
     	connection.setAutoCommit(false);
     	
-    	try (Statement stmt = connection.createStatement()) {
-    		// "UPDATE Stock SET libros_almacenados=libros_almacenados-"+units+" WHERE id_libro="+book
-    		int changes = stmt.executeUpdate("UPDATE Citas SET EstadoProp="+date.getState().toString()+" WHERE idProp="+date.getId());
+    	try (PreparedStatement stmt = connection.prepareStatement("UPDATE Citas SET EstadoProp = ? WHERE idProp = ?")) {
+    		
+    		// int changes = stmt.executeUpdate("UPDATE Citas SET EstadoProp="+date.getState().toString()+" WHERE idProp="+date.getId());
+    		stmt.setString(1, date.getState().toString());
+    		stmt.setInt(2, date.getId());
+    		int changes = stmt.executeUpdate();
     		if (changes > 0)
     			achieved = true;
     		

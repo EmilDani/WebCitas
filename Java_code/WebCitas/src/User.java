@@ -81,7 +81,12 @@ public class User {
 		this.pass = pass;
 	}
 	
-	
+	public boolean isPassCorrect (String pass){
+		boolean correct = false;
+		if (this.pass==pass)
+			correct = true;
+		return correct;
+	}
 	// public createPic
 	
 	
