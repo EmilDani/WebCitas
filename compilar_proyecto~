@@ -1,0 +1,1 @@
+javac -d ../classes -cp ../classes/:../../../apache-tomcat-8.0.28/lib/servlet-api.jar *.java

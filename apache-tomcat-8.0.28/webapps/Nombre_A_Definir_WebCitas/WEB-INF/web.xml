@@ -36,15 +36,15 @@
 
     <!-- Define servlets that are included in the example application -->
 
-    <!-- <servlet> -->
-    <!--   <servlet-name>ServletToJsp</servlet-name> -->
-    <!--   <servlet-class>ServletToJsp</servlet-class> -->
-    <!-- </servlet> -->
+ <!--    <servlet>
+        <servlet-name>inicioSesion</servlet-name>
+        <servlet-class>inicioSesion</servlet-class>
+    </servlet>
 
-    <!-- <servlet-mapping> -->
-    <!--   <servlet-name>ChatServlet</servlet-name> -->
-    <!--   <url-pattern>/servlets/chat/chat</url-pattern> -->
-    <!-- </servlet-mapping> -->
+    <servlet-mapping>
+         <servlet-name>inicioSesion</servlet-name>
+         <url-pattern>/loginWeb</url-pattern>
+    </servlet-mapping> -->
 
       <resource-ref>
     <description>                                                                                                                                                                                                                             

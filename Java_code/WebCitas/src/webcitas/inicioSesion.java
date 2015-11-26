@@ -1,3 +1,5 @@
+package webcitas;
+
 
 import java.io.*;
 import java.sql.SQLException;
@@ -8,7 +10,6 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.WebServlet;
 
 @WebServlet("/loginWeb")
-
 public class inicioSesion  extends HttpServlet{
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

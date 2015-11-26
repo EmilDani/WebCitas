@@ -1,3 +1,5 @@
+package webcitas;
+
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -232,7 +234,7 @@ public class DBManager implements AutoCloseable {
     		    proposer.setYear(year);
     		    proposer.setSex(sex.valueOf(sexo));
     		    proposer.setDtext(text);
-    		    proposer.setPic(pic);
+    		    //proposer.setPic(pic);
     		    proposer.setDesired_sex(sex.valueOf(desired_sex));
     		    proposer.setDesired_year_max(yearMx);
     		    proposer.setDesired_year_min(yearMn);
