@@ -40,7 +40,7 @@
 			Sexo: <%=user.getSex()%>
 		</p>
 		<p style="font-size:10px; ">
-			AÃ±o de Nacimiento: <%=user.getYear()%>
+			Año de Nacimiento: <%=user.getYear()%>
 		</p>
 		<p style="font-size:10px; ">
 			Interesado en: <%=user.getDesired_sex()%>
