@@ -19,7 +19,7 @@ public class mainView extends HttpServlet {
                 HttpSession session = request.getSession();
                 User user = (User) session.getAttribute("usuario");
                 if (user == null){
-                        response.sendRedirect("error-login.jsp");
+                        response.sendRedirect("error-login.html");
                 } else {
 
                         request.getRequestDispatcher("mainView.jsp").forward(request, response);

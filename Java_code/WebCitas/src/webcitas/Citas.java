@@ -7,29 +7,14 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import java.sql.SQLException;
 import javax.naming.NamingException;
+import java.util.ArrayList;
 import java.util.List;
 
-public class Citar extends HttpServlet {
-	
-//	public void init() throws ServletException {
-//		
-//	}
-//	
-//	public void destroy() {
-//		
-//	}
-	
-//	public boolean isLogged (HttpSession session, DBManager manager)
-//			throws SQLException{
-//		boolean logged = false;
-//		User user = (User) session.getAttribute("user");
-//		if (user != null){
-//			// NO SÉ SI El if A CONTINUACIÓN ES REALMENTE ÚTIL
-//			if (manager.searchUser(user.getNickuser()) != null)
-//				logged = true;
-//		}
-//		return logged;
-//	}
+
+@WebServlet("/citas")
+
+public class Citas extends HttpServlet{
+    
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
@@ -41,11 +26,10 @@ public class Citar extends HttpServlet {
 				response.sendRedirect("error-login.html");
 			} else {
 				try (DBManager manager = new DBManager()){
-				DinnerDate date= new DinnerDate();
-				date = (DinnerDate) session.getAttribute("cita");
-			// Variable citas a crear en el JSP de citas (Servlet)
-				
-				manager.setDate(date);
+					List<User> usuarios= manager.listUsers();
+				    request.setAttribute("listaUsuarios",usuarios);
+				    RequestDispatcher rd = request.getRequestDispatcher("citas.jsp");
+				    rd.forward(request, response);
 				
 			} catch (SQLException | NamingException e) {
 				
@@ -58,5 +42,5 @@ public class Citar extends HttpServlet {
 			}
 		
 	}
-
+    
 }
