@@ -1,10 +1,13 @@
 
 import java.io.*;
+import java.sql.SQLException;
+
+import javax.naming.NamingException;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.WebServlet;
 
-@WebServlet("/inicioSesion")
+@WebServlet("/loginWeb")
 
 public class inicioSesion  extends HttpServlet{
 
@@ -16,30 +19,29 @@ public class inicioSesion  extends HttpServlet{
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException
 	{
-		String user=request.getParameter("user");
-		String pass=request.getParameter("password");
-		if("emartinmayor".equals(user)&&"emilio".equals(pass)){
-			User nuevoUser= new User();
-			request.setAttribute("usuarioLogueado", user);
-			request.getRequestDispatcher("MainView.jsp").forward(request, response);
-			response(response,"login ok");   
-		}else{
-			response(response,"invalid login");
+		try	(DBManager manager = new DBManager()){
+			//			
+			String usuario=request.getParameter("usuario");
+			String password=request.getParameter("password");
+			//String texto="Hola me llamo Emilio y estoy probando la app";
+			//sex sexo=sex.MALE;
+			//SimpleDateFormat year = new SimpleDateFormat("13-11-1994");//La fecha esta mal hay que cambiarla
+
+			User usuarioLogueado= new User();
+			usuarioLogueado=manager.searchUser(usuario,password);
+			if(usuarioLogueado==null){
+				System.out.println("Usuario y contraseña incorrectos");
+				response.sendRedirect("error-login.jsp");
+			}else{
+				System.out.println("Bienvenido");
+				HttpSession session = request.getSession();
+				session.setAttribute("usuario",usuarioLogueado);
+				response.sendRedirect("mainView");
+			}
+		} catch(SQLException | NamingException e) {
+			e.printStackTrace();
 		}
-		//		   RequestDispatcher rd = request.getRequestDispatcher("catalogo.jsp");
-		//		    rd.forward(request, response);
 
-		response.sendRedirect("mainView");
-
-	}
-	//Para login.jsp response.sendRedirect(response.encodeRedirectURL("./catalogo.jsp"));
-	private void response(HttpServletResponse response, String msg ) throws IOException{
-		PrintWriter out=  response.getWriter();
-		out.println("<html>");
-		out.println("<body>");
-		out.println("<t1>"+ msg+"</t1>");
-		out.println("</body>");
-		out.println("</html>");
 	}
 
 

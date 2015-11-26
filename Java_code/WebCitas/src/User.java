@@ -38,12 +38,12 @@ public class User {
 	public void setYear(Date year) {
 		this.year = year;
 	}
-	public String getPic() {
-		return pic;
-	}
-	public void setPic(String pic) {
-		this.pic = pic;
-	}
+//	public String getPic() {
+//		return pic;
+//	}
+//	public void setPic(String pic) {
+//		this.pic = pic;
+//	}
 	public sex getDesired_sex() {
 		return desired_sex;
 	}
