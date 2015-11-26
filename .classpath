@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="Java_code/WebCitas/src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Tomcat"/>
 	<classpathentry kind="lib" path="G:/Eclipse_Workspace/WebCitas/Java_code/WebCitas/lib/annotations-api.jar"/>
 	<classpathentry kind="lib" path="G:/Eclipse_Workspace/WebCitas/Java_code/WebCitas/lib/catalina.jar"/>
 	<classpathentry kind="lib" path="G:/Eclipse_Workspace/WebCitas/Java_code/WebCitas/lib/catalina-ant.jar"/>

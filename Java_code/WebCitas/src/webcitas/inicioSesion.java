@@ -32,7 +32,7 @@ public class inicioSesion  extends HttpServlet{
 			usuarioLogueado=manager.searchUser(usuario,password);
 			if(usuarioLogueado==null){
 				System.out.println("Usuario y contraseña incorrectos");
-				response.sendRedirect("error-login.jsp");
+				response.sendRedirect("error-login.html");
 			}else{
 				System.out.println("Bienvenido");
 				HttpSession session = request.getSession();

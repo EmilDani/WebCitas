@@ -31,28 +31,32 @@ public class Citar extends HttpServlet {
 //		return logged;
 //	}
 	
-//	public void doGet(HttpServletRequest request, HttpServletResponse response)
-//			throws IOException, ServletException {
-//		
-//		HttpSession session = request.getSession();
-//		try (DBManager manager = new DBManager()){
-//			if (isLogged (session, manager)){
-//				
-//				DinnerDate date= new DinnerDate();
-//				date = (DinnerDate) session.getAttribute("citas");
-//			// Variable citas a crear en el JSP de citas (Servlet)
-//				
-//				manager.setDate(date);
-//			}
-//
-//		} catch (SQLException | NamingException e) {
-//			
-//			PrintWriter out = response.getWriter();
-//		    out.println("ERROR");
-//		    e.printStackTrace();
-//			
-//		}
-//		
-//	}
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
+		
+		HttpSession session = request.getSession();
+		User user = (User) session.getAttribute("usuario");
+		
+			if (user==null){
+				response.sendRedirect("error-login.html");
+			} else {
+				try (DBManager manager = new DBManager()){
+				DinnerDate date= new DinnerDate();
+				date = (DinnerDate) session.getAttribute("cita");
+			// Variable citas a crear en el JSP de citas (Servlet)
+				
+				manager.setDate(date);
+				
+			} catch (SQLException | NamingException e) {
+				
+				PrintWriter out = response.getWriter();
+			    out.println("ERROR");
+			    e.printStackTrace();
+				
+			}
+				
+			}
+		
+	}
 
 }

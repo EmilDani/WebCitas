@@ -141,7 +141,7 @@ public class DBManager implements AutoCloseable {
     	
     	List<DinnerDate> citas; // Mejor no inicializar hasta estar seguro de que funciona
     	try(Statement stmt = connection.createStatement()){
-    		String query = "SELECT idCita, EstadoProp, FechaProp, FechaResp, Usuario.id, Usuario.nombre, Usuario.year, Ususario.sexo, Usuario.texto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idRec AND Usuario.id=Gustos.idUsuario WHERE idProp='"+user.getId()+"'";
+    		String query = "SELECT idCita, EstadoProp, FechaProp, FechaResp, fecha, Usuario.id, Usuario.nombre, Usuario.year, Ususario.sexo, Usuario.texto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idRec AND Usuario.id=Gustos.idUsuario WHERE idProp='"+user.getId()+"'";
     		//"SELECT BooksDB.title, BooksDB.year, BooksDB.id, Authors.autor FROM BooksDB INNER JOIN Authors INNER JOIN BookAuthor ON BookAuthor.id_autor=Authors.id AND BooksDB.id=BookAuthor.id_libro WHERE BooksDB.ISBN='"+isbn+"'"
     		ResultSet rs = stmt.executeQuery(query);
     		citas = new ArrayList<DinnerDate>();
@@ -153,6 +153,7 @@ public class DBManager implements AutoCloseable {
     			Date proposal_sello = rs.getDate("FechaProp");
     			Date response_sello = rs.getDate("FechaResp");
     			int id_cita = rs.getInt("idCita");
+    			Date fecha = rs.getDate("fecha");
     			
     			String nickname = rs.getString("Usuario.nombre");
     		    Date year = rs.getDate("Usuario.year");
@@ -188,6 +189,7 @@ public class DBManager implements AutoCloseable {
     		    nodo.setProposal_sello(proposal_sello);
     		    nodo.setResponse_sello(response_sello);
     		    nodo.setId(id_cita);
+    		    nodo.setFecha(fecha);
     			
     		    if(!citas.add(nodo)){
     		    	throw new SQLException();
@@ -203,7 +205,7 @@ public class DBManager implements AutoCloseable {
     	
     	List<DinnerDate> citas; // Mejor no inicializar hasta estar seguro de que funciona
     	try(Statement stmt = connection.createStatement()){
-    		String query = "SELECT idCita, EstadoProp, FechaProp, FechaResp, Usuario.id, Usuario.nombre, Usuario.year, Ususario.sexo, Usuario.texto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idProp AND Usuario.id=Gustos.idUsuario WHERE idRec='"+user.getId()+"'";
+    		String query = "SELECT idCita, EstadoProp, FechaProp, FechaResp, fecha, Usuario.id, Usuario.nombre, Usuario.year, Ususario.sexo, Usuario.texto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idProp AND Usuario.id=Gustos.idUsuario WHERE idRec='"+user.getId()+"'";
     		//"SELECT BooksDB.title, BooksDB.year, BooksDB.id, Authors.autor FROM BooksDB INNER JOIN Authors INNER JOIN BookAuthor ON BookAuthor.id_autor=Authors.id AND BooksDB.id=BookAuthor.id_libro WHERE BooksDB.ISBN='"+isbn+"'"
     		ResultSet rs = stmt.executeQuery(query);
     		citas = new ArrayList<DinnerDate>();
@@ -215,6 +217,7 @@ public class DBManager implements AutoCloseable {
     			Date proposal_sello = rs.getDate("FechaProp");
     			Date response_sello = rs.getDate("FechaResp");
     			int id_cita = rs.getInt("idCita");
+    			Date fecha = rs.getDate("fecha");
     			
     			String nickname = rs.getString("Usuario.nombre");
     		    Date year = rs.getDate("Usuario.year");
@@ -250,6 +253,7 @@ public class DBManager implements AutoCloseable {
     		    nodo.setProposal_sello(proposal_sello);
     		    nodo.setResponse_sello(response_sello);
     		    nodo.setId(id_cita);
+    		    nodo.setFecha(fecha);
     			
     		    if(!citas.add(nodo)){
     		    	throw new SQLException();
@@ -269,9 +273,10 @@ public class DBManager implements AutoCloseable {
 //    	try (Statement stmt = connection.createStatement()){
 //    		stmt.executeUpdate("INSERT INTO Citas (idProp, idRec, FechaProp) VALUES ("+date.getProposer().getId()+", "+date.getReceiver().getId()+", NOW())");	
 //    	 
-    	try (PreparedStatement stmt = connection.prepareStatement("INSERT INTO Citas (idProp, idRec, FechaProp) VALUES (?, ?, NOW())")){
+    	try (PreparedStatement stmt = connection.prepareStatement("INSERT INTO Citas (idProp, idRec, FechaProp, fecha) VALUES (?, ?, NOW(), ?)")){
     		stmt.setInt(1, date.getProposer().getId());
     		stmt.setInt(2, date.getReceiver().getId());
+    		stmt.setDate(3, date.getFecha());
     		stmt.executeUpdate();
     	} finally {
     		

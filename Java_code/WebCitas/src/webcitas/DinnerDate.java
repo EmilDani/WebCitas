@@ -10,6 +10,7 @@ public class DinnerDate {
 	private Date proposal_sello;
 	private Date response_sello;
 	private int id_cita;
+	private Date fecha;
 	
 	public meetState getState() {
 		return state;
@@ -46,6 +47,12 @@ public class DinnerDate {
 	}
 	public void setId(int id) {
 		this.id_cita = id_cita;
+	}
+	public Date getFecha() {
+		return fecha;
+	}
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
 	}
 
 }
