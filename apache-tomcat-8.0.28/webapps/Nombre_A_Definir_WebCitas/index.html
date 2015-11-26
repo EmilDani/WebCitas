@@ -1,0 +1,124 @@
+
+<!-- <!DOCTYPE html> -->
+<!-- <html> -->
+<!--   <head> -->
+<!--     <meta charset="UTF-8"> -->
+<!--     <\!-- <link rel="stylesheet" href="Movie_Web.css" typ="text/css"> -\-> -->
+<!--     <title>PENDIENTE</title> -->
+<!--   </head> -->
+<!--   <body> -->
+
+<!--     <form method="post" action="/inicioSesion"> -->
+
+<!--      Mail: <input type="email" name="user"/> -->
+
+<!--      Contraseña: <input type="password" name="password"/> -->
+
+<!--      <input type="submit" value="Pa' dentro" /> -->
+
+<!--     </form> -->
+
+    
+<!--   </body> -->
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Login Web</title>
+
+
+
+
+
+</head><script type="text/javascript" lang="JavaScript">
+
+  function validarDatos(){
+
+      var usuario=document.getElementById("usuario");
+
+      var password=document.getElementById("password");
+
+      if(usuario.value=="" || usuario.value=='' || usuario.value==null){
+
+	  alert("Ingresa tu usuario y contraseña");
+
+	  usuario.focus();
+
+	  return false;
+
+      }else if(password.value=="" || password.value=='' || password.value==null){
+
+	  alert("Ingresa tu contraseña y contraseña");
+
+	  password.focus();
+
+	  return false;
+
+	  
+
+      }else{
+
+	  return true;
+
+      }
+
+  }
+
+
+
+</script>
+
+<body>
+
+
+
+<form action="loginWeb" method="post" onsubmit="return validarDatos();">
+
+<table align="center"> 
+
+<tr>
+
+<td colspan="2" style="font-weight:bold; size: 20px ">Ingresa tu Usuario y Contraseña</td>
+
+</tr>
+
+<tr>
+
+<td style="font-weight: bold; size: 12px; color:blue; align:right">Usuario:</td>
+
+<td><input type="text" name="usuario" id="usuario"></td>
+
+</tr>
+
+<tr>
+
+<td style="font-weight: bold; size: 12px; color:blue; align: right">Contraseña:</td>
+
+<td><input type="password" name="password" id="password"></td>
+
+</tr>
+
+<tr>
+
+<td><input type="button" value="Cancelar" style=font-size:14px;color:blue; ></td>
+
+<td><input type="submit" value="Aceptar"  style=font-size:14px;color:blue; ></td>
+
+</tr>
+
+</table>
+
+</form>
+
+
+
+</body>
+
+</html>
