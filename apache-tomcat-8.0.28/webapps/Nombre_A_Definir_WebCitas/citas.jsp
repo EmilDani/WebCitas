@@ -35,7 +35,7 @@ for (User usuario: listaUsuarios) {
 			  <td><%= usuario.getDesired_sex()%></td>
 			  <td><%= usuario.getDesired_year_max()%></td>
 			  <td><%= usuario.getDesired_year_min()%></td>
-			  <td><form action="citas" method="post"> <td><input type="submit" value="Pedir Cita"  style=font-size:14px;color:blue; ></td>
+			  <td><form action="citas" method="get"> <td><input type="submit" value="Pedir Cita"  style=font-size:14px;color:blue; ></td>
 		</form></td>
 		  </tr>
 		  <% } %>

@@ -52,7 +52,7 @@
 			Rango de edad mínimo: <%=user.getDesired_year_min()%>
 		</p>
 		<p>
-		<form action="citas" method="post">
+		<form action="citas" method="get">
 		<td><input type="submit" value="Buscar Citas"  style=font-size:14px;color:blue; ></td>
 		</form>
 		</p>
