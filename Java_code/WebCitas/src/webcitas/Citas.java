@@ -1,3 +1,4 @@
+
 package webcitas;
 
 import javax.servlet.ServletException;
@@ -30,7 +31,7 @@ public class Citas extends HttpServlet{
 				    request.setAttribute("listaUsuarios",usuarios);
 				    RequestDispatcher rd = request.getRequestDispatcher("citas.jsp");
 				    rd.forward(request, response);
-				
+				    
 			} catch (SQLException | NamingException e) {
 				
 				PrintWriter out = response.getWriter();
@@ -42,5 +43,12 @@ public class Citas extends HttpServlet{
 			}
 		
 	}
+
+    public void public void doPost(HttpServletRequest request, HttpServletResponse response)
+	throws IOException, ServletException {
+
+	
+	
+    }
     
 }

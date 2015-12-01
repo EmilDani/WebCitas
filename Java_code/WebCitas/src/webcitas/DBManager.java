@@ -6,7 +6,7 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,10 +50,13 @@ public class DBManager implements AutoCloseable {
     public User searchUser(String nickUser, String password) throws SQLException {
     	// TODO: program this method DONE
     	User user;
-    	try(Statement stmt = connection.createStatement()){
+    	try(PreparedStatement stmt = connection.prepareStatement("SELECT * FROM Usuario INNER JOIN Gustos ON id=idUsuario WHERE nickUser=? AND pass=?")){
     		
-    		String query="SELECT * FROM Usuario INNER JOIN Gustos ON id=idUsuario WHERE nickUser='"+nickUser+"' AND pass='"+password+"'"; 
-    		ResultSet rs = stmt.executeQuery(query);
+    		// String query="SELECT * FROM Usuario INNER JOIN Gustos ON id=idUsuario WHERE nickUser='"+nickUser+"' AND pass='"+password+"'";
+		stmt.setString(1, nickUser);
+		stmt.setString(2, password);
+
+		ResultSet rs = stmt.executeQuery();
 
     		// Se podría considerar mayor complejidad comprobando que rs, efectivamente, no sea una lista si no una
     		// única fila
@@ -95,9 +98,9 @@ public class DBManager implements AutoCloseable {
     public List<User> listUsers() throws SQLException {
         // TODO: program this method DONE
 	List<User> usuarios = new ArrayList<User>();
-	try(Statement stmt = connection.createStatement()){
-		String query = "";
-		ResultSet rs = stmt.executeQuery(query);
+	try(PreparedStatement stmt = connection.prepareStatement()){
+		// String query = "";
+		ResultSet rs = stmt.executeQuery();
 		User nodo = new User();
 		while (rs.next()){
 			
@@ -140,10 +143,10 @@ public class DBManager implements AutoCloseable {
     public List<DinnerDate> listDatesPropOf(User user) throws SQLException {
     	
     	List<DinnerDate> citas; // Mejor no inicializar hasta estar seguro de que funciona
-    	try(Statement stmt = connection.createStatement()){
-    		String query = "SELECT idCita, EstadoProp, FechaProp, FechaResp, fecha, Usuario.id, Usuario.nombre, Usuario.year, Ususario.sexo, Usuario.texto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idRec AND Usuario.id=Gustos.idUsuario WHERE idProp='"+user.getId()+"'";
+    	try(PreparedStatement stmt = connection.prepareStatement()){
+    		// String query = "SELECT idCita, EstadoProp, FechaProp, FechaResp, fecha, Usuario.id, Usuario.nombre, Usuario.year, Ususario.sexo, Usuario.texto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idRec AND Usuario.id=Gustos.idUsuario WHERE idProp='"+user.getId()+"'";
     		//"SELECT BooksDB.title, BooksDB.year, BooksDB.id, Authors.autor FROM BooksDB INNER JOIN Authors INNER JOIN BookAuthor ON BookAuthor.id_autor=Authors.id AND BooksDB.id=BookAuthor.id_libro WHERE BooksDB.ISBN='"+isbn+"'"
-    		ResultSet rs = stmt.executeQuery(query);
+    		ResultSet rs = stmt.executeQuery();
     		citas = new ArrayList<DinnerDate>();
     		DinnerDate nodo = new DinnerDate();
     		User receiver = new User();
@@ -204,10 +207,10 @@ public class DBManager implements AutoCloseable {
     public List<DinnerDate> listDatesRecOf(User user) throws SQLException {
     	
     	List<DinnerDate> citas; // Mejor no inicializar hasta estar seguro de que funciona
-    	try(Statement stmt = connection.createStatement()){
-    		String query = "SELECT idCita, EstadoProp, FechaProp, FechaResp, fecha, Usuario.id, Usuario.nombre, Usuario.year, Ususario.sexo, Usuario.texto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idProp AND Usuario.id=Gustos.idUsuario WHERE idRec='"+user.getId()+"'";
-    		//"SELECT BooksDB.title, BooksDB.year, BooksDB.id, Authors.autor FROM BooksDB INNER JOIN Authors INNER JOIN BookAuthor ON BookAuthor.id_autor=Authors.id AND BooksDB.id=BookAuthor.id_libro WHERE BooksDB.ISBN='"+isbn+"'"
-    		ResultSet rs = stmt.executeQuery(query);
+    	try(PreparedStatement stmt = connection.prepareStatement()){
+    		// String query = "SELECT idCita, EstadoProp, FechaProp, FechaResp, fecha, Usuario.id, Usuario.nombre, Usuario.year, Ususario.sexo, Usuario.texto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idProp AND Usuario.id=Gustos.idUsuario WHERE idRec='"+user.getId()+"'";
+
+    		ResultSet rs = stmt.executeQuery();
     		citas = new ArrayList<DinnerDate>();
     		DinnerDate nodo = new DinnerDate();
     		User proposer = new User();
@@ -270,7 +273,7 @@ public class DBManager implements AutoCloseable {
     	boolean achieved = false;
     	connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
     	connection.setAutoCommit(false);
-//    	try (Statement stmt = connection.createStatement()){
+//    	try (PreparedStatement stmt = connection.prepareStatement()){
 //    		stmt.executeUpdate("INSERT INTO Citas (idProp, idRec, FechaProp) VALUES ("+date.getProposer().getId()+", "+date.getReceiver().getId()+", NOW())");	
 //    	 
     	try (PreparedStatement stmt = connection.prepareStatement("INSERT INTO Citas (idProp, idRec, FechaProp, fecha) VALUES (?, ?, NOW(), ?)")){

@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" isErrorPage="true"%>
+<!doctype html public "-//W3C//DTD html 4.01 transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+        <body>
+                <p> Error usuario y contraseña fallidos</p>
+                <% response.sendRedirect("index.html");%>
+		<% %>
+		<p>
+        </body>
+</html>
