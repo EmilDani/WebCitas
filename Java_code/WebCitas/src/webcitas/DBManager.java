@@ -50,7 +50,7 @@ public class DBManager implements AutoCloseable {
     public User searchUser(String nickUser, String password) throws SQLException {
     	// TODO: program this method DONE
     	User user;
-    	try(PreparedStatement stmt = connection.prepareStatement("SELECT * FROM Usuario INNER JOIN Gustos ON id=idUsuario WHERE nickUser=? AND pass=?")){
+    	try(PreparedStatement stmt = connection.prepareStatement("SELECT * FROM Usuario INNER JOIN Gustos ON id=idUsuario WHERE nickUser = ? AND pass = ?")){
     		
     		// String query="SELECT * FROM Usuario INNER JOIN Gustos ON id=idUsuario WHERE nickUser='"+nickUser+"' AND pass='"+password+"'";
 		stmt.setString(1, nickUser);
@@ -98,7 +98,7 @@ public class DBManager implements AutoCloseable {
     public List<User> listUsers() throws SQLException {
         // TODO: program this method DONE
 	List<User> usuarios = new ArrayList<User>();
-	try(PreparedStatement stmt = connection.prepareStatement()){
+	try(PreparedStatement stmt = connection.prepareStatement("")){
 		// String query = "";
 		ResultSet rs = stmt.executeQuery();
 		User nodo = new User();
@@ -140,12 +140,56 @@ public class DBManager implements AutoCloseable {
         return usuarios;
     }
     
+    public List<User> listRecommendedUsers(User usuario) throws SQLException {
+        // TODO: program this method DONE
+	List<User> usuarios = new ArrayList<User>();
+	try(PreparedStatement stmt = connection.prepareStatement("SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo=? AND Gustos.yearMax<? AND Gustos.yearMin>? AND ?=Usuario.sexo AND ?<Usuario.year AND ?>Usuario.year ORDER BY RAND() LIMIT 5")){
+		stmt.setString(1, usuario.getSex().toString());
+		stmt.setDate(2, usuario.getYear());
+		stmt.setDate(3, usuario.getYear());
+		stmt.setString(4, usuario.getDesired_sex().toString());
+		stmt.setDate(5, usuario.getDesired_year_max());
+		stmt.setDate(6, usuario.getDesired_year_min());
+		ResultSet rs = stmt.executeQuery();
+		User nodo = new User();
+		while (rs.next()){
+			
+			//int id = rs.getInt("id"); Le metemos al objeto usuario la ID que genera la base de datos
+			//o es inseguro?
+			
+		    String nickname = rs.getString("Usuario.nombre");
+		    Date year = rs.getDate("Usuario.year");
+		    String sexo = rs.getString("Usuario.sexo");
+		    //String pic = rs.getString("Usuario.foto");
+		    String desired_sex = rs.getString("Gustos.sexo");
+		    Date yearMx = rs.getDate("Gustos.yearMax");
+		    Date yearMn = rs.getDate("yearMin");
+		    int id = rs.getInt("id");
+		    
+		    
+		    nodo.setNickname(nickname);
+		    nodo.setYear(year);
+		    nodo.setSex(sex.valueOf(sexo));
+		    //nodo.setPic(pic);
+		    nodo.setDesired_sex(sex.valueOf(desired_sex));
+		    nodo.setDesired_year_max(yearMx);
+		    nodo.setDesired_year_min(yearMn);
+		    nodo.setId(id);
+			
+		    if(!usuarios.add(nodo)){
+		    	throw new SQLException();
+		    }
+		}
+	    }
+        return usuarios;
+    }
+    
     public List<DinnerDate> listDatesPropOf(User user) throws SQLException {
     	
     	List<DinnerDate> citas; // Mejor no inicializar hasta estar seguro de que funciona
-    	try(PreparedStatement stmt = connection.prepareStatement()){
+    	try(PreparedStatement stmt = connection.prepareStatement("SELECT idCita, EstadoProp, FechaProp, FechaResp, fecha, Usuario.id, Usuario.nombre, Usuario.year, Ususario.sexo, Usuario.texto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idRec AND Usuario.id=Gustos.idUsuario WHERE idProp=?")){
     		// String query = "SELECT idCita, EstadoProp, FechaProp, FechaResp, fecha, Usuario.id, Usuario.nombre, Usuario.year, Ususario.sexo, Usuario.texto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idRec AND Usuario.id=Gustos.idUsuario WHERE idProp='"+user.getId()+"'";
-    		//"SELECT BooksDB.title, BooksDB.year, BooksDB.id, Authors.autor FROM BooksDB INNER JOIN Authors INNER JOIN BookAuthor ON BookAuthor.id_autor=Authors.id AND BooksDB.id=BookAuthor.id_libro WHERE BooksDB.ISBN='"+isbn+"'"
+    		stmt.setInt(1, user.getId());
     		ResultSet rs = stmt.executeQuery();
     		citas = new ArrayList<DinnerDate>();
     		DinnerDate nodo = new DinnerDate();
@@ -207,8 +251,9 @@ public class DBManager implements AutoCloseable {
     public List<DinnerDate> listDatesRecOf(User user) throws SQLException {
     	
     	List<DinnerDate> citas; // Mejor no inicializar hasta estar seguro de que funciona
-    	try(PreparedStatement stmt = connection.prepareStatement()){
+    	try(PreparedStatement stmt = connection.prepareStatement("SELECT idCita, EstadoProp, FechaProp, FechaResp, fecha, Usuario.id, Usuario.nombre, Usuario.year, Ususario.sexo, Usuario.texto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idProp AND Usuario.id=Gustos.idUsuario WHERE idRec=?")){
     		// String query = "SELECT idCita, EstadoProp, FechaProp, FechaResp, fecha, Usuario.id, Usuario.nombre, Usuario.year, Ususario.sexo, Usuario.texto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idProp AND Usuario.id=Gustos.idUsuario WHERE idRec='"+user.getId()+"'";
+    		stmt.setInt(1, user.getId());
 
     		ResultSet rs = stmt.executeQuery();
     		citas = new ArrayList<DinnerDate>();
