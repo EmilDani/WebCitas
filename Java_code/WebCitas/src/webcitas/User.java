@@ -8,7 +8,6 @@ public class User {
 	private String dtext;
 	private sex sex;
 	private Date year;
-	private String pic;
 	private sex desired_sex;
 	private Date desired_year_max;
 	private Date desired_year_min;
@@ -82,15 +81,17 @@ public class User {
 	public void setPass(String pass) {
 		this.pass = pass;
 	}
-	
-	public boolean isPassCorrect (String pass){
-		boolean correct = false;
-		if (this.pass==pass)
-			correct = true;
-		return correct;
+	public String getImgURL(){
+		String imgUrl = null;
+		
+		return imgUrl;
+		
 	}
-	// public createPic
-	
+	public String getProfileURL(){
+		String profileUrl = null;
+		
+		return profileUrl;
+	}
 	
 	
 

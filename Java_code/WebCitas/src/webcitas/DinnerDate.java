@@ -45,7 +45,7 @@ public class DinnerDate {
 	public int getId() {
 		return id_cita;
 	}
-	public void setId(int id) {
+	public void setId(int id_cita) {
 		this.id_cita = id_cita;
 	}
 	public Date getFecha() {
