@@ -27,12 +27,19 @@ public class Citas extends HttpServlet{
 			response.sendRedirect("error-login.html");
 		} else {
 			try (DBManager manager = new DBManager()){
-				List<User> usuarios= manager.listRecommendedUsers(user);
-				session.setAttribute("listaUsuarios",usuarios);
+//				List<User> usuarios= manager.listRecommendedUsers(user);
+//				session.setAttribute("listaUsuarios",usuarios);
+				
+				List<DinnerDate> citasProp = manager.listDatesRecOf(user);
+				List<DinnerDate> citasRec = manager.listDatesRecOf(user);
+				//if(citas==null)
+				session.setAttribute("citasProp", citasProp);
+				session.setAttribute("citasRec", citasRec);
 			
 
 				// HE PROBADO BASTANTES COSAS Y EFECTIVAMENTE EL ERROR ESTÁ EN JSP
 				RequestDispatcher rd = request.getRequestDispatcher("citas.jsp");
+				System.out.println("\n Redirección a citar.jsp\n");
 				rd.forward(request, response);
 
 			} catch (SQLException | NamingException e) {
