@@ -10,8 +10,8 @@
 	</head>
 	<body>
 
-		<%-- User usuario = (User) session.getAttribute("usuario"); %>
-		<% List<DinnerDate> citas = (List<User>) session.getAttribute("citas"); %>
+		<%-- User usuario = (User) session.getAttribute("usuario"); --%>
+		<% List<DinnerDate> citas = (List<DinnerDate>) session.getAttribute("citas"); %>
 
 		<h1>Citas</h1>
 
@@ -21,7 +21,7 @@
 			<% for(DinnerDate cita : citas) { %>
 			<tr>
 				<td><img src="<%= cita.getProposer().getImgURL() %>"></td>
-				<td><a href="<%= cita.getProposer.getProfileURL() %>"><%= cita.getProposer.getNickname() %></a></td>
+				<td><a href="<%= cita.getProposer().getProfileURL() %>"><%= cita.getProposer().getNickname() %></a></td>
 				<td><%= cita.getProposal_sello()  %></td>
 				<td><%= cita.getFecha() %></td>
 				<td><form action="citar" method="get"><input type="submit" value="Aceptar"><form></td>
