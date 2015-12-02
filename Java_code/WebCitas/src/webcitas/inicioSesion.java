@@ -41,6 +41,7 @@ public class inicioSesion  extends HttpServlet{
 			}
 		} catch(SQLException | NamingException e) {
 			e.printStackTrace();
+			response.sendRedirect("error-db.html");
 		}
 
 	}

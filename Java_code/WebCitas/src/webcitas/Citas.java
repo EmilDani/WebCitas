@@ -31,6 +31,7 @@ public class Citas extends HttpServlet{
 				session.setAttribute("listaUsuarios",usuarios);
 			
 
+				// HE PROBADO BASTANTES COSAS Y EFECTIVAMENTE EL ERROR ESTÁ EN JSP
 				RequestDispatcher rd = request.getRequestDispatcher("citas.jsp");
 				rd.forward(request, response);
 
