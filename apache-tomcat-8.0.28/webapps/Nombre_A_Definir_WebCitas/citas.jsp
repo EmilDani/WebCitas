@@ -1,42 +1,37 @@
-	<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-    <%@ page import="webcitas.*" %>
-    <%@ page import='java.util.List' %>
-	<%@ page import='java.util.ArrayList;' %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" errorPage="error-login"%>
+<%@ page import='java.util.*'%>
+<%@ page import='webcitas.*'%>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!doctype html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Elección de citas</title>
-</head>
-<body>
-<%  List<User> listaUsuarios= (List<User>) session.getAttribute("listaUsuarios"); %>
-<p>Usuarios cercanos a tu localización:</p>
-<table>
-	<thead>
-       <tr>
-          <td style="font-size:20px; color:green; ">NickName</td>
-		  <td style="font-size:20px; color:green; ">Año de nacimiento</td>
-		  <td style="font-size:20px; color:green; ">Interesado/a en</td>
-		  <td style="font-size:20px; color:green; ">Edad Máxima</td>
-		  <td style="font-size:20px; color:green; ">Edad Mínima</td>
-        </tr>
-      </thead>
-      <tr>
-<%
-for (User usuario: listaUsuarios) {
+	<head>
+		<title>Citas</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
 
-%>
-			  <td><%= usuario.getNickname()%></td>
-			  <td><%= usuario.getYear()%></td>
-			  <td><%= usuario.getDesired_sex()%></td>
-			  <td><%= usuario.getDesired_year_max()%></td>
-			  <td><%= usuario.getDesired_year_min()%></td>
-			  <td><form action="citar" method="get"> <td><input type="submit" value="Pedir Cita"  style=font-size:14px;color:blue; ></td>
-		</form></td>
-		  </tr>
-		  <% } %>
-	    </table>
+		<%-- User usuario = (User) session.getAttribute("usuario"); %>
+		<% List<DinnerDate> citas = (List<User>) session.getAttribute("citas"); %>
 
-</body>
+		<h1>Citas</h1>
+
+		<h2>Propuestas para ti</h2>
+
+		<table><tbody>
+			<% for(DinnerDate cita : citas) { %>
+			<tr>
+				<td><img src="<%= cita.getProposer().getImgURL() %>"></td>
+				<td><a href="<%= cita.getProposer.getProfileURL() %>"><%= cita.getProposer.getNickname() %></a></td>
+				<td><%= cita.getProposal_sello()  %></td>
+				<td><%= cita.getFecha() %></td>
+				<td><form action="citar" method="get"><input type="submit" value="Aceptar"><form></td>
+			</tr>
+			<% } %>
+		</tbody></table>
+		
+		<h2>Pendientas de respuesta</h2>
+
+		
+
+	</body>
 </html>
