@@ -5,9 +5,16 @@ import javax.servlet.http.*;
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
+
+import java.sql.Date;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
 import javax.naming.NamingException;
 import java.util.List;
+
+@WebServlet("/citar")
 
 public class Citar extends HttpServlet {
 	
@@ -42,12 +49,36 @@ public class Citar extends HttpServlet {
 			} else {
 				try (DBManager manager = new DBManager()){
 				DinnerDate date= new DinnerDate();
-				date = (DinnerDate) session.getAttribute("cita");
-			// Variable citas a crear en el JSP de citas (Servlet)
+				String receiverId = request.getParameter("recId");
+
+				User receiver = manager.searchId(Integer.parseInt(receiverId));
+
+
+				SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd"); // EL FORMATO QUE DEVUELVE HTML5 ES YYYY-MM-DD, ES ESTO CORRECTO?
+				Date fecha = new Date(dateFormat.parse(request.getParameter("fecha")).getTime());
+
+				java.util.Date hoy = new java.util.Date();
+				boolean fecha_error = false;
+				if (fecha.before(hoy)){
+
+				    date.setProposer(user);
+				    date.setReceiver(receiver);
+				    date.setProposal_sello(fecha);
+				    manager.setDate(date);
+
+				    List<DinnerDate> citas= manager.listDatesPropOf(user);
+
+				    session.setAttribute("listaCitasPropuestas",citas);
+
+				    request.getRequestDispatcher("citas.jsp").forward(request, response);
+				} else {
+
+				    fecha_error = true;
+				    request.getRequestDispatcher("recomendaciones.jsp").forward(request, response);
+
+				}
 				
-				manager.setDate(date);
-				
-			} catch (SQLException | NamingException e) {
+			} catch (SQLException | NamingException | ParseException e) {
 				
 				PrintWriter out = response.getWriter();
 			    out.println("ERROR");

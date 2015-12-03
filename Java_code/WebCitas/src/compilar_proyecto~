@@ -1,0 +1,5 @@
+
+javac -d ../classes -cp ../classes/:../../../apache-tomcat-8.0.28/lib/servlet-api.jar webcitas/*.java;
+
+javac -d ../../../apache-tomcat-8.0.28/webapps/Nombre_A_Definir_WebCitas/WEB-INF/classes -cp ../classes/:../../../apache-tomcat-8.0.28/lib/servlet-api.jar webcitas/*.java
+

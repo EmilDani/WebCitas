@@ -390,7 +390,7 @@ public class DBManager implements AutoCloseable {
     	connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
     	connection.setAutoCommit(false);
     	
-    	try (PreparedStatement stmt = connection.prepareStatement("UPDATE Citas SET EstadoProp = ? WHERE idProp = ?")) {
+    	try (PreparedStatement stmt = connection.prepareStatement("UPDATE Citas SET EstadoProp = ?, FechaResp = NOW() WHERE idProp = ?")) {
     		
     		// int changes = stmt.executeUpdate("UPDATE Citas SET EstadoProp="+date.getState().toString()+" WHERE idProp="+date.getId());
     		stmt.setString(1, date.getState().toString());

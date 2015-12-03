@@ -20,6 +20,7 @@
 					<td style="font-size:20px; color:green; ">Interesado/a en</td>
 					<td style="font-size:20px; color:green; ">Edad Máxima</td>
 					<td style="font-size:20px; color:green; ">Edad Mínima</td>
+					<td style="font-size:20px; color:green; ">Elija una fecha para su cita</td>
 				</tr>
 			</thead>
 			<tr>
@@ -32,7 +33,9 @@
 				<td><%= usuario.getDesired_sex()%></td>
 				<td><%= usuario.getDesired_year_max()%></td>
 				<td><%= usuario.getDesired_year_min()%></td>
-				<td><form action="citar" method="get"> <td><input type="submit" value="Pedir Cita"  style=font-size:14px;color:blue; ></td>
+				<td><form action="citar" method="get"> </td>
+				<td><input type="date" name="fecha"><td>
+				  <td><input type="hidden" name="recId" value="<%=usuario.getId() %>">							  	 	       			    <input type="submit" value="Pedir Cita" style=font-size:14px;color:blue; ></td>
 				</form></td>
 			</tr>
 		  <% } %>
