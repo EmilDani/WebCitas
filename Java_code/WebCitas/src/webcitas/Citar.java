@@ -68,7 +68,7 @@ public class Citar extends HttpServlet {
 
 				    List<DinnerDate> citas= manager.listDatesPropOf(user);
 
-				    session.setAttribute("listaCitasPropuestas",citas);
+				    request.setAttribute("listaCitasPropuestas",citas);
 
 				    request.getRequestDispatcher("citas.jsp").forward(request, response);
 				} else {

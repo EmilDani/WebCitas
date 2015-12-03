@@ -33,11 +33,9 @@ public class Citas extends HttpServlet{
 				List<DinnerDate> citasProp = manager.listDatesRecOf(user);
 				List<DinnerDate> citasRec = manager.listDatesRecOf(user);
 				//if(citas==null)
-				session.setAttribute("citasProp", citasProp);
-				session.setAttribute("citasRec", citasRec);
+				request.setAttribute("citasProp", citasProp);
+				request.setAttribute("citasRec", citasRec);
 			
-
-				// HE PROBADO BASTANTES COSAS Y EFECTIVAMENTE EL ERROR ESTÁ EN JSP
 				RequestDispatcher rd = request.getRequestDispatcher("citas.jsp");
 				System.out.println("\n Redirección a citar.jsp\n");
 				rd.forward(request, response);

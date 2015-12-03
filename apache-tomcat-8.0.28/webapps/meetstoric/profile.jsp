@@ -4,20 +4,9 @@
 <%@ page import="java.sql.SQLException" %>
 <%@ page import="javax.naming.NamingException" %>
 
-<%-- User usuario = (User) session.getAttribute("usuario"); --%>
-<%
+<% User perfil = (User) request.getAttribute("usuario");%>
 
-try (DBManager manager = new DBManager()){
-	String id = request.getParameter("id");
-	User perfil = manager.searchId(Integer.parseInt(id));
 
-} catch (SQLException | NamingException e) {
-	
-	
-
-}
-
-%>
 
 <!DOCTYPE>
 <html>

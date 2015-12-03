@@ -11,7 +11,7 @@
 	<body>
 
 		<%-- User usuario = (User) session.getAttribute("usuario"); --%>
-		<% List<DinnerDate> citasProp = (List<DinnerDate>) session.getAttribute("citasProp"); %>
+		<% List<DinnerDate> citasProp = (List<DinnerDate>) request.getAttribute("citasProp"); %>
 
 		<h1>Citas</h1>
 

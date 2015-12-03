@@ -52,8 +52,8 @@
 			Rango de edad mínimo: <%=user.getDesired_year_min()%>
 		</p>
 		<p>
-		<form action="citas" method="get">
-		<td><input type="submit" value="Buscar Citas"  style=font-size:14px;color:blue; ></td>
+		<form action="sugerencias" method="get">
+		<td><input type="submit" value="Recomendaciones"  style=font-size:14px;color:blue; ></td>
 		</form>
 		</p>
 	</body>

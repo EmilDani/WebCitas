@@ -10,8 +10,8 @@
 		<title>Elección de citas</title>
 	</head>
 	<body>
-		<%  List<User> listaUsuarios= (List<User>) session.getAttribute("listaUsuarios"); %>
-		<p>Usuarios cercanos a tu localización:</p>
+		<%  List<User> listaUsuarios = (List<User>) request.getAttribute("listaUsuarios"); %>
+		<p>Usuarios reomendados para ti:</p>
 		<table>
 			<thead>
 				<tr>
@@ -35,7 +35,8 @@
 				<td><%= usuario.getDesired_year_min()%></td>
 				<td><form action="citar" method="get"> </td>
 				<td><input type="date" name="fecha"><td>
-				  <td><input type="hidden" name="recId" value="<%=usuario.getId() %>">							  	 	       			    <input type="submit" value="Pedir Cita" style=font-size:14px;color:blue; ></td>
+				  <td><input type="hidden" name="recId" value="<%=usuario.getId() %>">
+				  <input type="submit" value="Pedir Cita" style=font-size:14px;color:blue; ></td>
 				</form></td>
 			</tr>
 		  <% } %>
