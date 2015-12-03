@@ -4247,3 +4247,4 @@ java.sql.SQLException: Column 'user.getNickUser()' not found.
 03-Dec-2015 19:07:57.955 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
 03-Dec-2015 19:07:57.956 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1853 ms
 Bienvenido
+Bienvenido
