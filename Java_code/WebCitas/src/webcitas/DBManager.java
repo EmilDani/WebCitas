@@ -94,6 +94,52 @@ public class DBManager implements AutoCloseable {
     	}
     	return user;
     }
+    
+    public User searchId(int id) throws SQLException {
+    	// TODO: program this method DONE
+    	User user;
+    	try(PreparedStatement stmt = connection.prepareStatement("SELECT * FROM Usuario INNER JOIN Gustos ON id=idUsuario WHERE id = ?")){
+    		
+    		// String query="SELECT * FROM Usuario INNER JOIN Gustos ON id=idUsuario WHERE nickUser='"+nickUser+"' AND pass='"+password+"'";
+		stmt.setInt(1, id);
+
+		ResultSet rs = stmt.executeQuery();
+
+    		// Se podría considerar mayor complejidad comprobando que rs, efectivamente, no sea una lista si no una
+    		// única fila
+
+    		if (rs.next()){ //Tenemos que recordar que el primer valor inicial que devuelve executeQuery no es válido
+    			user = new User();
+
+    			String nickname = rs.getString("Usuario.nombre");
+    			Date year = rs.getDate("Usuario.year");
+    			String sexo = rs.getString("Usuario.sexo");
+    			String text = rs.getString("Usuario.texto");
+    			//String pic = rs.getString("Usuario.foto");
+    			String desired_sex = rs.getString("Gustos.sexo");
+    			Date yearMx = rs.getDate("Gustos.yearMax");
+    			Date yearMn = rs.getDate("yearMin");
+    			String nickuser = rs.getString("nickUser");
+    			String pass = rs.getString("pass");
+
+
+    			user.setNickname(nickname);
+    			user.setYear(year);
+    			user.setSex(sex.valueOf(sexo));
+    			user.setDtext(text);
+    			//user.setPic(pic);
+    			user.setDesired_sex(sex.valueOf(desired_sex));
+    			user.setDesired_year_max(yearMx);
+    			user.setDesired_year_min(yearMn);
+    			user.setId(id);
+    			user.setNickuser(nickuser);
+    			user.setPass(pass);
+    		} else {
+    			user = null;
+    		}
+    	}
+    	return user;
+    }
 
     public List<User> listUsers() throws SQLException {
         // TODO: program this method DONE

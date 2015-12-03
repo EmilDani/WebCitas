@@ -18,10 +18,11 @@
 		<h2>Propuestas para ti</h2>
 
 		<table><tbody>
-			<% for (DinnerDate cita:citasProp) { %>
+			<% for (DinnerDate cita: citasProp) { %>
 			<tr>
 				<td><img src="<%= cita.getProposer().getImgURL()%>"></td>
-				<td><a href="<%= cita.getProposer().getProfileURL()%>"><%= cita.getProposer().getNickname() %></a></td>
+				<%--= cita.getProposer().getProfileURL()--%>
+				<td><a href="<%=response.encodeURL("profile?id="+cita.getProposer().getId()) %>"><%= cita.getProposer().getNickname() %></a></td>
 				<td><%= cita.getProposal_sello()%></td>
 				<td><%= cita.getFecha()%></td>
 				<td><form action="citar" method="get"><input type="submit" value="Aceptar"></form></td>
