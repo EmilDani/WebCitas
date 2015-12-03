@@ -233,7 +233,7 @@ public class DBManager implements AutoCloseable {
     public List<DinnerDate> listDatesPropOf(User user) throws SQLException {
     	
     	List<DinnerDate> citas; // Mejor no inicializar hasta estar seguro de que funciona
-    	try(PreparedStatement stmt = connection.prepareStatement("SELECT idCita, EstadoProp, FechaProp, FechaResp, fecha, Usuario.id, Usuario.nombre, Usuario.year, Ususario.sexo, Usuario.texto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idRec AND Usuario.id=Gustos.idUsuario WHERE idProp=?")){
+    	try(PreparedStatement stmt = connection.prepareStatement("SELECT idCita, EstadoProp, FechaProp, FechaResp, fecha, Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Usuario.texto, Usuario.nickUser, Usuario.pass, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idRec AND Usuario.id=Gustos.idUsuario WHERE idProp=?")){
     		// String query = "SELECT idCita, EstadoProp, FechaProp, FechaResp, fecha, Usuario.id, Usuario.nombre, Usuario.year, Ususario.sexo, Usuario.texto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idRec AND Usuario.id=Gustos.idUsuario WHERE idProp='"+user.getId()+"'";
     		stmt.setInt(1, user.getId());
     		ResultSet rs = stmt.executeQuery();
@@ -257,8 +257,8 @@ public class DBManager implements AutoCloseable {
     		    Date yearMx = rs.getDate("Gustos.yearMax");
     		    Date yearMn = rs.getDate("Gustos.yearMin");
     		    int id = rs.getInt("Usuario.id"); 
-    		    String nickuser = rs.getString("nickUser");
-    		    String pass = rs.getString("pass");
+    		    String nickuser = rs.getString("Usuario.nickUser");
+    		    String pass = rs.getString("Usuario.pass");
     		    
     		    // Generamos al usuario que recibe la cita
     			

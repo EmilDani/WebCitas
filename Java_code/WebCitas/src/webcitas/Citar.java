@@ -63,7 +63,7 @@ public class Citar extends HttpServlet {
 
 				    date.setProposer(user);
 				    date.setReceiver(receiver);
-				    date.setProposal_sello(fecha);
+				    date.setFecha(fecha);
 				    manager.setDate(date);
 				    
 				    // CAMBIAR BASE DE DATOS PERMITIR QUE FechaResp SEA NULL
