@@ -11,6 +11,9 @@
 	</head>
 	<body>
 		<%  List<User> listaUsuarios = (List<User>) request.getAttribute("listaUsuarios"); %>
+		
+		<%-- HAY QUE COMPROBAR SI HA HABIDO O NO UN ERROR --%>
+		
 		<p>Usuarios reomendados para ti:</p>
 		<table>
 			<thead>

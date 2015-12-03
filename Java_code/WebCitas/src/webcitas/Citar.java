@@ -59,12 +59,14 @@ public class Citar extends HttpServlet {
 
 				java.util.Date hoy = new java.util.Date();
 				boolean fecha_error = false;
-				if (fecha.before(hoy)){
+				if (!fecha.before(hoy)){
 
 				    date.setProposer(user);
 				    date.setReceiver(receiver);
 				    date.setProposal_sello(fecha);
 				    manager.setDate(date);
+				    
+				    // CAMBIAR BASE DE DATOS PERMITIR QUE FechaResp SEA NULL
 
 				    List<DinnerDate> citas= manager.listDatesPropOf(user);
 
@@ -81,7 +83,7 @@ public class Citar extends HttpServlet {
 			} catch (SQLException | NamingException | ParseException e) {
 				
 				PrintWriter out = response.getWriter();
-			    out.println("ERROR");
+			    out.println("ERROR "+e);
 			    e.printStackTrace();
 				
 			}
