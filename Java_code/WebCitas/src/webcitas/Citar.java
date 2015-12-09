@@ -55,31 +55,32 @@ public class Citar extends HttpServlet {
 
 
 				SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd"); // EL FORMATO QUE DEVUELVE HTML5 ES YYYY-MM-DD, ES ESTO CORRECTO?
-				Date fecha = new Date(dateFormat.parse(request.getParameter("fecha")).getTime());
-
-				java.util.Date hoy = new java.util.Date();
+				String fecha_recuperada = request.getParameter("fecha");
 				boolean fecha_error = false;
-				if (!fecha.before(hoy)){
+				if (fecha_recuperada != null) {
+				    Date fecha = new Date(dateFormat.parse(fecha_recuperada).getTime());
+				    java.util.Date hoy = new java.util.Date();
+				    if (!fecha.before(hoy)){
 
-				    date.setProposer(user);
-				    date.setReceiver(receiver);
-				    date.setFecha(fecha);
-				    manager.setDate(date);
+					date.setProposer(user);
+					date.setReceiver(receiver);
+					date.setFecha(fecha);
+					manager.setDate(date);
 				    
-				    // CAMBIAR BASE DE DATOS PERMITIR QUE FechaResp SEA NULL
+					// CAMBIAR BASE DE DATOS PERMITIR QUE FechaResp SEA NULL
 
-				    List<DinnerDate> citas= manager.listDatesPropOf(user);
+					List<DinnerDate> citas= manager.listDatesPropOf(user);
 
-				    request.setAttribute("listaCitasPropuestas",citas);
+					request.setAttribute("listaCitasPropuestas",citas);
 
-				    request.getRequestDispatcher("citas.jsp").forward(request, response);
-				} else {
+					request.getRequestDispatcher("citas.jsp").forward(request, response);
+				    } else {
 
-				    fecha_error = true;
-				    request.getRequestDispatcher("recomendaciones.jsp").forward(request, response);
+					fecha_error = true;
+					request.getRequestDispatcher("recomendaciones.jsp").forward(request, response);
 
+				    }
 				}
-				
 			} catch (SQLException | NamingException | ParseException e) {
 				
 				PrintWriter out = response.getWriter();
