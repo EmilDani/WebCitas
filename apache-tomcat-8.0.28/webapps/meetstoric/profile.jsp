@@ -4,7 +4,10 @@
 <%@ page import="java.sql.SQLException" %>
 <%@ page import="javax.naming.NamingException" %>
 
-<% User perfil = (User) request.getAttribute("usuario");%>
+<% 
+User perfil = (User) request.getAttribute("usuario");
+int id = (int) request.getAttribute("id");
+%>
 
 
 

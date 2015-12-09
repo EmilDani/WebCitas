@@ -27,12 +27,12 @@ public class Recomendaciones extends HttpServlet{
 		boolean recomendaciones_error = false;
 		if (usuarios == null){
 			recomendaciones_error = true;
-			request.setAttribute("recomendaciones_error",recomendaciones_error);
-			request.getRequestDispatcher("recomendaciones.jsp").forward(request, response);
 		} else {
 			request.setAttribute("listaUsuarios",usuarios);
-			request.getRequestDispatcher("recomendaciones.jsp").forward(request, response);
 		}
+		
+		request.setAttribute("recomendaciones_error",recomendaciones_error);
+		request.getRequestDispatcher("recomendaciones.jsp").forward(request, response);
 
 	    } catch (SQLException | NamingException e) {
 

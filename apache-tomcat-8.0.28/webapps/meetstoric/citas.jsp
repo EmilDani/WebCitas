@@ -11,14 +11,10 @@
 	<body>
 
 		<%-- User usuario = (User) session.getAttribute("usuario"); --%>
-<<<<<<< HEAD
 		<%
 		boolean errorCProp = (boolean) request.getAttribute("errorCProp");
 		boolean errorCRec = (boolean) request.getAttribute("errorCRec");
 		%>
-=======
-		<% List<DinnerDate> citasProp = (List<DinnerDate>) request.getAttribute("listaCitasPropuestas"); %>
->>>>>>> branch 'master' of https://github.com/EmilDani/WebCitas.git
 
 		<h1>Citas</h1>
 

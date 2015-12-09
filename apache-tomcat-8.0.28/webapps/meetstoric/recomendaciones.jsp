@@ -10,11 +10,24 @@
 		<title>Elección de citas</title>
 	</head>
 	<body>
-		<%  List<User> listaUsuarios = (List<User>) request.getAttribute("listaUsuarios"); %>
+	
+	<p>Usuarios recomendados para ti:</p>
+	
+		<%
+		boolean recomendados_error = (boolean) request.getAttribute("recomendaciones_error");
+		if (recomendados_error) {
+		%>
+		
+		<h4>No hay usuarios recomendados para ti. Tu horrorífica persona ha vencido a nuestro poderoso algoritmo.</h4>
+		
+		<%} else { %>
+		
+		<%  
+		List<User> listaUsuarios = (List<User>) request.getAttribute("listaUsuarios"); 
+		%>
 		
 		<%-- HAY QUE COMPROBAR SI HA HABIDO O NO UN ERROR --%>
-		
-		<p>Usuarios reomendados para ti:</p>
+	
 		<table>
 			<thead>
 				<tr>
@@ -44,6 +57,6 @@
 			</tr>
 		  <% } %>
 		</table>
-
+	<%} %>
 	</body>
 </html>
