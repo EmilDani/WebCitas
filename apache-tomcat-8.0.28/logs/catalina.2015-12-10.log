@@ -1554,3 +1554,58 @@ Caused by: java.net.BindException: La dirección ya se está usando
 10-Dec-2015 20:10:49.327 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-9188"]
 10-Dec-2015 20:10:49.381 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
 10-Dec-2015 20:10:49.402 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1869 ms
+10-Dec-2015 20:15:28.959 INFO [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+10-Dec-2015 20:15:28.960 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-9188"]
+10-Dec-2015 20:15:29.011 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+10-Dec-2015 20:15:29.062 INFO [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio Catalina
+10-Dec-2015 20:15:29.113 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [meetstoric] registró el conductor JDBC [com.mysql.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+10-Dec-2015 20:15:29.114 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [meetstoric] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+10-Dec-2015 20:15:29.135 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-9188"]
+10-Dec-2015 20:15:29.145 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+10-Dec-2015 20:15:29.145 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-9188"]
+10-Dec-2015 20:15:29.147 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+10-Dec-2015 20:15:29.661 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.28
+10-Dec-2015 20:15:29.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 7 2015 18:25:21 UTC
+10-Dec-2015 20:15:29.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.28.0
+10-Dec-2015 20:15:29.664 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+10-Dec-2015 20:15:29.664 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.1.1
+10-Dec-2015 20:15:29.664 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          i386
+10-Dec-2015 20:15:29.664 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/jdk-8-oracle-i586/jre
+10-Dec-2015 20:15:29.664 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_45-b14
+10-Dec-2015 20:15:29.664 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+10-Dec-2015 20:15:29.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /var/home/lab/alum0/03/04/420/Escritorio/AplicacionesWeb/WebCitas/apache-tomcat-8.0.28
+10-Dec-2015 20:15:29.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /var/home/lab/alum0/03/04/420/Escritorio/AplicacionesWeb/WebCitas/apache-tomcat-8.0.28
+10-Dec-2015 20:15:29.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/lab/alum/0304420/Escritorio/AplicacionesWeb/WebCitas/apache-tomcat-8.0.28/conf/logging.properties
+10-Dec-2015 20:15:29.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+10-Dec-2015 20:15:29.666 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/usr/lab/alum/0304420/Escritorio/AplicacionesWeb/WebCitas/apache-tomcat-8.0.28/endorsed
+10-Dec-2015 20:15:29.666 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/lab/alum/0304420/Escritorio/AplicacionesWeb/WebCitas/apache-tomcat-8.0.28
+10-Dec-2015 20:15:29.666 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/lab/alum/0304420/Escritorio/AplicacionesWeb/WebCitas/apache-tomcat-8.0.28
+10-Dec-2015 20:15:29.666 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/lab/alum/0304420/Escritorio/AplicacionesWeb/WebCitas/apache-tomcat-8.0.28/temp
+10-Dec-2015 20:15:29.666 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: /usr/java/packages/lib/i386:/lib:/usr/lib
+10-Dec-2015 20:15:29.842 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-9188"]
+10-Dec-2015 20:15:29.858 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+10-Dec-2015 20:15:29.861 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+10-Dec-2015 20:15:29.879 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+10-Dec-2015 20:15:29.884 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 667 ms
+10-Dec-2015 20:15:29.915 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio Catalina
+10-Dec-2015 20:15:29.915 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.28
+10-Dec-2015 20:15:29.927 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/03/04/420/Escritorio/AplicacionesWeb/WebCitas/apache-tomcat-8.0.28/webapps/examples de la aplicación web
+10-Dec-2015 20:15:31.010 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/03/04/420/Escritorio/AplicacionesWeb/WebCitas/apache-tomcat-8.0.28/webapps/examples has finished in 1.081 ms
+10-Dec-2015 20:15:31.010 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/03/04/420/Escritorio/AplicacionesWeb/WebCitas/apache-tomcat-8.0.28/webapps/docs de la aplicación web
+10-Dec-2015 20:15:31.042 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/03/04/420/Escritorio/AplicacionesWeb/WebCitas/apache-tomcat-8.0.28/webapps/docs has finished in 32 ms
+10-Dec-2015 20:15:31.043 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/03/04/420/Escritorio/AplicacionesWeb/WebCitas/apache-tomcat-8.0.28/webapps/manager de la aplicación web
+10-Dec-2015 20:15:31.102 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/03/04/420/Escritorio/AplicacionesWeb/WebCitas/apache-tomcat-8.0.28/webapps/manager has finished in 59 ms
+10-Dec-2015 20:15:31.102 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/03/04/420/Escritorio/AplicacionesWeb/WebCitas/apache-tomcat-8.0.28/webapps/ROOT de la aplicación web
+10-Dec-2015 20:15:31.140 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/03/04/420/Escritorio/AplicacionesWeb/WebCitas/apache-tomcat-8.0.28/webapps/ROOT has finished in 37 ms
+10-Dec-2015 20:15:31.141 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/03/04/420/Escritorio/AplicacionesWeb/WebCitas/apache-tomcat-8.0.28/webapps/host-manager de la aplicación web
+10-Dec-2015 20:15:31.180 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/03/04/420/Escritorio/AplicacionesWeb/WebCitas/apache-tomcat-8.0.28/webapps/host-manager has finished in 39 ms
+10-Dec-2015 20:15:31.181 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/03/04/420/Escritorio/AplicacionesWeb/WebCitas/apache-tomcat-8.0.28/webapps/meetstoric de la aplicación web
+10-Dec-2015 20:15:31.479 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = BaseDatos Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "8" for "maxActive" property, which is being ignored.
+10-Dec-2015 20:15:31.507 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+10-Dec-2015 20:15:31.541 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/03/04/420/Escritorio/AplicacionesWeb/WebCitas/apache-tomcat-8.0.28/webapps/meetstoric has finished in 361 ms
+10-Dec-2015 20:15:31.557 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-9188"]
+10-Dec-2015 20:15:31.565 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+10-Dec-2015 20:15:31.567 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1683 ms

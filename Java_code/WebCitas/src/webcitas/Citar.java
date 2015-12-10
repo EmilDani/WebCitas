@@ -96,7 +96,7 @@ public class Citar extends HttpServlet {
 					}
 					toAnswerDate.setState(state);
 					manager.answerDate(toAnswerDate);
-					response.sendRedirect("citas");
+					response.sendRedirect("mainView");
 				
 				} else {
 					request.getRequestDispatcher("error-login.jsp").forward(request, response);

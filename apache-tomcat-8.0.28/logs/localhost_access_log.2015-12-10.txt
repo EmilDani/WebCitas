@@ -65,3 +65,12 @@
 0:0:0:0:0:0:0:1 - - [10/Dec/2015:20:11:26 +0100] "GET /meetstoric/null HTTP/1.1" 404 1034
 0:0:0:0:0:0:0:1 - - [10/Dec/2015:20:12:36 +0100] "GET /meetstoric/citas HTTP/1.1" 200 2273
 0:0:0:0:0:0:0:1 - - [10/Dec/2015:20:12:36 +0100] "GET /meetstoric/null HTTP/1.1" 404 1034
+0:0:0:0:0:0:0:1 - - [10/Dec/2015:20:15:40 +0100] "POST /meetstoric/loginWeb HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Dec/2015:20:15:40 +0100] "GET /meetstoric/mainView HTTP/1.1" 200 1408
+0:0:0:0:0:0:0:1 - - [10/Dec/2015:20:15:46 +0100] "GET /meetstoric/sugerencias? HTTP/1.1" 200 1563
+0:0:0:0:0:0:0:1 - - [10/Dec/2015:20:15:54 +0100] "GET /meetstoric/citar?fecha=2015-12-30&recId=5 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Dec/2015:20:15:54 +0100] "GET /meetstoric/citas HTTP/1.1" 200 2422
+0:0:0:0:0:0:0:1 - - [10/Dec/2015:20:15:54 +0100] "GET /meetstoric/null HTTP/1.1" 404 1034
+0:0:0:0:0:0:0:1 - - [10/Dec/2015:20:15:59 +0100] "GET /meetstoric/citar?citaID=4&cita_estado=Aceptar HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Dec/2015:20:15:59 +0100] "GET /meetstoric/mainView HTTP/1.1" 200 1408
+0:0:0:0:0:0:0:1 - - [10/Dec/2015:20:16:04 +0100] "GET /meetstoric/sugerencias? HTTP/1.1" 200 1563
