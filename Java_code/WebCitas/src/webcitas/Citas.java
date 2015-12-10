@@ -30,14 +30,23 @@ public class Citas extends HttpServlet{
 //				List<User> usuarios= manager.listRecommendedUsers(user);
 //				session.setAttribute("listaUsuarios",usuarios);
 				
-				List<DinnerDate> citasProp = manager.listDatesRecOf(user);
+				boolean errorCProp = false;
+				boolean errorCRec = false;
+				
+				List<DinnerDate> citasProp = manager.listDatesPropOf(user);
 				List<DinnerDate> citasRec = manager.listDatesRecOf(user);
-				//if(citas==null)
-				request.setAttribute("citasProp", citasProp);
-				request.setAttribute("citasRec", citasRec);
-			
+				if (citasProp == null) {
+					errorCProp = true;
+				} if (citasRec == null){
+					errorCRec = true;
+				} else {
+					request.setAttribute("citasProp", citasProp);
+					request.setAttribute("citasRec", citasRec);
+				}
+				request.setAttribute("errorCProp", errorCProp);
+				request.setAttribute("errorCRec", errorCRec);
 				RequestDispatcher rd = request.getRequestDispatcher("citas.jsp");
-				System.out.println("\n Redirección a citar.jsp\n");
+				System.out.println("\n Redirección a citas.jsp\n");
 				rd.forward(request, response);
 
 			} catch (SQLException | NamingException e) {

@@ -230,6 +230,13 @@ public class DBManager implements AutoCloseable {
         return usuarios;
     }
     
+    public DinnerDate idToDinnerDate (int id)  throws SQLException {
+    	DinnerDate cita;
+    	
+    	return cita;
+    	
+    }
+    
     public List<DinnerDate> listDatesPropOf(User user) throws SQLException {
     	
     	List<DinnerDate> citas; // Mejor no inicializar hasta estar seguro de que funciona
@@ -297,7 +304,7 @@ public class DBManager implements AutoCloseable {
     public List<DinnerDate> listDatesRecOf(User user) throws SQLException {
     	
     	List<DinnerDate> citas; // Mejor no inicializar hasta estar seguro de que funciona
-    	try(PreparedStatement stmt = connection.prepareStatement("SELECT idCita, EstadoProp, FechaProp, FechaResp, fecha, Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Usuario.texto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idProp AND Usuario.id=Gustos.idUsuario WHERE idRec=?")){
+    	try(PreparedStatement stmt = connection.prepareStatement("SELECT idCita, EstadoProp, FechaProp, FechaResp, fecha, Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Usuario.texto, Usuario.nickUser, Usuario.pass, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idProp AND Usuario.id=Gustos.idUsuario WHERE idRec=?")){
     		// String query = "SELECT idCita, EstadoProp, FechaProp, FechaResp, fecha, Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Usuario.texto, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Citas INNER JOIN Usuario INNER JOIN Gustos ON Usuario.id=idProp AND Usuario.id=Gustos.idUsuario WHERE idRec='"+user.getId()+"'";
     		stmt.setInt(1, user.getId());
 
@@ -317,13 +324,13 @@ public class DBManager implements AutoCloseable {
     		    Date year = rs.getDate("Usuario.year");
     		    String sexo = rs.getString("Usuario.sexo");
     		    String text = rs.getString("Usuario.texto");
-    		    String pic = rs.getString("Usuario.foto");
+    		    //String pic = rs.getString("Usuario.foto");
     		    String desired_sex = rs.getString("Gustos.sexo");
     		    Date yearMx = rs.getDate("Gustos.yearMax");
     		    Date yearMn = rs.getDate("Gustos.yearMin");
     		    int id = rs.getInt("Usuario.id");
-    		    String nickuser = rs.getString("nickUser");
-    		    String pass = rs.getString("pass");
+    		    String nickuser = rs.getString("Usuario.nickUser");
+    		    String pass = rs.getString("Usuario.pass");
     		    
     		    // Generamos al usuario que propone la cita
     			

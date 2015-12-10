@@ -18,25 +18,6 @@ import java.util.List;
 
 public class Citar extends HttpServlet {
 	
-//	public void init() throws ServletException {
-//		
-//	}
-//	
-//	public void destroy() {
-//		
-//	}
-	
-//	public boolean isLogged (HttpSession session, DBManager manager)
-//			throws SQLException{
-//		boolean logged = false;
-//		User user = (User) session.getAttribute("user");
-//		if (user != null){
-//			// NO SÉ SI El if A CONTINUACIÓN ES REALMENTE ÚTIL
-//			if (manager.searchUser(user.getNickuser()) != null)
-//				logged = true;
-//		}
-//		return logged;
-//	}
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
@@ -69,11 +50,12 @@ public class Citar extends HttpServlet {
 				    
 					// CAMBIAR BASE DE DATOS PERMITIR QUE FechaResp SEA NULL
 
-					List<DinnerDate> citas= manager.listDatesPropOf(user);
+//					List<DinnerDate> citas= manager.listDatesPropOf(user);
+//
+//					request.setAttribute("citasProp",citas);
 
-					request.setAttribute("citasProp",citas);
-
-					request.getRequestDispatcher("citas.jsp").forward(request, response);
+					//request.getRequestDispatcher("citas.jsp").forward(request, response);
+					response.sendRedirect("citas");
 				    } else {
 
 					fecha_error = true;

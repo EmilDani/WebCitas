@@ -33,12 +33,11 @@
 		<table><tbody>
 			<% for (DinnerDate cita: citasProp) { %>
 			<tr>
-				<td><img src="<%= cita.getProposer().getImgURL()%>"></td>
+				<td><img src="<%= cita.getReceiver().getImgURL()%>"></td>
 				<%--= cita.getProposer().getProfileURL()--%>
-				<td><a href="<%=response.encodeURL("profile?id="+cita.getProposer().getId()) %>"><%= cita.getProposer().getNickname() %></a></td>
+				<td><a href="<%=response.encodeURL("profile?id="+cita.getReceiver().getId()) %>"><%= cita.getReceiver().getNickname() %></a></td>
 				<td><%= cita.getProposal_sello()%></td>
 				<td><%= cita.getFecha()%></td>
-				<td><form action="citar" method="get"><input type="submit" value="Aceptar"></form></td>
 			</tr>
 			<% } %>
 		</tbody></table>
@@ -61,12 +60,14 @@
 		<table><tbody>
 			<% for (DinnerDate cita: citasRec) { %>
 				<tr>
-					<td><img src="<%= cita.getReceiver().getImgURL()%>"></td>
+					<td><img src="<%= cita.getProposer().getImgURL()%>"></td>
 					<%--= cita.getProposer().getProfileURL()--%>
-					<td><a href="<%=response.encodeURL("profile?id="+cita.getReceiver().getId()) %>"><%= cita.getReceiver().getNickname() %></a></td>
+					<td><a href="<%=response.encodeURL("profile?id="+cita.getProposer().getId()) %>"><%= cita.getProposer().getNickname() %></a></td>
 					<!-- <td><%= cita.getProposal_sello()%></td> -->
 					<td><%= cita.getFecha()%></td>
-					<td><form action="citar" method="get"><input type="submit" value="Aceptar"></form></td>
+					<td><form action="citar" method="get">
+					<input type="hidden" name="citaID" value="<%=cita.getId() %>">
+					<input type="submit" value="Aceptar"></form></td>
 				</tr>
 			<% } %>
 		</tbody></table>
