@@ -67,7 +67,11 @@
 					<td><%= cita.getFecha()%></td>
 					<td><form action="citar" method="get">
 					<input type="hidden" name="citaID" value="<%=cita.getId() %>">
-					<input type="submit" value="Aceptar"></form></td>
+					<input type="submit" name="cita_estado" value="Aceptar">
+					<input type="submit" name="cita_estado" value="Rechazar"><!-- </td> -->
+					<!-- <td><input type="date" name="fecha"> -->
+					<!-- <input type="submit" name="cita_estado" value="No puedo"> -->
+					<input type="submit" name="cita_estado" value="Otro día"></form></td>
 				</tr>
 			<% } %>
 		</tbody></table>

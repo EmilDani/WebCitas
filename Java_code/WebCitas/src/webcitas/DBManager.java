@@ -229,14 +229,90 @@ public class DBManager implements AutoCloseable {
 	    }
         return usuarios;
     }
-    
+  
     public DinnerDate idToDinnerDate (int id)  throws SQLException {
     	DinnerDate cita;
-    	
+    	try (PreparedStatement stmt = connection.prepareStatement("SELECT * FROM Citas INNER JOIN Usuario AS P ON P.id=Citas.idProp INNER JOIN Usuario AS R ON R.id=Citas.idRec INNER JOIN Gustos AS GP ON GP.idUsuario=P.id INNER JOIN Gustos AS GR ON GR.idUsuario=R.id WHERE idCita=?")){
+    		
+    		stmt.setInt(1, id);
+    		ResultSet rs = stmt.executeQuery();
+    		
+    		if (rs.next()){
+    			cita = new DinnerDate();
+        		int idProp = rs.getInt("idProp");
+        		int idRec = rs.getInt("idRec");
+        		User receiver = new User();
+        		
+        		String receiver_nickname = rs.getString("R.nombre");
+    			Date receiver_year = rs.getDate("R.year");
+    			String receiver_sexo = rs.getString("R.sexo");
+    			String receiver_text = rs.getString("R.texto");
+    			String receiver_desired_sex = rs.getString("GR.sexo");
+    			Date receiver_yearMx = rs.getDate("GR.yearMax");
+    			Date receiver_yearMn = rs.getDate("GR.yearMin");
+    			String receiver_nickuser = rs.getString("R.nickUser");
+    			String receiver_pass = rs.getString("R.pass");
+
+
+    			receiver.setNickname(receiver_nickname);
+    			receiver.setYear(receiver_year);
+    			receiver.setSex(sex.valueOf(receiver_sexo));
+    			receiver.setDtext(receiver_text);
+    			receiver.setDesired_sex(sex.valueOf(receiver_desired_sex));
+    			receiver.setDesired_year_max(receiver_yearMx);
+    			receiver.setDesired_year_min(receiver_yearMn);
+    			receiver.setId(idRec);
+    			receiver.setNickuser(receiver_nickuser);
+    			receiver.setPass(receiver_pass);
+
+        		
+        		User proposer = new User();
+        		
+        		String proposer_nickname = rs.getString("P.nombre");
+    			Date proposer_year = rs.getDate("P.year");
+    			String proposer_sexo = rs.getString("P.sexo");
+    			String proposer_text = rs.getString("P.texto");
+    			String proposer_desired_sex = rs.getString("GP.sexo");
+    			Date proposer_yearMx = rs.getDate("GP.yearMax");
+    			Date proposer_yearMn = rs.getDate("GP.yearMin");
+    			String proposer_nickuser = rs.getString("P.nickUser");
+    			String proposer_pass = rs.getString("P.pass");
+
+
+    			proposer.setNickname(proposer_nickname);
+    			proposer.setYear(proposer_year);
+    			proposer.setSex(sex.valueOf(proposer_sexo));
+    			proposer.setDtext(proposer_text);
+    			proposer.setDesired_sex(sex.valueOf(proposer_desired_sex));
+    			proposer.setDesired_year_max(proposer_yearMx);
+    			proposer.setDesired_year_min(proposer_yearMn);
+    			proposer.setId(idProp);
+    			proposer.setNickuser(proposer_nickuser);
+    			proposer.setPass(proposer_pass);
+
+        		
+        		String state = rs.getString("EstadoProp");
+        		Date proposal_sello = rs.getDate("FechaProp");
+        		Date response_sello = rs.getDate("FechaResp");
+        		Date fecha = rs.getDate("fecha");
+        		
+        		cita.setState(meetState.valueOf(state));
+        		cita.setProposer(proposer);
+        		cita.setReceiver(receiver);
+        		cita.setProposal_sello(proposal_sello);
+        		cita.setResponse_sello(response_sello);
+        		cita.setFecha(fecha);
+        		
+    		} else {
+    			cita = null;
+    		}
+    		
+    		
+    	}
     	return cita;
     	
     }
-    
+ 
     public List<DinnerDate> listDatesPropOf(User user) throws SQLException {
     	
     	List<DinnerDate> citas; // Mejor no inicializar hasta estar seguro de que funciona
@@ -397,11 +473,12 @@ public class DBManager implements AutoCloseable {
     	connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
     	connection.setAutoCommit(false);
     	
-    	try (PreparedStatement stmt = connection.prepareStatement("UPDATE Citas SET EstadoProp = ?, FechaResp = NOW() WHERE idProp = ?")) {
+    	try (PreparedStatement stmt = connection.prepareStatement("UPDATE Citas SET EstadoProp = ?, FechaResp = NOW() WHERE idCita = ?")) {
     		
     		// int changes = stmt.executeUpdate("UPDATE Citas SET EstadoProp="+date.getState().toString()+" WHERE idProp="+date.getId());
     		stmt.setString(1, date.getState().toString());
     		stmt.setInt(2, date.getId());
+    		System.out.println(stmt.toString());
     		int changes = stmt.executeUpdate();
     		if (changes > 0)
     			achieved = true;
