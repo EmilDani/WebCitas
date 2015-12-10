@@ -189,16 +189,19 @@ public class DBManager implements AutoCloseable {
     public List<User> listRecommendedUsers(User usuario) throws SQLException {
         // TODO: program this method DONE
 	List<User> usuarios = new ArrayList<User>();
-	try(PreparedStatement stmt = connection.prepareStatement("SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo=? AND Gustos.yearMax<? AND Gustos.yearMin>? AND ?=Usuario.sexo AND ?<Usuario.year AND ?>Usuario.year ORDER BY RAND() LIMIT 5")){
+	try(PreparedStatement stmt = connection.prepareStatement("SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo=? AND Gustos.yearMax<? AND Gustos.yearMin>? AND ?=Usuario.sexo AND ?<Usuario.year AND ?>Usuario.year AND Usuario.id<>? ORDER BY RAND() LIMIT 5")){
 		stmt.setString(1, usuario.getSex().toString());
 		stmt.setDate(2, usuario.getYear());
 		stmt.setDate(3, usuario.getYear());
 		stmt.setString(4, usuario.getDesired_sex().toString());
 		stmt.setDate(5, usuario.getDesired_year_max());
 		stmt.setDate(6, usuario.getDesired_year_min());
+		stmt.setInt(7, usuario.getId());
+		
+		System.out.println(stmt);
 		ResultSet rs = stmt.executeQuery();
-		User nodo = new User();
 		while (rs.next()){
+		    User nodo = new User();
 			
 			//int id = rs.getInt("id"); Le metemos al objeto usuario la ID que genera la base de datos
 			//o es inseguro?
@@ -209,8 +212,8 @@ public class DBManager implements AutoCloseable {
 		    //String pic = rs.getString("Usuario.foto");
 		    String desired_sex = rs.getString("Gustos.sexo");
 		    Date yearMx = rs.getDate("Gustos.yearMax");
-		    Date yearMn = rs.getDate("yearMin");
-		    int id = rs.getInt("id");
+		    Date yearMn = rs.getDate("Gustos.yearMin");
+		    int id = rs.getInt("Usuario.id");
 		    
 		    
 		    nodo.setNickname(nickname);
