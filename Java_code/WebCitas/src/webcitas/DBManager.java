@@ -326,10 +326,13 @@ public class DBManager implements AutoCloseable {
     		stmt.setInt(1, user.getId());
     		ResultSet rs = stmt.executeQuery();
     		citas = new ArrayList<DinnerDate>();
-    		DinnerDate nodo = new DinnerDate();
+    		
     		
     		while (rs.next()){
+    			
     			User receiver = new User();
+    			DinnerDate nodo = new DinnerDate();
+    			
     			String state = rs.getString("EstadoProp");
     			Date proposal_sello = rs.getDate("FechaProp");
     			Date response_sello = rs.getDate("FechaResp");
@@ -391,10 +394,13 @@ public class DBManager implements AutoCloseable {
 
     		ResultSet rs = stmt.executeQuery();
     		citas = new ArrayList<DinnerDate>();
-    		DinnerDate nodo = new DinnerDate();
+    		
     		
     		while (rs.next()){
+    			
     			User proposer = new User();
+    			DinnerDate nodo = new DinnerDate();
+    			
     			String state = rs.getString("EstadoProp");
     			Date proposal_sello = rs.getDate("FechaProp");
     			Date response_sello = rs.getDate("FechaResp");
