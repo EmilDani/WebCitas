@@ -14,10 +14,13 @@
 		<div>
 			<header id="header style="background-image:url(https://cdn.comuniame.com/img/header.jpg)">
 				<div id="logo">
-					<a href="/">
 						<img src="http://www.euroresidentes.com/corazones/imagenes/corazones1.png">
-					</a>
 				</div>
+				<div><p>
+		<form action="cierreSesion" method="post">
+		<td><input type="submit" value="Cerrar Sesión"  style=font-size:14px;color:blue; ></td>
+		</form>
+		</p></div>
 			</header>
 
 
