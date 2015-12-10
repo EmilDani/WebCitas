@@ -238,6 +238,7 @@ public class DBManager implements AutoCloseable {
     	try (PreparedStatement stmt = connection.prepareStatement("SELECT * FROM Citas INNER JOIN Usuario AS P ON P.id=Citas.idProp INNER JOIN Usuario AS R ON R.id=Citas.idRec INNER JOIN Gustos AS GP ON GP.idUsuario=P.id INNER JOIN Gustos AS GR ON GR.idUsuario=R.id WHERE idCita=?")){
     		
     		stmt.setInt(1, id);
+    		System.out.println(stmt.toString());
     		ResultSet rs = stmt.executeQuery();
     		
     		if (rs.next()){
@@ -299,6 +300,7 @@ public class DBManager implements AutoCloseable {
         		Date response_sello = rs.getDate("FechaResp");
         		Date fecha = rs.getDate("fecha");
         		
+        		cita.setId(id);
         		cita.setState(meetState.valueOf(state));
         		cita.setProposer(proposer);
         		cita.setReceiver(receiver);
@@ -325,9 +327,9 @@ public class DBManager implements AutoCloseable {
     		ResultSet rs = stmt.executeQuery();
     		citas = new ArrayList<DinnerDate>();
     		DinnerDate nodo = new DinnerDate();
-    		User receiver = new User();
+    		
     		while (rs.next()){
-    			
+    			User receiver = new User();
     			String state = rs.getString("EstadoProp");
     			Date proposal_sello = rs.getDate("FechaProp");
     			Date response_sello = rs.getDate("FechaResp");
@@ -390,9 +392,9 @@ public class DBManager implements AutoCloseable {
     		ResultSet rs = stmt.executeQuery();
     		citas = new ArrayList<DinnerDate>();
     		DinnerDate nodo = new DinnerDate();
-    		User proposer = new User();
+    		
     		while (rs.next()){
-    			
+    			User proposer = new User();
     			String state = rs.getString("EstadoProp");
     			Date proposal_sello = rs.getDate("FechaProp");
     			Date response_sello = rs.getDate("FechaResp");
@@ -482,6 +484,7 @@ public class DBManager implements AutoCloseable {
     		stmt.setString(1, date.getState().toString());
     		stmt.setInt(2, date.getId());
     		System.out.println(stmt.toString());
+    		System.out.println("hola");
     		int changes = stmt.executeUpdate();
     		if (changes > 0)
     			achieved = true;

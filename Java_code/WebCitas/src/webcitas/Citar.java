@@ -61,6 +61,7 @@ public class Citar extends HttpServlet {
 
 						//request.getRequestDispatcher("citas.jsp").forward(request, response);
 						response.sendRedirect("citas");
+						
 					    } else {
 
 						fecha_error = true;
@@ -73,10 +74,13 @@ public class Citar extends HttpServlet {
 					
 					DinnerDate toAnswerDate = manager.idToDinnerDate(Integer.parseInt(citaId));
 					meetState state;
+					System.out.println(citaEstado);
+					
 					switch (citaEstado){
 					
 					case "Aceptar":
 						state=meetState.CONFIRMADA;
+						System.out.println(state.toString());
 						break;
 					case "Rechazar":
 						state=meetState.RECHAZADA;
