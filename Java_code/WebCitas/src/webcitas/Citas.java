@@ -19,6 +19,8 @@ public class Citas extends HttpServlet{
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
+		
+		System.out.println("\n [Citas]:\n");
 
 		HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("usuario");
@@ -37,16 +39,21 @@ public class Citas extends HttpServlet{
 				List<DinnerDate> citasRec = manager.listDatesRecOf(user);
 				if (citasProp == null) {
 					errorCProp = true;
-				} if (citasRec == null){
-					errorCRec = true;
 				} else {
 					request.setAttribute("citasProp", citasProp);
+				} 
+				
+				if (citasRec == null){
+					errorCRec = true;
+				} else {
 					request.setAttribute("citasRec", citasRec);
 				}
+				System.out.println(" errorCProp: "+errorCProp);
+				System.out.println(" errorCRec: "+errorCRec);
 				request.setAttribute("errorCProp", errorCProp);
 				request.setAttribute("errorCRec", errorCRec);
 				RequestDispatcher rd = request.getRequestDispatcher("citas.jsp");
-				System.out.println("\n Redirección a citas.jsp\n");
+				System.out.println(" Redirección a citas.jsp");
 				rd.forward(request, response);
 
 			} catch (SQLException | NamingException e) {
@@ -64,7 +71,7 @@ public class Citas extends HttpServlet{
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 
-
+		System.out.println("\n [Citas POST]:\n");
 
 	}
     

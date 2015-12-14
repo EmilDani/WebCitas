@@ -10,90 +10,105 @@
 <title>Login Web</title>
 
 
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+	crossorigin="anonymous">
 
 
+</head>
+<script type="text/javascript" lang="JavaScript">
+	function validarDatos() {
 
-</head><script type="text/javascript" lang="JavaScript">
+		var usuario = document.getElementById("usuario");
 
-  function validarDatos(){
+		var password = document.getElementById("password");
 
-      var usuario=document.getElementById("usuario");
+		if (usuario.value == "" || usuario.value == '' || usuario.value == null) {
 
-      var password=document.getElementById("password");
+			alert("Ingresa tu usuario y contraseña");
 
-      if(usuario.value=="" || usuario.value=='' || usuario.value==null){
+			usuario.focus();
 
-	  alert("Ingresa tu usuario y contraseña");
+			return false;
 
-	  usuario.focus();
+		} else if (password.value == "" || password.value == ''
+				|| password.value == null) {
 
-	  return false;
+			alert("Ingresa tu contraseña y contraseña");
 
-      }else if(password.value=="" || password.value=='' || password.value==null){
+			password.focus();
 
-	  alert("Ingresa tu contraseña y contraseña");
+			return false;
 
-	  password.focus();
+		} else {
 
-	  return false;
+			return true;
 
-	  
+		}
 
-      }else{
-
-	  return true;
-
-      }
-
-  }
-
-
-
+	}
 </script>
 
-<body>
+<!-- <body background="http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-289103.jpg"> -->
+<!-- <body background="http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-287859.jpg"> -->
+<!-- <body background="http://static.independent.co.uk/s3fs-public/thumbnails/image/2014/03/14/17/kissing-sailorv4.jpg">
+ -->
+ <body background="http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-148192.jpg">
+	<main>
 
+	<div class="container container-table">
 
+		<form class="form-group" action="loginWeb" method="post"
+			onsubmit="return validarDatos();">
 
-<form action="loginWeb" method="post" onsubmit="return validarDatos();">
+			<table align="center">
 
-<table align="center"> 
+				<tr class="row vertical-center-row">
 
-<tr>
+					<td class="col-md-4" colspan="2"
+						style="font-weight: bold; size: 20px">Ingresa tu Usuario y
+						Contraseña</td>
 
-<td colspan="2" style="font-weight:bold; size: 20px ">Ingresa tu Usuario y Contraseña</td>
+				</tr>
 
-</tr>
+				<tr class="row vertical-center-row">
 
-<tr>
+					<td class="col-md-4"
+						style="font-weight: bold; size: 30px; color: blue; align: right">Usuario:</td>
 
-<td style="font-weight: bold; size: 12px; color:blue; align:right">Usuario:</td>
+					<td class="col-md-4"><input class="form-control input-lg"
+						type="text" name="usuario" id="usuario" placeholder="Usuario o mail"></td>
 
-<td><input type="text" name="usuario" id="usuario"></td>
+				</tr>
 
-</tr>
+				<tr class="row vertical-center-row">
 
-<tr>
+					<td class="col-md-4"
+						style="font-weight: bold; size: 12px; color: blue; align: right">Contraseña:</td>
 
-<td style="font-weight: bold; size: 12px; color:blue; align: right">Contraseña:</td>
+					<td class="col-md-4"><input class="form-control input-lg"
+						type="password" name="password" id="password" placeholder="Contraseña"></td>
 
-<td><input type="password" name="password" id="password"></td>
+				</tr>
 
-</tr>
+				<tr class="row vertical-center-row">
 
-<tr>
+					<!-- <td><input type="button" value="Cancelar" style=font-size:14px;color:blue; ></td> -->
 
-<td><input type="button" value="Cancelar" style=font-size:14px;color:blue; ></td>
+					<td class="col-md-4"><input
+						class="btn btn-default btn-lg btn-block" type="submit"
+						value="Aceptar" style="font-size: 14px; color: blue;"></td>
 
-<td><input type="submit" value="Aceptar"  style=font-size:14px;color:blue; ></td>
+				</tr>
 
-</tr>
+			</table>
 
-</table>
+		</form>
 
-</form>
+	</div>
 
-
+	</main>
 
 </body>
 

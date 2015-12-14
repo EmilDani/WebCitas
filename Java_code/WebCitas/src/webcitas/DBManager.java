@@ -26,6 +26,8 @@ public class DBManager implements AutoCloseable {
     private void connect() throws SQLException , NamingException {
         // TODO: program this method
     	
+    	System.out.println("\n\t[DBManager]:\n");
+    	
     	Context initCtx = new InitialContext();
     	Context envCtx = (Context) initCtx.lookup("java:comp/env");
     	DataSource ds = (DataSource) envCtx.lookup("jdbc/BaseDatos");
@@ -147,8 +149,10 @@ public class DBManager implements AutoCloseable {
 	try(PreparedStatement stmt = connection.prepareStatement("")){
 		// String query = "";
 		ResultSet rs = stmt.executeQuery();
-		User nodo = new User();
+		User nodo;
 		while (rs.next()){
+			
+			nodo = new User();
 			
 			//int id = rs.getInt("id"); Le metemos al objeto usuario la ID que genera la base de datos
 			//o es inseguro?
@@ -182,6 +186,9 @@ public class DBManager implements AutoCloseable {
 		    	throw new SQLException();
 		    }
 		}
+		System.out.println("\tusuarios Length: "+usuarios.size());
+		if(usuarios.size()==0)
+			usuarios=null;
 	    }
         return usuarios;
     }
@@ -189,19 +196,19 @@ public class DBManager implements AutoCloseable {
     public List<User> listRecommendedUsers(User usuario) throws SQLException {
         // TODO: program this method DONE
 	List<User> usuarios = new ArrayList<User>();
-	try(PreparedStatement stmt = connection.prepareStatement("SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo=? AND Gustos.yearMax<? AND Gustos.yearMin>? AND ?=Usuario.sexo AND ?<Usuario.year AND ?>Usuario.year AND Usuario.id<>? ORDER BY RAND() LIMIT 5")){
+	try(PreparedStatement stmt = connection.prepareStatement("SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo=? AND Gustos.yearMax<? AND Gustos.yearMin>? AND ?=Usuario.sexo AND ?<Usuario.year AND ?>Usuario.year ORDER BY RAND() LIMIT 5")){
 		stmt.setString(1, usuario.getSex().toString());
 		stmt.setDate(2, usuario.getYear());
 		stmt.setDate(3, usuario.getYear());
 		stmt.setString(4, usuario.getDesired_sex().toString());
 		stmt.setDate(5, usuario.getDesired_year_max());
 		stmt.setDate(6, usuario.getDesired_year_min());
-		stmt.setInt(7, usuario.getId());
-		
-		System.out.println(stmt);
+		System.out.println("\t"+stmt);
 		ResultSet rs = stmt.executeQuery();
+		User nodo;
 		while (rs.next()){
-		    User nodo = new User();
+			
+			nodo = new User();
 			
 			//int id = rs.getInt("id"); Le metemos al objeto usuario la ID que genera la base de datos
 			//o es inseguro?
@@ -212,8 +219,8 @@ public class DBManager implements AutoCloseable {
 		    //String pic = rs.getString("Usuario.foto");
 		    String desired_sex = rs.getString("Gustos.sexo");
 		    Date yearMx = rs.getDate("Gustos.yearMax");
-		    Date yearMn = rs.getDate("Gustos.yearMin");
-		    int id = rs.getInt("Usuario.id");
+		    Date yearMn = rs.getDate("yearMin");
+		    int id = rs.getInt("id");
 		    
 		    
 		    nodo.setNickname(nickname);
@@ -225,10 +232,17 @@ public class DBManager implements AutoCloseable {
 		    nodo.setDesired_year_min(yearMn);
 		    nodo.setId(id);
 			
+		    System.out.println("\t"+nodo.getNickname());
+		    
 		    if(!usuarios.add(nodo)){
 		    	throw new SQLException();
 		    }
 		}
+//		System.out.println("\tNombre del primer usuario: "+usuarios.get(0).getNickname());
+//		System.out.println("\tNombre del segundo usuario: "+usuarios.get(1).getNickname());
+		System.out.println("\tusuarios Length: "+usuarios.size());
+		if(usuarios.size()==0)
+			usuarios=null;
 	    }
         return usuarios;
     }
@@ -238,13 +252,13 @@ public class DBManager implements AutoCloseable {
     	try (PreparedStatement stmt = connection.prepareStatement("SELECT * FROM Citas INNER JOIN Usuario AS P ON P.id=Citas.idProp INNER JOIN Usuario AS R ON R.id=Citas.idRec INNER JOIN Gustos AS GP ON GP.idUsuario=P.id INNER JOIN Gustos AS GR ON GR.idUsuario=R.id WHERE idCita=?")){
     		
     		stmt.setInt(1, id);
-    		System.out.println(stmt.toString());
     		ResultSet rs = stmt.executeQuery();
     		
     		if (rs.next()){
     			cita = new DinnerDate();
         		int idProp = rs.getInt("idProp");
         		int idRec = rs.getInt("idRec");
+        		
         		User receiver = new User();
         		
         		String receiver_nickname = rs.getString("R.nombre");
@@ -300,13 +314,13 @@ public class DBManager implements AutoCloseable {
         		Date response_sello = rs.getDate("FechaResp");
         		Date fecha = rs.getDate("fecha");
         		
-        		cita.setId(id);
         		cita.setState(meetState.valueOf(state));
         		cita.setProposer(proposer);
         		cita.setReceiver(receiver);
         		cita.setProposal_sello(proposal_sello);
         		cita.setResponse_sello(response_sello);
         		cita.setFecha(fecha);
+        		cita.setId(id);
         		
     		} else {
     			cita = null;
@@ -326,12 +340,12 @@ public class DBManager implements AutoCloseable {
     		stmt.setInt(1, user.getId());
     		ResultSet rs = stmt.executeQuery();
     		citas = new ArrayList<DinnerDate>();
-    		
-    		
+    		DinnerDate nodo;
+    		User receiver;
     		while (rs.next()){
     			
-    			User receiver = new User();
-    			DinnerDate nodo = new DinnerDate();
+    			nodo = new DinnerDate();
+    			receiver = new User();
     			
     			String state = rs.getString("EstadoProp");
     			Date proposal_sello = rs.getDate("FechaProp");
@@ -379,6 +393,9 @@ public class DBManager implements AutoCloseable {
     		    	throw new SQLException();
     		    }
     		}
+    		System.out.println("\tcitas Length: "+citas.size());
+    		if(citas.size()==0)
+    			citas=null;
     	}
     	
     	return citas;
@@ -394,12 +411,12 @@ public class DBManager implements AutoCloseable {
 
     		ResultSet rs = stmt.executeQuery();
     		citas = new ArrayList<DinnerDate>();
-    		
-    		
+    		DinnerDate nodo;
+    		User proposer;
     		while (rs.next()){
     			
-    			User proposer = new User();
-    			DinnerDate nodo = new DinnerDate();
+    			nodo = new DinnerDate();
+    			proposer = new User();
     			
     			String state = rs.getString("EstadoProp");
     			Date proposal_sello = rs.getDate("FechaProp");
@@ -447,6 +464,9 @@ public class DBManager implements AutoCloseable {
     		    	throw new SQLException();
     		    }
     		}
+    		System.out.println("\tcitas Length: "+citas.size());
+    		if(citas.size()==0)
+    			citas=null;
     	}
     	
     	return citas;
@@ -490,10 +510,10 @@ public class DBManager implements AutoCloseable {
     		stmt.setString(1, date.getState().toString());
     		stmt.setInt(2, date.getId());
     		System.out.println(stmt.toString());
-    		System.out.println("hola");
     		int changes = stmt.executeUpdate();
     		if (changes > 0)
     			achieved = true;
+    		System.out.println(achieved);
     		
     	} finally {
     		if (achieved)

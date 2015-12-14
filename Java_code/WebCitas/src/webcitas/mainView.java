@@ -16,6 +16,9 @@ public class mainView extends HttpServlet {
         public void doGet(HttpServletRequest request, HttpServletResponse response)
                         throws IOException, ServletException
         {
+        	
+        	System.out.println("\n [mainView]:\n");
+        	
                 HttpSession session = request.getSession();
                 User user = (User) session.getAttribute("usuario");
                 if (user == null){

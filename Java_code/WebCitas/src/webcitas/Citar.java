@@ -12,6 +12,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 import javax.naming.NamingException;
+
+import java.util.Calendar;
 import java.util.List;
 
 @WebServlet("/citar")
@@ -21,6 +23,8 @@ public class Citar extends HttpServlet {
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
+		
+		System.out.println("\n [Citar]:\n");
 		
 		HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("usuario");
@@ -46,7 +50,10 @@ public class Citar extends HttpServlet {
 					if (fecha_recuperada != null) {
 					    Date fecha = new Date(dateFormat.parse(fecha_recuperada).getTime());
 					    java.util.Date hoy = new java.util.Date();
-					    if (!fecha.before(hoy)){
+					    Calendar calendario = Calendar.getInstance();
+					    calendario.setTime(hoy);
+					    calendario.add(Calendar.DAY_OF_YEAR, 14);  // Sumamos los días
+					    if (!fecha.before(hoy) && !fecha.after(calendario.getTime())){
 
 						date.setProposer(user);
 						date.setReceiver(receiver);
@@ -61,11 +68,12 @@ public class Citar extends HttpServlet {
 
 						//request.getRequestDispatcher("citas.jsp").forward(request, response);
 						response.sendRedirect("citas");
-						
 					    } else {
 
 						fecha_error = true;
-						request.getRequestDispatcher("recomendaciones.jsp").forward(request, response);
+						request.setAttribute("fecha_error", fecha_error);
+						response.sendRedirect("sugerencias");
+						//request.getRequestDispatcher("recomendaciones.jsp").forward(request, response);
 
 					    }
 					}
@@ -74,13 +82,14 @@ public class Citar extends HttpServlet {
 					
 					DinnerDate toAnswerDate = manager.idToDinnerDate(Integer.parseInt(citaId));
 					meetState state;
-					System.out.println(citaEstado);
+					System.out.println(" citaEstado: "+citaEstado);
+					System.out.println(" citaID: "+Integer.parseInt(citaId));
+					System.out.println(" ID de cita dentro de la cita de respuesta: "+toAnswerDate.getId());
 					
 					switch (citaEstado){
 					
 					case "Aceptar":
 						state=meetState.CONFIRMADA;
-						System.out.println(state.toString());
 						break;
 					case "Rechazar":
 						state=meetState.RECHAZADA;
@@ -96,7 +105,7 @@ public class Citar extends HttpServlet {
 					}
 					toAnswerDate.setState(state);
 					manager.answerDate(toAnswerDate);
-					response.sendRedirect("mainView");
+					response.sendRedirect("citas");
 				
 				} else {
 					request.getRequestDispatcher("error-login.jsp").forward(request, response);
@@ -105,7 +114,9 @@ public class Citar extends HttpServlet {
 				
 				PrintWriter out = response.getWriter();
 			    out.println("ERROR "+e);
+			    System.out.println("ERROR "+e);
 			    e.printStackTrace();
+			    response.sendRedirect("mainView");
 				
 			}
 				
