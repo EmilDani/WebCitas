@@ -9,7 +9,7 @@
 
 <title>Login Web</title>
 
-
+<link rel="stylesheet" href="base_style.css" typ="text/css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
 	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
@@ -55,9 +55,16 @@
 <!-- <body background="http://static.independent.co.uk/s3fs-public/thumbnails/image/2014/03/14/17/kissing-sailorv4.jpg">
  -->
  <body background="http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-148192.jpg">
-	<main>
+ 
+	<main class="container" id="portada_container">
+	
+	<div class="col-md-4">
+	
+	<img alt="Meetstoric Logo" src="/img/logo.png">	
+	
+	</div>
 
-	<div class="container container-table">
+	<div id="login_container" class="col-md-8 container-table jumbotron">
 
 		<form class="form-group" action="loginWeb" method="post"
 			onsubmit="return validarDatos();">
@@ -67,17 +74,17 @@
 				<tr class="row vertical-center-row">
 
 					<td class="col-md-4" colspan="2"
-						style="font-weight: bold; size: 20px">Ingresa tu Usuario y
-						Contraseña</td>
+						style="color: #e8702a"><h3>Ingresa tu Usuario y
+						Contraseña</h3></td> <!-- font-weight: bold; size: 30px; -->
 
 				</tr>
 
 				<tr class="row vertical-center-row">
 
 					<td class="col-md-4"
-						style="font-weight: bold; size: 30px; color: blue; align: right">Usuario:</td>
+						style="font-weight: bold; size: 30px; align: right">Usuario:</td>
 
-					<td class="col-md-4"><input class="form-control input-lg"
+					<td class="col-md-6"><input class="form-control input-lg"
 						type="text" name="usuario" id="usuario" placeholder="Usuario o mail"></td>
 
 				</tr>
@@ -85,9 +92,9 @@
 				<tr class="row vertical-center-row">
 
 					<td class="col-md-4"
-						style="font-weight: bold; size: 12px; color: blue; align: right">Contraseña:</td>
+						style="font-weight: bold; size: 12px; align: right">Contraseña:</td>
 
-					<td class="col-md-4"><input class="form-control input-lg"
+					<td class="col-md-6"><input class="form-control input-lg"
 						type="password" name="password" id="password" placeholder="Contraseña"></td>
 
 				</tr>
