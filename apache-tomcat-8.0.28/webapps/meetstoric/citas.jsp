@@ -14,6 +14,8 @@
 
 <link rel="stylesheet" href="base_style.css" typ="text/css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
 </head>
 
 <body class="body_back">
@@ -28,7 +30,7 @@
 		
 		<main>
 		
-		<!-- <div class="container"> -->
+		<div class="container-fluid"> 
 		
 			<div class="container jumbotron ">
 	
@@ -240,6 +242,11 @@
 			<%
 				for (DinnerDate cita : citas) {
 						if (cita.getState() != meetState.CONFIRMADA && cita.getState() != meetState.PROPUESTA) {
+							String icon;
+							if (cita.getState() == meetState.OTRO_DIA)
+								icon = "glyphicon glyphicon-calendar";
+							else
+								icon = "glyphicon glyphicon-remove-circle";
 			%>
 			<tr>
 				<td><img class="img-rounded" src="<%=cita.getProposer().getImgURL()%>"></td>
@@ -253,7 +260,7 @@
 				<td><a
 					href="<%=response.encodeURL("profile?id=" + cita.getReceiver().getId())%>"><%=cita.getReceiver().getNickname()%></a></td>
 				<td><%=cita.getFecha()%></td>
-				<td> <%= cita.getState()%></td>
+				<td> <%--=cita.getState()--%> <span class="<%=icon %>"></span></td>
 			</tr>
 			<%
 					}
@@ -266,6 +273,7 @@
 	
 	</div>
 	
+	</div>
 	</div>
 	</div>
 
