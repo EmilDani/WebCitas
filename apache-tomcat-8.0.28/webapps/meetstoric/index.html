@@ -56,7 +56,7 @@
  -->
  <body background="http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-148192.jpg">
  
-	<main class="container" id="portada_container">
+	<main class="container container-fluid" id="portada_container">
 	
 	<div class="col-md-4">
 	
@@ -64,7 +64,7 @@
 	
 	</div>
 
-	<div id="login_container" class="col-md-8 container-table jumbotron">
+	<div id="login_container" class="col-md-8 container-table jumbotron front-signin">
 
 		<form class="form-group" action="loginWeb" method="post"
 			onsubmit="return validarDatos();">
@@ -74,15 +74,14 @@
 				<tr class="row vertical-center-row">
 
 					<td class="col-md-4" colspan="2"
-						style="color: #e8702a"><h3>Ingresa tu Usuario y
-						Contraseña</h3></td> <!-- font-weight: bold; size: 30px; -->
+						style="font-weight: bold; color: #e8702a"><h2>Accede a Meetstoric</h2></td> <!-- font-weight: bold; size: 30px; -->
 
 				</tr>
 
 				<tr class="row vertical-center-row">
 
 					<td class="col-md-4"
-						style="font-weight: bold; size: 30px; align: right">Usuario:</td>
+						style="font-weight: bold; size: 100px; align: right; overflow: hidden">Usuario:</td>
 
 					<td class="col-md-6"><input class="form-control input-lg"
 						type="text" name="usuario" id="usuario" placeholder="Usuario o mail"></td>
@@ -92,7 +91,7 @@
 				<tr class="row vertical-center-row">
 
 					<td class="col-md-4"
-						style="font-weight: bold; size: 12px; align: right">Contraseña:</td>
+						style="font-weight: bold; size: 100px; align: right; overflow: hidden">Contraseña:</td>
 
 					<td class="col-md-6"><input class="form-control input-lg"
 						type="password" name="password" id="password" placeholder="Contraseña"></td>
@@ -103,9 +102,9 @@
 
 					<!-- <td><input type="button" value="Cancelar" style=font-size:14px;color:blue; ></td> -->
 
-					<td class="col-md-4"><input
-						class="btn btn-default btn-lg btn-block" type="submit"
-						value="Aceptar" style="font-size: 14px; color: blue;"></td>
+					<td class="col-md-4"><button
+						class="btn success_button btn-lg btn-block" type="submit"
+						value="Aceptar" style="font-size: 14px;"><i class="glyphicon glyphicon-log-in"></i> Pa' dentro</td>
 
 				</tr>
 

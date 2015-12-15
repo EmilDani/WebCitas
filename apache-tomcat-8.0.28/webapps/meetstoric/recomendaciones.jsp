@@ -8,7 +8,9 @@
 <%@ page import="java.util.Calendar"%>
 <%@ page import="java.text.*"%>
 
-<%User user = (User) session.getAttribute("usuario"); %>
+<%
+	User user = (User) session.getAttribute("usuario");
+%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -16,124 +18,117 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Elección de citas</title>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="base_style.css" typ="text/css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+	crossorigin="anonymous">
 </head>
-<body>
+<body class="body_back">
 
-	<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
-	<div id="top_bar" class="top_bar" style="position: relative; top: 0px;">
-
-		<div class="container" style="float: left; width: 50%; overflow: hidden; height: 44px">
-
-			<a href="/meetstoric/mainView" class="top_bottom" title="mainView">Inicio</a>
-			<a href="/meetstoric/citas" class="top_bottom" title="Citas">Citas</a>
-			<a href="/meetstoric/sugerencias" class="top_bottom"
-				title="Recomendaciones">Sugerencias</a>
-
-		</div>
-
-		<div class="container"
-			style="float: right; width: 200px; overflow: hidden; height: 44px;">
-
-			<a href="/meetstoric/cierreSesion" class="top_bottom" onclick=""
-				title="Cerrar Sesión">Cerrar Sesión</a> <a
-				href="<%=response.encodeURL("profile?id=" + user.getId())%>"
-				class="top_bottom" onclick="" title="Mi perfil">Mi Perfil</a>
-
-		</div>
-
-	</div>
+	<%@ include file="/navigation_top_bar.jsp"%>
+	
+	<div class="container jumbotron semi_back">
+	
+	<header class="page-header">
+	
+	<h2 align="center">Usuarios recomendados para ti:</h2>
+	
 	</header>
-	
-	<div class="container">
 
-	<h1>Usuarios recomendados para ti:</h1>
-	
-	<div class="row">
-	
-	<h1> </h1>
-	
-	</div>
+	<div class="container jumbotron table-responsive jumbotron_even">
 
-	<%
-		boolean recomendados_error = (boolean) request.getAttribute("recomendaciones_error");
-		if (recomendados_error) {
-		%>
-
-	<h4>No hay usuarios recomendados para ti. Tu horrorífica persona
-		ha vencido a nuestro poderoso algoritmo.</h4>
-
-	<%} else { %>
-
-	<%  
-		boolean fecha_error = (boolean) request.getAttribute("fecha_error"); // ESTO NO ESTÁ BIEN
-		if (fecha_error) {
-		%>
-
-	<h4>EH! Pon una fecha bien Marty Macfly. Recuerda que no
-		reservamos con más de 14 días de antelación</h4>
-
-	<%}%>
-
-	<%
 		
-		List<User> listaUsuarios = (List<User>) request.getAttribute("listaUsuarios");
-		Date hoy = new java.util.Date();
-	    Calendar calendario = Calendar.getInstance();
-	    calendario.setTime(hoy);
-	    calendario.add(Calendar.DAY_OF_YEAR, 14);  // Sumamos los días
-	    DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+
+		<%
+			boolean recomendados_error = (boolean) request.getAttribute("recomendaciones_error");
+			if (recomendados_error) {
 		%>
 
-	<%-- HAY QUE COMPROBAR SI HA HABIDO O NO UN ERROR --%>
-	
+		<h4>No hay usuarios recomendados para ti. Tu horrorífica persona
+			ha vencido a nuestro poderoso algoritmo.</h4>
 
-	
-	
+		<%
+			} else {
+		%>
 
-	<table>
-		<thead>
-			<tr class="row">
-				<td class="col-md-1" style="font-size: 20px; color: green;">NickName</td>
-				<td class="col-md-1" style="font-size: 20px; color: green;">Año de nacimiento</td>
-				<td class="col-md-1" style="font-size: 20px; color: green;">Interesado/a en</td>
-				<td class="col-md-1" style="font-size: 20px; color: green;">Edad Máxima</td>
-				<td class="col-md-1" style="font-size: 20px; color: green;">Edad Mínima</td>
-				<td class="col-md-1"></td>
-				<td class="col-md-1" style="font-size: 20px; color: green;">Elija una fecha para
-					su cita</td>
-			</tr>
-		</thead>
-		
+		<%
+			boolean fecha_error = (boolean) request.getAttribute("fecha_error"); // ESTO NO ESTÁ BIEN
+				if (fecha_error) {
+		%>
+
+		<h4>EH! Pon una fecha bien Marty Macfly. Recuerda que no
+			reservamos con más de 14 días de antelación</h4>
+
+		<%
+			}
+		%>
+
+		<%
+			List<User> listaUsuarios = (List<User>) request.getAttribute("listaUsuarios");
+				Date hoy = new java.util.Date();
+				Calendar calendario = Calendar.getInstance();
+				calendario.setTime(hoy);
+				calendario.add(Calendar.DAY_OF_YEAR, 14); // Sumamos los días
+				DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		%>
+
+		<%-- HAY QUE COMPROBAR SI HA HABIDO O NO UN ERROR --%>
+
+		<table class="table table-striped">
+			<thead>
+				<tr class="row">
+					<th class="col-md-1">NickName</th>
+					<th class="col-md-1">Año de nacimiento</th>
+					<th class="col-md-1">Interesado/a en</th>
+					<th class="col-md-1">Edad Máxima</th>
+					<th class="col-md-1">Edad Mínima</th>
+					<th class="col-md-1"></th>
+					<th class="col-md-1">Elija una fecha para su cita</th>
+				</tr>
+			</thead>
+
 			<div class="row">
-	
-	<p> </p>
-	
-	</div>
-			<%
-				for (User usuario: listaUsuarios) {
 
-				%>
-		<tr class="row">
-			<td class="col-md-1"><a href="<%=response.encodeURL("profile?id=" + usuario.getId())%>"><%= usuario.getNickname()%></td>
-			<td class="col-md-1"><%= usuario.getYear()%></td>
-			<td class="col-md-1"><%= usuario.getDesired_sex()%></td>
-			<td class="col-md-1"><%= usuario.getDesired_year_max()%></td>
-			<td class="col-md-1"><%= usuario.getDesired_year_min()%></td>
-			<td class="col-md-1"><form class="form-group" action="citar" method="get"></td>
-			<td class="col-md-1"><input type="date" name="fecha" min="<%= df.format(hoy)%>"
-				max="<%=df.format(calendario.getTime())%>"><!-- class="form-control" -->
-			<td><input type="hidden" name="recId"
-				value="<%=usuario.getId() %>"> <input class="btn btn-success" type="submit"
-				value="Pedir Cita" style="font-size: 14px; color: blue;"></td>
-			</form>
-		</tr>
-		<% } %>
-	</table>
-	
-	<%} %>
+				<p></p>
+
+			</div>
+			<%
+				for (User usuario : listaUsuarios) {
+			%>
+				<tr class="row">
+					<td class="col-md-1"><a
+						href="<%=response.encodeURL("profile?id=" + usuario.getId())%>"><%=usuario.getNickname()%></a></td>
+					<td class="col-md-1"><%=usuario.getYear()%></td>
+					<td class="col-md-1"><%=usuario.getDesired_sex()%></td>
+					<td class="col-md-1"><%=usuario.getDesired_year_max()%></td>
+					<td class="col-md-1"><%=usuario.getDesired_year_min()%></td>
+					<td class="col-md-1"><form class="form-group" action="citar" method="get"></td>
+					<td class="col-md-1">
+						
+						<input type="hidden" name="recId"
+						value="<%=usuario.getId()%>">
+					<input class="input-group" type="date" name="fecha"
+						min="<%=df.format(hoy)%>"
+						max="<%=df.format(calendario.getTime())%>">
+						</td>
+					<!-- class="form-control" -->
+					<td class="col-md-1"><input class="btn success_button" type="submit" value="Pedir Cita"
+						style="font-size: 14px;"></form>
+					</td>
+
+				</tr>
+
+			<%
+				}
+			%>
+		</table>
+
+		<%
+			}
+		%>
 	</div>
-	
-	
+	</div>
+
 </body>
 </html>

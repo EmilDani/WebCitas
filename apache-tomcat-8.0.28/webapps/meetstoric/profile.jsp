@@ -17,34 +17,12 @@ User perfil = (User) request.getAttribute("perfil");
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title><%=perfil.getNickname()%></title>
 
+<link rel="stylesheet" href="base_style.css" typ="text/css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
-<body>
+<body class="body_back">
 
-<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
-	<div id="top_bar" class="top_bar" style="position: relative; top: 0px;">
-
-		<div class="container" style="float: left; width: 50%; overflow: hidden; height: 44px">
-
-			<a href="/meetstoric/mainView" class="top_bottom" title="mainView">Inicio</a>
-			<a href="/meetstoric/citas" class="top_bottom" title="Citas">Citas</a>
-			<a href="/meetstoric/sugerencias" class="top_bottom"
-				title="Recomendaciones">Sugerencias</a>
-
-		</div>
-
-		<div class="container"
-			style="float: right; width: 200px; overflow: hidden; height: 44px;">
-
-			<a href="/meetstoric/cierreSesion" class="top_bottom" onclick=""
-				title="Cerrar Sesión">Cerrar Sesión</a> <a
-				href="<%=response.encodeURL("profile?id=" + user.getId())%>"
-				class="top_bottom" onclick="" title="Mi perfil">Mi Perfil</a>
-
-		</div>
-
-	</div>
-	</header>
+<%@ include file="/navigation_top_bar.jsp" %>
 
 	<main id="presentation" class="container">
 

@@ -12,35 +12,13 @@
 <title>Citas</title>
 <meta charset="utf-8" />
 
+<link rel="stylesheet" href="base_style.css" typ="text/css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="body_back">
 
-	<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
-	<div id="top_bar" class="top_bar" style="position: relative; top: 0px;">
-
-		<div class="container" style="float: left; width: 50%; overflow: hidden; height: 44px">
-
-			<a href="/meetstoric/mainView" class="top_bottom" title="mainView">Inicio</a>
-			<a href="/meetstoric/citas" class="top_bottom" title="Citas">Citas</a>
-			<a href="/meetstoric/sugerencias" class="top_bottom"
-				title="Recomendaciones">Sugerencias</a>
-
-		</div>
-
-		<div class="container"
-			style="float: right; width: 200px; overflow: hidden; height: 44px;">
-
-			<a href="/meetstoric/cierreSesion" class="top_bottom" onclick=""
-				title="Cerrar Sesión">Cerrar Sesión</a> <a
-				href="<%=response.encodeURL("profile?id=" + user.getId())%>"
-				class="top_bottom" onclick="" title="Mi perfil">Mi Perfil</a>
-
-		</div>
-
-	</div>
-	</header>
+<%@ include file="/navigation_top_bar.jsp" %>
 
 	<%-- User usuario = (User) session.getAttribute("usuario"); --%>
 	<%
@@ -48,12 +26,19 @@
 		boolean errorCRec = (boolean) request.getAttribute("errorCRec");
 		%>
 		
-		<div class="container">
+		<main>
+		
+		<!-- <div class="container"> -->
+		
+			<div class="container jumbotron ">
+	
+	<header class="page-header">
 
-	<h1>Citas</h1>
+	<h1 align="center">Citas</h1>
 	
+	</header>
 	
-	<div class="row">
+	<div class="row jumbotron jumbotron_even">
 	
 	<div class="col-md-6">
 	
@@ -124,12 +109,12 @@
 				<td><%=cita.getFecha()%></td>
 				<td><form action="citar" method="get">
 						<input type="hidden" name="citaID" value="<%=cita.getId()%>">
-						<input type="submit" name="cita_estado" value="Aceptar"> <input
-							type="submit" name="cita_estado" value="Rechazar">
+						<input class="btn success_button" type="submit" name="cita_estado" value="Aceptar"> <input
+							class="btn fail_button" type="submit" name="cita_estado" value="Rechazar">
 						<!-- </td> -->
 						<!-- <td><input type="date" name="fecha"> -->
 						<!-- <input type="submit" name="cita_estado" value="No puedo"> -->
-						<input type="submit" name="cita_estado" value="Otro día">
+						<input class="btn btn-default" type="submit" name="cita_estado" value="Otro día">
 					</form></td>
 			</tr>
 			<%
@@ -144,7 +129,7 @@
 	</div>
 	</div>
 	
-	<div class="row">
+	<div class="row jumbotron jumbotron_even">
 	
 	<div class="col-md-6">
 
@@ -282,6 +267,8 @@
 	</div>
 	
 	</div>
+	</div>
+
 
 </body>
 </html>

@@ -15539,3 +15539,3258 @@ Bienvenido
 
  [CerrarSesion]:
 
+14-Dec-2015 21:55:30.144 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-9188"]
+14-Dec-2015 21:55:30.196 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+14-Dec-2015 21:55:30.247 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Parando servicio Catalina
+14-Dec-2015 21:55:30.266 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [meetstoric] registró el conductor JDBC [com.mysql.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+14-Dec-2015 21:55:30.267 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [meetstoric] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:135)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+14-Dec-2015 21:55:30.275 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-9188"]
+14-Dec-2015 21:55:30.276 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+14-Dec-2015 21:55:30.277 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-9188"]
+14-Dec-2015 21:55:30.277 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+14-Dec-2015 22:04:18.299 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.28
+14-Dec-2015 22:04:18.301 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 7 2015 18:25:21 UTC
+14-Dec-2015 22:04:18.301 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.28.0
+14-Dec-2015 22:04:18.301 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+14-Dec-2015 22:04:18.301 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.1.1
+14-Dec-2015 22:04:18.301 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          i386
+14-Dec-2015 22:04:18.301 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-7-openjdk-i386/jre
+14-Dec-2015 22:04:18.302 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.7.0_79-b14
+14-Dec-2015 22:04:18.302 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+14-Dec-2015 22:04:18.302 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+14-Dec-2015 22:04:18.302 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+14-Dec-2015 22:04:18.303 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/conf/logging.properties
+14-Dec-2015 22:04:18.303 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+14-Dec-2015 22:04:18.303 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/endorsed
+14-Dec-2015 22:04:18.303 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+14-Dec-2015 22:04:18.303 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+14-Dec-2015 22:04:18.303 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/temp
+14-Dec-2015 22:04:18.303 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: /usr/java/packages/lib/i386:/usr/lib/i386-linux-gnu/jni:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+14-Dec-2015 22:04:18.479 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-9188"]
+14-Dec-2015 22:04:18.509 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+14-Dec-2015 22:04:18.513 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+14-Dec-2015 22:04:18.516 SEVERE [main] org.apache.coyote.AbstractProtocol.init Failed to initialize end point associated with ProtocolHandler ["ajp-nio-8009"]
+ java.net.BindException: La dirección ya se está usando
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:444)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:340)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:742)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:457)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:567)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:851)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:599)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+
+14-Dec-2015 22:04:18.518 SEVERE [main] org.apache.catalina.core.StandardService.initInternal No pude inicializar el conector [Connector[AJP/1.3-8009]]
+ org.apache.catalina.LifecycleException: Failed to initialize component [Connector[AJP/1.3-8009]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:106)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:567)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:851)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:599)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+Caused by: org.apache.catalina.LifecycleException: Falló la inicialización del manejador de protocolo
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:962)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	... 12 more
+Caused by: java.net.BindException: La dirección ya se está usando
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:444)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:340)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:742)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:457)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	... 13 more
+
+14-Dec-2015 22:04:18.518 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 791 ms
+14-Dec-2015 22:04:18.554 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio Catalina
+14-Dec-2015 22:04:18.554 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.28
+14-Dec-2015 22:04:18.569 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/ROOT de la aplicación web
+14-Dec-2015 22:04:19.014 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/ROOT has finished in 445 ms
+14-Dec-2015 22:04:19.015 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/examples de la aplicación web
+14-Dec-2015 22:04:19.682 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/examples has finished in 667 ms
+14-Dec-2015 22:04:19.683 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/docs de la aplicación web
+14-Dec-2015 22:04:19.781 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/docs has finished in 97 ms
+14-Dec-2015 22:04:19.781 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/host-manager de la aplicación web
+14-Dec-2015 22:04:19.836 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/host-manager has finished in 55 ms
+14-Dec-2015 22:04:19.837 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/meetstoric de la aplicación web
+14-Dec-2015 22:04:20.157 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = BaseDatos Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "8" for "maxActive" property, which is being ignored.
+14-Dec-2015 22:04:20.179 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+14-Dec-2015 22:04:20.190 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/meetstoric has finished in 352 ms
+14-Dec-2015 22:04:20.190 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/manager de la aplicación web
+14-Dec-2015 22:04:20.236 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/manager has finished in 46 ms
+14-Dec-2015 22:04:20.240 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-9188"]
+14-Dec-2015 22:04:20.250 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1731 ms
+14-Dec-2015 22:04:20.252 SEVERE [main] org.apache.catalina.core.StandardServer.await StandardServer.await: create[localhost:8005]: 
+ java.net.BindException: La dirección ya se está usando
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:376)
+	at java.net.ServerSocket.bind(ServerSocket.java:376)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at org.apache.catalina.core.StandardServer.await(StandardServer.java:420)
+	at org.apache.catalina.startup.Catalina.await(Catalina.java:713)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:659)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:351)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:485)
+
+14-Dec-2015 22:04:20.253 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-9188"]
+14-Dec-2015 22:04:20.305 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+14-Dec-2015 22:04:20.305 INFO [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio Catalina
+14-Dec-2015 22:04:20.350 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-9188"]
+14-Dec-2015 22:04:20.352 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-9188"]
+14-Dec-2015 22:04:20.353 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+14-Dec-2015 22:04:20.353 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+14-Dec-2015 22:05:43.013 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.28
+14-Dec-2015 22:05:43.015 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 7 2015 18:25:21 UTC
+14-Dec-2015 22:05:43.015 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.28.0
+14-Dec-2015 22:05:43.016 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+14-Dec-2015 22:05:43.016 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.1.1
+14-Dec-2015 22:05:43.016 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          i386
+14-Dec-2015 22:05:43.016 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-7-openjdk-i386/jre
+14-Dec-2015 22:05:43.017 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.7.0_79-b14
+14-Dec-2015 22:05:43.018 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+14-Dec-2015 22:05:43.018 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+14-Dec-2015 22:05:43.018 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+14-Dec-2015 22:05:43.019 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/conf/logging.properties
+14-Dec-2015 22:05:43.019 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+14-Dec-2015 22:05:43.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/endorsed
+14-Dec-2015 22:05:43.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+14-Dec-2015 22:05:43.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+14-Dec-2015 22:05:43.020 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/temp
+14-Dec-2015 22:05:43.021 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: /usr/java/packages/lib/i386:/usr/lib/i386-linux-gnu/jni:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+14-Dec-2015 22:05:43.202 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-9188"]
+14-Dec-2015 22:05:43.235 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+14-Dec-2015 22:05:43.239 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+14-Dec-2015 22:05:43.242 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+14-Dec-2015 22:05:43.243 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 862 ms
+14-Dec-2015 22:05:43.287 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio Catalina
+14-Dec-2015 22:05:43.288 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.28
+14-Dec-2015 22:05:43.318 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/ROOT de la aplicación web
+14-Dec-2015 22:05:43.787 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/ROOT has finished in 469 ms
+14-Dec-2015 22:05:43.788 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/examples de la aplicación web
+14-Dec-2015 22:05:44.633 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/examples has finished in 845 ms
+14-Dec-2015 22:05:44.634 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/docs de la aplicación web
+14-Dec-2015 22:05:44.675 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/docs has finished in 40 ms
+14-Dec-2015 22:05:44.675 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/host-manager de la aplicación web
+14-Dec-2015 22:05:44.747 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/host-manager has finished in 72 ms
+14-Dec-2015 22:05:44.747 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/meetstoric de la aplicación web
+14-Dec-2015 22:05:45.086 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = BaseDatos Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "8" for "maxActive" property, which is being ignored.
+14-Dec-2015 22:05:45.122 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+14-Dec-2015 22:05:45.133 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/meetstoric has finished in 385 ms
+14-Dec-2015 22:05:45.133 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/manager de la aplicación web
+14-Dec-2015 22:05:45.178 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/manager has finished in 45 ms
+14-Dec-2015 22:05:45.184 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-9188"]
+14-Dec-2015 22:05:45.194 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+14-Dec-2015 22:05:45.195 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1952 ms
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1f99d54: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [CerrarSesion]:
+
+
+	[DBManager]:
+
+Usuario y contraseña incorrectos
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [CerrarSesion]:
+
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@41d5e8: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@c87f7c: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@12d527f: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1764b9f: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@15d456b: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@2b17b5: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@592f4b: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@e48ee2: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1e1d8a2: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 5
+ Nombre del perfil: Lola
+
+ Redirección a profile.jsp
+
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+ [CerrarSesion]:
+
+
+ [mainView]:
+
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1f7709b: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@27dc83: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1220536: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@19af1f7: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@152d70d: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@2e0823: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1fd466: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 4
+ Nombre del perfil: Josefina
+
+ Redirección a profile.jsp
+
+
+ [CerrarSesion]:
+
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [CerrarSesion]:
+
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@dbf492: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+ [CerrarSesion]:
+
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@12198ab: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 4
+ Nombre del perfil: Josefina
+
+ Redirección a profile.jsp
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 1
+ Nombre del perfil: Emilio
+
+ Redirección a profile.jsp
+
+
+ [CerrarSesion]:
+
+
+	[DBManager]:
+
+Usuario y contraseña incorrectos
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@f7d212: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@de2c9f: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@dffe1: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@10c398c: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@24c070: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@19f3f1f: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1e522a6: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1b85164: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@85e2c1: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@89ed15: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@b0852c: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1fd3ed: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@18e42d0: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@644df6: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@182a3ca: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1cf2fc4: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@aef238: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1728d48: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@77c4b7: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@dff4af: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@15d4338: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1fd2f18: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1273377: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1a3e88e: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@d110c3: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@9f5f55: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@5fa17c: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@34e1d5: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@b11143: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@d3b40f: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@ad64e: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1a78569: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1343ff6: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@8c17a2: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1b7416a: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@bbf17a: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1cd41df: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@302a4b: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@11528ab: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@23b83c: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1556e37: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@f3ce67: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@f17772: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1360d86: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1403b8: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@147818: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1497071: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@750c66: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@b8aba6: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@15bc2c1: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@131cca7: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1f432b8: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1d9b9fd: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1dc8c55: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@68531b: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1e3c928: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [CerrarSesion]:
+
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@9a65ca: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@8bb8c0: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@cf6a3f: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@d900c3: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1a76988: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1dbd9ea: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@18fa93: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@203669: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@4086a8: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@e4e636: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 1
+ Nombre del perfil: Emilio
+
+ Redirección a profile.jsp
+
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1ce6d48: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@a97a2f: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@d33418: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@15caa7a: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@97ac1b: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1a443cb: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1803f68: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@c2ea8b: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@b44d17: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@415a21: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1584f60: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@13469dc: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1e01608: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 4
+ Nombre del perfil: Josefina
+
+ Redirección a profile.jsp
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 1
+ Nombre del perfil: Emilio
+
+ Redirección a profile.jsp
+
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@19ef204: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@95223c: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1366ac0: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@ea25fa: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1041911: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@9cd4ce: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1719466: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1058cbf: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@bf5798: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1bf31fe: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@53af06: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@601095: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1d7d90f: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1654e9e: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@d0e4d9: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
+
+ [CerrarSesion]:
+
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@19bbd08: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='FEMALE' AND Gustos.yearMax<'1993-05-28' AND Gustos.yearMin>'1993-05-28' AND 'MALE'=Usuario.sexo AND '1975-01-01'<Usuario.year AND '2003-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Jorge
+	Daniel
+	Emilio
+	usuarios Length: 3
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@10a3f5e: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='FEMALE' AND Gustos.yearMax<'1993-05-28' AND Gustos.yearMin>'1993-05-28' AND 'MALE'=Usuario.sexo AND '1975-01-01'<Usuario.year AND '2003-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Daniel
+	Emilio
+	Jorge
+	usuarios Length: 3
+ fecha_error: false
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@124bbbe: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='FEMALE' AND Gustos.yearMax<'1993-05-28' AND Gustos.yearMin>'1993-05-28' AND 'MALE'=Usuario.sexo AND '1975-01-01'<Usuario.year AND '2003-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Daniel
+	Emilio
+	Jorge
+	usuarios Length: 3
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 4
+ Nombre del perfil: Josefina
+
+ Redirección a profile.jsp
+
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1322bd9: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='FEMALE' AND Gustos.yearMax<'1993-05-28' AND Gustos.yearMin>'1993-05-28' AND 'MALE'=Usuario.sexo AND '1975-01-01'<Usuario.year AND '2003-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Emilio
+	Daniel
+	Jorge
+	usuarios Length: 3
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@bf3245: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='FEMALE' AND Gustos.yearMax<'1993-05-28' AND Gustos.yearMin>'1993-05-28' AND 'MALE'=Usuario.sexo AND '1975-01-01'<Usuario.year AND '2003-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Daniel
+	Jorge
+	Emilio
+	usuarios Length: 3
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@7d7f95: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='FEMALE' AND Gustos.yearMax<'1993-05-28' AND Gustos.yearMin>'1993-05-28' AND 'MALE'=Usuario.sexo AND '1975-01-01'<Usuario.year AND '2003-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Emilio
+	Jorge
+	Daniel
+	usuarios Length: 3
+ fecha_error: false
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1de61a4: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='FEMALE' AND Gustos.yearMax<'1993-05-28' AND Gustos.yearMin>'1993-05-28' AND 'MALE'=Usuario.sexo AND '1975-01-01'<Usuario.year AND '2003-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Emilio
+	Daniel
+	Jorge
+	usuarios Length: 3
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@118a325: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='FEMALE' AND Gustos.yearMax<'1993-05-28' AND Gustos.yearMin>'1993-05-28' AND 'MALE'=Usuario.sexo AND '1975-01-01'<Usuario.year AND '2003-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Jorge
+	Emilio
+	Daniel
+	usuarios Length: 3
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@80ef2f: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='FEMALE' AND Gustos.yearMax<'1993-05-28' AND Gustos.yearMin>'1993-05-28' AND 'MALE'=Usuario.sexo AND '1975-01-01'<Usuario.year AND '2003-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Jorge
+	Emilio
+	Daniel
+	usuarios Length: 3
+ fecha_error: false
+
+ [mainView]:
+
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 4
+ Nombre del perfil: Josefina
+
+ Redirección a profile.jsp
+
+
+ [CerrarSesion]:
+
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1db82bd: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@dd0bd3: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [mainView]:
+
+
+ [CerrarSesion]:
+
+15-Dec-2015 06:55:14.665 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-9188"]
+15-Dec-2015 06:55:14.718 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+15-Dec-2015 06:55:14.769 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Parando servicio Catalina
+15-Dec-2015 06:55:14.819 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [meetstoric] registró el conductor JDBC [com.mysql.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+15-Dec-2015 06:55:14.820 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [meetstoric] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:135)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+15-Dec-2015 06:55:14.838 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-9188"]
+15-Dec-2015 06:55:14.840 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+15-Dec-2015 06:55:14.841 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-9188"]
+15-Dec-2015 06:55:14.842 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+15-Dec-2015 10:40:13.357 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.28
+15-Dec-2015 10:40:13.359 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 7 2015 18:25:21 UTC
+15-Dec-2015 10:40:13.359 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.28.0
+15-Dec-2015 10:40:13.359 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+15-Dec-2015 10:40:13.359 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.1.1
+15-Dec-2015 10:40:13.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          i386
+15-Dec-2015 10:40:13.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-7-openjdk-i386/jre
+15-Dec-2015 10:40:13.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.7.0_79-b14
+15-Dec-2015 10:40:13.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+15-Dec-2015 10:40:13.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+15-Dec-2015 10:40:13.360 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+15-Dec-2015 10:40:13.361 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/conf/logging.properties
+15-Dec-2015 10:40:13.361 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+15-Dec-2015 10:40:13.361 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/endorsed
+15-Dec-2015 10:40:13.361 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+15-Dec-2015 10:40:13.362 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+15-Dec-2015 10:40:13.362 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/temp
+15-Dec-2015 10:40:13.362 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: /usr/java/packages/lib/i386:/usr/lib/i386-linux-gnu/jni:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+15-Dec-2015 10:40:14.151 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-9188"]
+15-Dec-2015 10:40:14.219 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+15-Dec-2015 10:40:14.225 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+15-Dec-2015 10:40:14.228 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+15-Dec-2015 10:40:14.228 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 2247 ms
+15-Dec-2015 10:40:14.326 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio Catalina
+15-Dec-2015 10:40:14.327 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.28
+15-Dec-2015 10:40:14.365 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/ROOT de la aplicación web
+15-Dec-2015 10:40:15.124 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/ROOT has finished in 758 ms
+15-Dec-2015 10:40:15.124 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/examples de la aplicación web
+15-Dec-2015 10:40:17.359 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/examples has finished in 2.235 ms
+15-Dec-2015 10:40:17.360 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/docs de la aplicación web
+15-Dec-2015 10:40:17.411 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/docs has finished in 51 ms
+15-Dec-2015 10:40:17.411 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/host-manager de la aplicación web
+15-Dec-2015 10:40:17.508 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/host-manager has finished in 97 ms
+15-Dec-2015 10:40:17.508 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/meetstoric de la aplicación web
+15-Dec-2015 10:40:18.101 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = BaseDatos Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "8" for "maxActive" property, which is being ignored.
+15-Dec-2015 10:40:18.133 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+15-Dec-2015 10:40:18.161 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/meetstoric has finished in 653 ms
+15-Dec-2015 10:40:18.162 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/manager de la aplicación web
+15-Dec-2015 10:40:18.241 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/manager has finished in 79 ms
+15-Dec-2015 10:40:18.248 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-9188"]
+15-Dec-2015 10:40:18.267 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+15-Dec-2015 10:40:18.268 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 4039 ms
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+15-Dec-2015 11:07:47.225 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.28
+15-Dec-2015 11:07:47.227 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 7 2015 18:25:21 UTC
+15-Dec-2015 11:07:47.227 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.28.0
+15-Dec-2015 11:07:47.227 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+15-Dec-2015 11:07:47.227 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.1.1
+15-Dec-2015 11:07:47.227 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          i386
+15-Dec-2015 11:07:47.227 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-7-openjdk-i386/jre
+15-Dec-2015 11:07:47.227 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.7.0_79-b14
+15-Dec-2015 11:07:47.228 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+15-Dec-2015 11:07:47.228 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+15-Dec-2015 11:07:47.228 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+15-Dec-2015 11:07:47.228 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/conf/logging.properties
+15-Dec-2015 11:07:47.228 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+15-Dec-2015 11:07:47.228 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/endorsed
+15-Dec-2015 11:07:47.228 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+15-Dec-2015 11:07:47.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+15-Dec-2015 11:07:47.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/temp
+15-Dec-2015 11:07:47.229 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: /usr/java/packages/lib/i386:/usr/lib/i386-linux-gnu/jni:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+15-Dec-2015 11:07:47.466 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-9188"]
+15-Dec-2015 11:07:47.507 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+15-Dec-2015 11:07:47.510 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+15-Dec-2015 11:07:47.520 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+15-Dec-2015 11:07:47.521 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1183 ms
+15-Dec-2015 11:07:47.582 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio Catalina
+15-Dec-2015 11:07:47.582 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.28
+15-Dec-2015 11:07:47.598 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/ROOT de la aplicación web
+15-Dec-2015 11:07:48.230 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/ROOT has finished in 622 ms
+15-Dec-2015 11:07:48.231 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/examples de la aplicación web
+15-Dec-2015 11:07:49.086 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/examples has finished in 855 ms
+15-Dec-2015 11:07:49.087 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/docs de la aplicación web
+15-Dec-2015 11:07:49.136 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/docs has finished in 50 ms
+15-Dec-2015 11:07:49.136 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/host-manager de la aplicación web
+15-Dec-2015 11:07:49.187 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/host-manager has finished in 51 ms
+15-Dec-2015 11:07:49.187 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/meetstoric de la aplicación web
+15-Dec-2015 11:07:49.481 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = BaseDatos Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "8" for "maxActive" property, which is being ignored.
+15-Dec-2015 11:07:49.515 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+15-Dec-2015 11:07:49.536 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/meetstoric has finished in 349 ms
+15-Dec-2015 11:07:49.536 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/manager de la aplicación web
+15-Dec-2015 11:07:49.589 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/manager has finished in 53 ms
+15-Dec-2015 11:07:49.593 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-9188"]
+15-Dec-2015 11:07:49.604 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+15-Dec-2015 11:07:49.605 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 2084 ms
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@978813: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	usuarios Length: 2
+ fecha_error: false
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 1
+ Nombre del perfil: Emilio
+
+ Redirección a profile.jsp
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@531f13: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Josefina
+	Lola
+	usuarios Length: 2
+ fecha_error: false
