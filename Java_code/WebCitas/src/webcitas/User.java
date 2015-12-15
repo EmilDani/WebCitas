@@ -82,13 +82,13 @@ public class User {
 		this.pass = pass;
 	}
 	public String getImgURL(){
-		String imgUrl = null;
+		String imgUrl = "img/"+id+".png";
 		
 		return imgUrl;
 		
 	}
 	public String getProfileURL(){
-		String profileUrl = null;
+		String profileUrl = "img/background_"+id+".png";
 		
 		return profileUrl;
 	}
