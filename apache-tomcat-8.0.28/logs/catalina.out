@@ -20666,3 +20666,642 @@ Bienvenido
  errorCProp: false
  errorCRec: false
  Redirección a citas.jsp
+15-Dec-2015 21:53:17.794 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-9188"]
+15-Dec-2015 21:53:17.796 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+15-Dec-2015 21:53:17.796 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Parando servicio Catalina
+15-Dec-2015 21:53:17.826 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-9188"]
+15-Dec-2015 21:53:17.827 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+15-Dec-2015 21:53:17.828 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-9188"]
+15-Dec-2015 21:53:17.828 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+16-Dec-2015 00:16:33.393 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.28
+16-Dec-2015 00:16:33.395 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 7 2015 18:25:21 UTC
+16-Dec-2015 00:16:33.395 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.28.0
+16-Dec-2015 00:16:33.395 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+16-Dec-2015 00:16:33.396 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.1.1
+16-Dec-2015 00:16:33.396 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          i386
+16-Dec-2015 00:16:33.396 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-7-openjdk-i386/jre
+16-Dec-2015 00:16:33.396 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.7.0_79-b14
+16-Dec-2015 00:16:33.396 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+16-Dec-2015 00:16:33.396 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+16-Dec-2015 00:16:33.397 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+16-Dec-2015 00:16:33.397 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/conf/logging.properties
+16-Dec-2015 00:16:33.397 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+16-Dec-2015 00:16:33.397 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/endorsed
+16-Dec-2015 00:16:33.398 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+16-Dec-2015 00:16:33.398 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+16-Dec-2015 00:16:33.398 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/temp
+16-Dec-2015 00:16:33.398 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: /usr/java/packages/lib/i386:/usr/lib/i386-linux-gnu/jni:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+16-Dec-2015 00:16:33.568 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-9188"]
+16-Dec-2015 00:16:33.597 SEVERE [main] org.apache.coyote.AbstractProtocol.init Failed to initialize end point associated with ProtocolHandler ["http-nio-9188"]
+ java.net.BindException: La dirección ya se está usando
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:444)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:340)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:742)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:457)
+	at org.apache.coyote.http11.AbstractHttp11JsseProtocol.init(AbstractHttp11JsseProtocol.java:120)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:567)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:851)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:599)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+
+16-Dec-2015 00:16:33.599 SEVERE [main] org.apache.catalina.core.StandardService.initInternal No pude inicializar el conector [Connector[HTTP/1.1-9188]]
+ org.apache.catalina.LifecycleException: Failed to initialize component [Connector[HTTP/1.1-9188]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:106)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:567)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:851)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:599)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+Caused by: org.apache.catalina.LifecycleException: Falló la inicialización del manejador de protocolo
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:962)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	... 12 more
+Caused by: java.net.BindException: La dirección ya se está usando
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:444)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:340)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:742)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:457)
+	at org.apache.coyote.http11.AbstractHttp11JsseProtocol.init(AbstractHttp11JsseProtocol.java:120)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	... 13 more
+
+16-Dec-2015 00:16:33.600 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+16-Dec-2015 00:16:33.601 SEVERE [main] org.apache.coyote.AbstractProtocol.init Failed to initialize end point associated with ProtocolHandler ["ajp-nio-8009"]
+ java.net.BindException: La dirección ya se está usando
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:444)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:340)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:742)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:457)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:567)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:851)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:599)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+
+16-Dec-2015 00:16:33.602 SEVERE [main] org.apache.catalina.core.StandardService.initInternal No pude inicializar el conector [Connector[AJP/1.3-8009]]
+ org.apache.catalina.LifecycleException: Failed to initialize component [Connector[AJP/1.3-8009]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:106)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:567)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:851)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:599)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+Caused by: org.apache.catalina.LifecycleException: Falló la inicialización del manejador de protocolo
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:962)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	... 12 more
+Caused by: java.net.BindException: La dirección ya se está usando
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:444)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:340)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:742)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:457)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	... 13 more
+
+16-Dec-2015 00:16:33.602 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 773 ms
+16-Dec-2015 00:16:33.638 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio Catalina
+16-Dec-2015 00:16:33.638 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.28
+16-Dec-2015 00:16:33.655 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/ROOT de la aplicación web
+16-Dec-2015 00:16:34.086 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/ROOT has finished in 430 ms
+16-Dec-2015 00:16:34.086 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/examples de la aplicación web
+16-Dec-2015 00:16:34.799 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/examples has finished in 712 ms
+16-Dec-2015 00:16:34.799 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/docs de la aplicación web
+16-Dec-2015 00:16:34.830 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/docs has finished in 31 ms
+16-Dec-2015 00:16:34.830 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/host-manager de la aplicación web
+16-Dec-2015 00:16:34.891 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/host-manager has finished in 61 ms
+16-Dec-2015 00:16:34.892 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/meetstoric de la aplicación web
+16-Dec-2015 00:16:35.261 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = BaseDatos Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "8" for "maxActive" property, which is being ignored.
+16-Dec-2015 00:16:35.282 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+16-Dec-2015 00:16:35.291 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/meetstoric has finished in 399 ms
+16-Dec-2015 00:16:35.291 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/manager de la aplicación web
+16-Dec-2015 00:16:35.343 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/manager has finished in 52 ms
+16-Dec-2015 00:16:35.348 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1744 ms
+16-Dec-2015 00:16:35.349 SEVERE [main] org.apache.catalina.core.StandardServer.await StandardServer.await: create[localhost:8005]: 
+ java.net.BindException: La dirección ya se está usando
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:376)
+	at java.net.ServerSocket.bind(ServerSocket.java:376)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at org.apache.catalina.core.StandardServer.await(StandardServer.java:420)
+	at org.apache.catalina.startup.Catalina.await(Catalina.java:713)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:659)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:351)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:485)
+
+16-Dec-2015 00:16:35.350 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-9188"]
+16-Dec-2015 00:16:35.350 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+16-Dec-2015 00:16:35.350 INFO [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio Catalina
+16-Dec-2015 00:16:35.399 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-9188"]
+16-Dec-2015 00:16:35.399 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-9188"]
+16-Dec-2015 00:16:35.399 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+16-Dec-2015 00:16:35.400 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@166b6bd: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	María Magdalena
+	Isabel I de Inglaterra
+	Josefina
+	usuarios Length: 4
+ fecha_error: false
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 24
+ Nombre del perfil: María Magdalena
+
+ Redirección a profile.jsp
+
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 27
+ Nombre del perfil: Isabel I de Inglaterra
+
+ Redirección a profile.jsp
+
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1dd6242: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	María Magdalena
+	Isabel I de Inglaterra
+	Lola
+	Josefina
+	usuarios Length: 4
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 4
+ Nombre del perfil: Josefina
+
+ Redirección a profile.jsp
+
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 4
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1e178a0: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Lola
+	Josefina
+	Isabel I de Inglaterra
+	María Magdalena
+	usuarios Length: 4
+ fecha_error: false
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 1
+ Nombre del perfil: Emilio
+
+ Redirección a profile.jsp
+
+
+ [CerrarSesion]:
+
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 6
+ Nombre del perfil: Jorge
+
+ Redirección a profile.jsp
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@104bceb: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='FEMALE' AND Gustos.yearMax<'1993-05-28' AND Gustos.yearMin>'1993-05-28' AND 'MALE'=Usuario.sexo AND '1975-01-01'<Usuario.year AND '2003-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Daniel
+	Emilio
+	Jorge
+	usuarios Length: 3
+ fecha_error: false
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 4
+ Nombre del perfil: Josefina
+
+ Redirección a profile.jsp
+
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 4
+ Nombre del perfil: Josefina
+
+ Redirección a profile.jsp
+
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 4
+ Nombre del perfil: Josefina
+
+ Redirección a profile.jsp
+
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@2ee9c4: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='FEMALE' AND Gustos.yearMax<'1993-05-28' AND Gustos.yearMin>'1993-05-28' AND 'MALE'=Usuario.sexo AND '1975-01-01'<Usuario.year AND '2003-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Jorge
+	Daniel
+	Emilio
+	usuarios Length: 3
+ fecha_error: false
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 6
+ Nombre del perfil: Jorge
+
+ Redirección a profile.jsp
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 2
+ Nombre del perfil: Daniel
+
+ Redirección a profile.jsp
+
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@8bbe62: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='FEMALE' AND Gustos.yearMax<'1993-05-28' AND Gustos.yearMin>'1993-05-28' AND 'MALE'=Usuario.sexo AND '1975-01-01'<Usuario.year AND '2003-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Emilio
+	Jorge
+	Daniel
+	usuarios Length: 3
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@15c5527: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='FEMALE' AND Gustos.yearMax<'1993-05-28' AND Gustos.yearMin>'1993-05-28' AND 'MALE'=Usuario.sexo AND '1975-01-01'<Usuario.year AND '2003-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Emilio
+	Jorge
+	Daniel
+	usuarios Length: 3
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 4
+ Nombre del perfil: Josefina
+
+ Redirección a profile.jsp
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@9a0b: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='FEMALE' AND Gustos.yearMax<'1993-05-28' AND Gustos.yearMin>'1993-05-28' AND 'MALE'=Usuario.sexo AND '1975-01-01'<Usuario.year AND '2003-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Jorge
+	Daniel
+	Emilio
+	usuarios Length: 3
+ fecha_error: false
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1b56444: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='FEMALE' AND Gustos.yearMax<'1993-05-28' AND Gustos.yearMin>'1993-05-28' AND 'MALE'=Usuario.sexo AND '1975-01-01'<Usuario.year AND '2003-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Jorge
+	Emilio
+	Daniel
+	usuarios Length: 3
+ fecha_error: false
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [mainView]:
+
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 10
+	citas Length: 1
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@19bc9a2: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='FEMALE' AND Gustos.yearMax<'1993-05-28' AND Gustos.yearMin>'1993-05-28' AND 'MALE'=Usuario.sexo AND '1975-01-01'<Usuario.year AND '2003-01-01'>Usuario.year ORDER BY RAND() LIMIT 5
+	Daniel
+	Jorge
+	Emilio
+	usuarios Length: 3
+ fecha_error: false
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 4
+ Nombre del perfil: Josefina
+
+ Redirección a profile.jsp
+
+16-Dec-2015 06:55:19.933 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-9188"]
+16-Dec-2015 06:55:19.936 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+16-Dec-2015 06:55:19.937 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Parando servicio Catalina
+16-Dec-2015 06:55:19.977 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [meetstoric] registró el conductor JDBC [com.mysql.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+16-Dec-2015 06:55:19.978 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [meetstoric] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:135)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+16-Dec-2015 06:55:19.994 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-9188"]
+16-Dec-2015 06:55:19.997 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+16-Dec-2015 06:55:19.998 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-9188"]
+16-Dec-2015 06:55:19.999 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]

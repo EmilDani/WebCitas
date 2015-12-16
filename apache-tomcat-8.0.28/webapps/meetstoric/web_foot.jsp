@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 
-<footer>
+<footer class="container-fluid">
+
+	
+
 
 
 </footer>
