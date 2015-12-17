@@ -23,7 +23,9 @@
 	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
 	crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="megusta.js" type="text/javascript"></script>
 	
 </head>
 <body class="body_back">
@@ -54,7 +56,33 @@
 
 			<span id="year_perfil" class=""><%=perfil.getYear()%></span> 
 			</div>
-			<div class="col-md-4 col-md-offset-4">
+			
+			<div class="col-md-4">
+			
+				<div class="container">
+				
+				<div class="row" id="mg_extra_row">
+				
+				<div class="col-md-4"></div>
+				
+				
+				</div>
+			
+				<div align="center">
+			
+				<form action="megusta">
+					
+					<input type="hidden" name="recId"
+						value="<%=perfil.getId()%>">
+					<button class="btn btn-danger" id="mg_button" type="submit" name="gustar" value="1<%--dependiendo del estado de me gusta 1 o 0 --%>"><i class="glyphicon glyphicon-heart-empty <%-- dependiendo del estado de me gusta corazón lleo o no --%>" id="corazon"></i></button> <!-- Hay que añadir que con JavaScript se rellene el botón -->
+				
+				</form>
+				
+				</div>
+				</div>			
+			</div>
+			
+			<div class="col-md-4">
 			
 			<%
 			String icon_perf_sex;

@@ -196,13 +196,14 @@ public class DBManager implements AutoCloseable {
     public List<User> listRecommendedUsers(User usuario) throws SQLException {
         // TODO: program this method DONE
 	List<User> usuarios = new ArrayList<User>();
-	try(PreparedStatement stmt = connection.prepareStatement("SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo=? AND Gustos.yearMax<? AND Gustos.yearMin>? AND ?=Usuario.sexo AND ?<Usuario.year AND ?>Usuario.year ORDER BY RAND() LIMIT 5")){
+	try(PreparedStatement stmt = connection.prepareStatement("SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo=? AND Gustos.yearMax<? AND Gustos.yearMin>? AND ?=Usuario.sexo AND ?<Usuario.year AND ?>Usuario.year AND Usuario.id<>? ORDER BY RAND() LIMIT 5")){
 		stmt.setString(1, usuario.getSex().toString());
 		stmt.setDate(2, usuario.getYear());
 		stmt.setDate(3, usuario.getYear());
 		stmt.setString(4, usuario.getDesired_sex().toString());
 		stmt.setDate(5, usuario.getDesired_year_max());
 		stmt.setDate(6, usuario.getDesired_year_min());
+		stmt.setInt(7, usuario.getId());
 		System.out.println("\t"+stmt);
 		ResultSet rs = stmt.executeQuery();
 		User nodo;
@@ -526,6 +527,111 @@ public class DBManager implements AutoCloseable {
     	connection.setAutoCommit(true);
     	
     	return achieved;
+    }
+    
+    public boolean gustar(User user1, User user2) throws SQLException {
+
+    	boolean achieved = false;
+
+    	connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
+    	connection.setAutoCommit(false);
+
+    	try (PreparedStatement stmt = connection.prepareStatement("INSERT INTO MeGusta (idPropMG, idRecMG) VALUES (?, ?, '1')")) {
+
+    		// int changes = stmt.executeUpdate("UPDATE Citas SET EstadoProp="+date.getState().toString()+" WHERE idProp="+date.getId());
+    		stmt.setInt(1, user1.getId());
+    		stmt.setInt(2, user2.getId());
+    		System.out.println(stmt.toString());
+    	} finally {
+
+    		connection.commit();
+    		achieved = true;
+
+    	}
+    	connection.setAutoCommit(true);
+
+    	return achieved;
+
+    }
+    
+    public boolean changeGustar(User user1, User user2, boolean heart) throws SQLException {
+
+    	boolean achieved = false;
+
+    	connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
+    	connection.setAutoCommit(false);
+
+    	try (PreparedStatement stmt = connection.prepareStatement("UPDATE Citas SET heart = ? WHERE idPropMG = ? AND idRecMG = ?")) {
+
+    		// int changes = stmt.executeUpdate("UPDATE Citas SET EstadoProp="+date.getState().toString()+" WHERE idProp="+date.getId());
+    		if(heart)
+    			stmt.setString(1, "1");
+    		else
+    			stmt.setString(1, "0");
+    		stmt.setInt(2, user1.getId());
+    		stmt.setInt(3, user2.getId());
+    		System.out.println(stmt.toString());
+    	} finally {
+
+    		connection.commit();
+    		achieved = true;
+
+    	}
+    	connection.setAutoCommit(true);
+
+    	return achieved;
+
+    }
+    
+    public List<User> amantes(User user) throws SQLException {
+    	
+    	List<User> usuarios = new ArrayList<User>();
+    	try(PreparedStatement stmt = connection.prepareStatement("SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin, MeGusta.idPropMG, MeGusta.heart FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario INNER JOIN MeGusta ON MeGusta.idPropMG = Usuario.id WHERE MeGusta.idRec = ? AND MeGusta.heart = '1'")){
+    		stmt.setInt(1, user.getId());
+    		System.out.println("\t"+stmt);
+    		ResultSet rs = stmt.executeQuery();
+    		User nodo;
+    		while (rs.next()){
+    			
+    			nodo = new User();
+    			
+    			//int id = rs.getInt("id"); Le metemos al objeto usuario la ID que genera la base de datos
+    			//o es inseguro?
+    			
+    		    String nickname = rs.getString("Usuario.nombre");
+    		    Date year = rs.getDate("Usuario.year");
+    		    String sexo = rs.getString("Usuario.sexo");
+    		    //String pic = rs.getString("Usuario.foto");
+    		    String desired_sex = rs.getString("Gustos.sexo");
+    		    Date yearMx = rs.getDate("Gustos.yearMax");
+    		    Date yearMn = rs.getDate("yearMin");
+    		    int id = rs.getInt("id");
+    		    
+    		    nodo.setNickname(nickname);
+    		    nodo.setYear(year);
+    		    nodo.setSex(sex.valueOf(sexo));
+    		    //nodo.setPic(pic);
+    		    nodo.setDesired_sex(sex.valueOf(desired_sex));
+    		    nodo.setDesired_year_max(yearMx);
+    		    nodo.setDesired_year_min(yearMn);
+    		    nodo.setId(id);
+    		    nodo.setLove(true);
+    			
+    		    System.out.println("\t"+nodo.getNickname());
+    		    
+    		    if(!usuarios.add(nodo)){
+    		    	throw new SQLException();
+    		    }
+    		}
+//    		System.out.println("\tNombre del primer usuario: "+usuarios.get(0).getNickname());
+//    		System.out.println("\tNombre del segundo usuario: "+usuarios.get(1).getNickname());
+    		System.out.println("\tusuarios Length: "+usuarios.size());
+    		if(usuarios.size()==0)
+    			usuarios=null;
+    	    }
+            return usuarios;
+    	
+    	
     }
     
 }

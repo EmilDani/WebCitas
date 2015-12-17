@@ -63,7 +63,7 @@
 				if (cita.getState() == meetState.PROPUESTA) {
 			%>
 			<tr>
-				<td><img class="img-rounded" src="<%= cita.getReceiver().getImgURL()%>"></td>
+				<td><img class="img-rounded cita_pic" src="<%= cita.getReceiver().getImgURL()%>"></td>
 				<%--= cita.getProposer().getProfileURL()--%>
 				<td><a
 					href="<%=response.encodeURL("profile?id="+cita.getReceiver().getId()) %>"><%= cita.getReceiver().getNickname() %></a></td>
@@ -103,7 +103,7 @@
 						if (cita.getState() == meetState.PROPUESTA) {
 			%>
 			<tr>
-				<td><img class="img-rounded" src="<%=cita.getProposer().getImgURL()%>"></td>
+				<td><img class="img-rounded cita_pic" src="<%=cita.getProposer().getImgURL()%>"></td>
 				<%--= cita.getProposer().getProfileURL()--%>
 				<td><a
 					href="<%=response.encodeURL("profile?id=" + cita.getProposer().getId())%>"><%=cita.getProposer().getNickname()%></a></td>
@@ -177,13 +177,13 @@
 						if (cita.getState() == meetState.CONFIRMADA) {
 			%>
 			<tr>
-				<td><img class="img-rounded" src="<%=cita.getProposer().getImgURL()%>"></td>
+				<td><img class="img-rounded cita_pic" src="<%=cita.getProposer().getImgURL()%>"></td>
 				<%-- = cita.getProposer().getProfileURL() --%>
 				<td><a
 					href="<%=response.encodeURL("profile?id=" + cita.getProposer().getId())%>"><%=cita.getProposer().getNickname()%></a></td>
 				<!-- <td><%=cita.getProposal_sello()%></td> -->
 				<td>-</td>
-				<td><img class="img-rounded" src="<%=cita.getReceiver().getImgURL()%>"></td>
+				<td><img class="img-rounded cita_pic" src="<%=cita.getReceiver().getImgURL()%>"></td>
 				<%-- = cita.getProposer().getProfileURL() --%>
 				<td><a
 					href="<%=response.encodeURL("profile?id=" + cita.getReceiver().getId())%>"><%=cita.getReceiver().getNickname()%></a></td>
@@ -249,13 +249,13 @@
 								icon = "glyphicon glyphicon-remove-circle";
 			%>
 			<tr>
-				<td><img class="img-rounded" src="<%=cita.getProposer().getImgURL()%>"></td>
+				<td><img class="img-rounded cita_pic" src="<%=cita.getProposer().getImgURL()%>"></td>
 				<%-- = cita.getProposer().getProfileURL() --%>
 				<td><a
 					href="<%=response.encodeURL("profile?id=" + cita.getProposer().getId())%>"><%=cita.getProposer().getNickname()%></a></td>
 				<!-- <td><%=cita.getProposal_sello()%></td> -->
 				<td>-</td>
-				<td><img class="img-rounded" src="<%=cita.getReceiver().getImgURL()%>"></td>
+				<td><img class="img-rounded cita_pic" src="<%=cita.getReceiver().getImgURL()%>"></td>
 				<%-- = cita.getProposer().getProfileURL() --%>
 				<td><a
 					href="<%=response.encodeURL("profile?id=" + cita.getReceiver().getId())%>"><%=cita.getReceiver().getNickname()%></a></td>

@@ -1,0 +1,171 @@
+/* http://www.color-hex.com/color-palette/827 */
+/* 
+https://www.google.com/fonts#QuickUsePlace:quickUse
+https://www.google.com/fonts/specimen/Pinyon+Script#charset
+https://www.google.com/fonts/specimen/Special+Elite
+ */
+
+
+@import url(https://fonts.googleapis.com/css?family=Satisfy);
+@import url(https://fonts.googleapis.com/css?family=Great+Vibes);
+
+body {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+ 
+/*  .semi_back {
+ 	background: #6bd2db !important;
+ }
+  */
+  
+nav {
+	background-color: #e8702a;
+}
+
+table a {
+	color: #e8702a;
+	font-weight: bold;
+}
+
+footer {
+    background-color: #ffbe4f !important;
+}
+
+/* thead td {
+	
+	color: #ffbe4f;
+	
+} */
+
+.success_button {
+	
+	background-color: #ffbe4f;
+	color: black;
+	
+}
+
+.fail_button {
+	background-color: #0c457d;
+	color: white;
+}
+
+#jumbotron_1 {
+	
+	background-color: #ffbe4f;
+	
+}
+
+.jumbotron_even {
+	background: #6bd2db !important;
+}
+
+.jumbotron_even:hover {
+	background: #0ea7b5 !important;
+}
+
+nav a:hover{
+	
+	background-color: #ffbe4f !important;
+	
+}
+
+#login_container {
+	
+	background: rgba(14, 167, 181, 0.4);
+	
+	
+	
+}
+
+.foto_perfil {
+	
+	
+	
+}
+
+#nombre_perfil{
+	
+	color: #0c457d;
+	/* font-family: 'Satisfy', cursive; */
+	font-family: 'Great Vibes', cursive;
+	
+}
+
+#presentation {
+	/* background-image: url(http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-239694.png) !important; */
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+div[class^="col-md-4"] h2 {
+	
+		color: #0c457d;
+	/* font-family: 'Satisfy', cursive; */
+		font-family: 'Great Vibes', cursive;
+	
+}
+
+#year_perfil {
+	text-align: center;
+	font-size: 150%;
+	
+}
+
+#sexo_perfil {
+	text-align: center;
+	font-size: 150%;
+}
+
+.cita_pic {
+	
+	width: 50px;
+    height: 50px;
+
+}
+
+#main_citas {
+	
+	background-color: #ffbe4f;
+	
+}
+
+#main_me_gusta {
+	
+	background-color: #ffbe4f;
+	
+}
+
+#main_sugerencias {
+	
+	background-color: #ffbe4f;
+	
+}
+
+#main1 {
+	background-color: #6bd2db;
+}
+
+#main2 {
+	background-color: #0ea7b5;
+}
+
+#main3{
+	background-color: #0c457d;
+}
+
+#corazon {
+	width: 50px;
+    height: 50px;
+    font-size: 350%;
+}
+
+/* #mg_button {
+	top: 100% !important;
+} */
+
+#mg_extra_row {
+	width: 50px;
+    height: 50px;
+}
