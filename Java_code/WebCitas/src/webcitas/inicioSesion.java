@@ -3,6 +3,7 @@ package webcitas;
 
 import java.io.*;
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.naming.NamingException;
 import javax.servlet.*;
@@ -37,6 +38,10 @@ public class inicioSesion  extends HttpServlet{
 				System.out.println("Bienvenido");
 				HttpSession session = request.getSession();
 				session.setAttribute("usuario",usuarioLogueado);
+				
+				List<User> amantes = manager.amantes(usuarioLogueado);
+				session.setAttribute("amantes", amantes);
+				
 				response.sendRedirect("mainView");
 			}
 		} catch(SQLException | NamingException e) {

@@ -146,7 +146,7 @@ public class DBManager implements AutoCloseable {
     public List<User> listUsers() throws SQLException {
         // TODO: program this method DONE
 	List<User> usuarios = new ArrayList<User>();
-	try(PreparedStatement stmt = connection.prepareStatement("")){
+	try(PreparedStatement stmt = connection.prepareStatement("SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario")){
 		// String query = "";
 		ResultSet rs = stmt.executeQuery();
 		User nodo;
@@ -529,7 +529,7 @@ public class DBManager implements AutoCloseable {
     	return achieved;
     }
     
-    public boolean gustar(User user1, User user2) throws SQLException {
+    public boolean gustar(Like like) throws SQLException {
 
     	boolean achieved = false;
 
@@ -539,8 +539,8 @@ public class DBManager implements AutoCloseable {
     	try (PreparedStatement stmt = connection.prepareStatement("INSERT INTO MeGusta (idPropMG, idRecMG) VALUES (?, ?, '1')")) {
 
     		// int changes = stmt.executeUpdate("UPDATE Citas SET EstadoProp="+date.getState().toString()+" WHERE idProp="+date.getId());
-    		stmt.setInt(1, user1.getId());
-    		stmt.setInt(2, user2.getId());
+    		stmt.setInt(1, like.getPropMG().getId());
+    		stmt.setInt(2, like.getRecMG().getId());
     		System.out.println(stmt.toString());
     	} finally {
 
@@ -554,9 +554,11 @@ public class DBManager implements AutoCloseable {
 
     }
     
-    public boolean changeGustar(User user1, User user2, boolean heart) throws SQLException {
+    public boolean toggleGustar(Like like) throws SQLException {
 
     	boolean achieved = false;
+    	
+    	
 
     	connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
     	connection.setAutoCommit(false);
@@ -564,12 +566,12 @@ public class DBManager implements AutoCloseable {
     	try (PreparedStatement stmt = connection.prepareStatement("UPDATE Citas SET heart = ? WHERE idPropMG = ? AND idRecMG = ?")) {
 
     		// int changes = stmt.executeUpdate("UPDATE Citas SET EstadoProp="+date.getState().toString()+" WHERE idProp="+date.getId());
-    		if(heart)
+    		if(like.isHeart())
     			stmt.setString(1, "1");
     		else
     			stmt.setString(1, "0");
-    		stmt.setInt(2, user1.getId());
-    		stmt.setInt(3, user2.getId());
+    		stmt.setInt(2, like.getPropMG().getId());
+    		stmt.setInt(3, like.getRecMG().getId());
     		System.out.println(stmt.toString());
     	} finally {
 
@@ -583,10 +585,45 @@ public class DBManager implements AutoCloseable {
 
     }
     
+    public Like searchLike(Like like) throws SQLException {
+    	
+    	Like mg = new Like();
+    	
+    	try (PreparedStatement stmt = connection.prepareStatement("SELECT * FROM MeGusta WHERE idRecMG=? AND idPropMG=?")) {
+    		stmt.setInt(1, like.getRecMG().getId());
+    		stmt.setInt(1, like.getPropMG().getId());
+    		System.out.println("\t"+stmt);
+    		ResultSet rs = stmt.executeQuery();
+    		if(rs.next()){
+    			
+    			int idMG = rs.getInt("idMG");
+    			int idPropMG = rs.getInt("idPropMG");
+    			int idRecMG = rs.getInt("idRecMG");
+    			String heart = rs.getString("heart");
+    			
+    			boolean love = false;
+    			if(heart == "1") {
+    				love=true;
+    			}
+    			
+    			mg.setIdMG(idMG);
+    			mg.setPropMG(searchId(idPropMG));
+    			mg.setRecMG(searchId(idRecMG));
+    			mg.setHeart(love);
+    		} else {
+//    			like.setHeart(false);
+    			mg=like;
+    			mg.setIdMG(0);
+    		}
+    	}
+    	
+    	return mg;
+    }
+    
     public List<User> amantes(User user) throws SQLException {
     	
     	List<User> usuarios = new ArrayList<User>();
-    	try(PreparedStatement stmt = connection.prepareStatement("SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin, MeGusta.idPropMG, MeGusta.heart FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario INNER JOIN MeGusta ON MeGusta.idPropMG = Usuario.id WHERE MeGusta.idRec = ? AND MeGusta.heart = '1'")){
+    	try(PreparedStatement stmt = connection.prepareStatement("SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin, MeGusta.idPropMG, MeGusta.heart FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario INNER JOIN MeGusta ON MeGusta.idPropMG = Usuario.id WHERE MeGusta.idRecMG = ? AND MeGusta.heart = '1'")){
     		stmt.setInt(1, user.getId());
     		System.out.println("\t"+stmt);
     		ResultSet rs = stmt.executeQuery();
@@ -615,7 +652,6 @@ public class DBManager implements AutoCloseable {
     		    nodo.setDesired_year_max(yearMx);
     		    nodo.setDesired_year_min(yearMn);
     		    nodo.setId(id);
-    		    nodo.setLove(true);
     			
     		    System.out.println("\t"+nodo.getNickname());
     		    

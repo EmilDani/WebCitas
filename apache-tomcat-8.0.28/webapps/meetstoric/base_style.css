@@ -9,9 +9,17 @@ https://www.google.com/fonts/specimen/Special+Elite
 @import url(https://fonts.googleapis.com/css?family=Satisfy);
 @import url(https://fonts.googleapis.com/css?family=Great+Vibes);
 
-body {
-	background-repeat: no-repeat;
-	background-size: cover;
+html, body {
+    background-repeat: no-repeat !important;
+    /* background-size: cover; */
+    height: 100% !important;
+    
+}
+
+#portada_container {
+    background: url(http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-148192.jpg);
+    height: 100% !important;
+    weight: 100%;
 }
 
  
@@ -59,6 +67,7 @@ footer {
 
 .jumbotron_even {
 	background: #6bd2db !important;
+	/* height: 100%; */
 }
 
 .jumbotron_even:hover {
@@ -145,14 +154,17 @@ div[class^="col-md-4"] h2 {
 
 #main1 {
 	background-color: #6bd2db;
+	height: 100%;
 }
 
 #main2 {
 	background-color: #0ea7b5;
+	height: 100%;
 }
 
 #main3{
 	background-color: #0c457d;
+	height: 100%;
 }
 
 #corazon {

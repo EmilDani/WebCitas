@@ -1,12 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="webcitas.*"%>
+<%@ page import="java.util.*" %>
 <%@ page import="java.sql.SQLException"%>
 <%@ page import="javax.naming.NamingException"%>
 
 <%
 	User user = (User) session.getAttribute("usuario");
 	User perfil = (User) request.getAttribute("perfil");
+	List<User> amantes = (List<User>) session.getAttribute("amantes");
+	
+	boolean isAmor = false;
+	for (User amante : amantes){
+		if (amante.getId()==perfil.getId())
+			isAmor = true;
+	}
 %>
 
 
@@ -71,10 +79,17 @@
 				<div align="center">
 			
 				<form action="megusta">
+				
+				<% 
+				String heart = "glyphicon glyphicon-heart-empty";
+				if (isAmor) 
+					heart = "glyphicon glyphicon-heart";
+				
+				%>
 					
 					<input type="hidden" name="recId"
 						value="<%=perfil.getId()%>">
-					<button class="btn btn-danger" id="mg_button" type="submit" name="gustar" value="1<%--dependiendo del estado de me gusta 1 o 0 --%>"><i class="glyphicon glyphicon-heart-empty <%-- dependiendo del estado de me gusta corazón lleo o no --%>" id="corazon"></i></button> <!-- Hay que añadir que con JavaScript se rellene el botón -->
+					<button class="btn btn-danger" id="mg_button" type="submit" name="gustar"><i class=" <%= heart %>" id="corazon"></i></button> <!-- Hay que añadir que con JavaScript se rellene el botón -->
 				
 				</form>
 				

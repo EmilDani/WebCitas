@@ -14,7 +14,6 @@ public class User {
 	private int id;
 	private String nickuser;
 	private String pass;
-	private boolean love;
 	
 	public String getNickname() {
 		return nickname;
@@ -93,13 +92,6 @@ public class User {
 		
 		return profileUrl;
 	}
-	public boolean isLove() {
-		return love;
-	}
-	public void setLove(boolean love) {
-		this.love = love;
-	}
-	
-	
+
 
 }

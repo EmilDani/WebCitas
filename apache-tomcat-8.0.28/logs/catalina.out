@@ -24979,3 +24979,403 @@ Bienvenido
 	Karl Marx
 	usuarios Length: 1
  fecha_error: false
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 28
+ Nombre del perfil: Karl Marx
+
+ Redirección a profile.jsp
+
+17-Dec-2015 21:53:19.896 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-9188"]
+17-Dec-2015 21:53:19.948 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+17-Dec-2015 21:53:19.999 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Parando servicio Catalina
+17-Dec-2015 21:53:20.026 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-9188"]
+17-Dec-2015 21:53:20.028 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+17-Dec-2015 21:53:20.028 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-9188"]
+17-Dec-2015 21:53:20.029 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+17-Dec-2015 21:55:19.572 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-9188"]
+17-Dec-2015 21:55:19.624 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+17-Dec-2015 21:55:19.674 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Parando servicio Catalina
+17-Dec-2015 21:55:19.695 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [meetstoric] registró el conductor JDBC [com.mysql.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+17-Dec-2015 21:55:19.696 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [meetstoric] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:135)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+17-Dec-2015 21:55:19.709 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-9188"]
+17-Dec-2015 21:55:19.711 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+17-Dec-2015 21:55:19.717 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-9188"]
+17-Dec-2015 21:55:19.717 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+17-Dec-2015 23:00:01.247 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.28
+17-Dec-2015 23:00:01.250 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 7 2015 18:25:21 UTC
+17-Dec-2015 23:00:01.250 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.28.0
+17-Dec-2015 23:00:01.250 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+17-Dec-2015 23:00:01.250 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.1.1
+17-Dec-2015 23:00:01.250 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          i386
+17-Dec-2015 23:00:01.251 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-7-openjdk-i386/jre
+17-Dec-2015 23:00:01.251 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.7.0_79-b14
+17-Dec-2015 23:00:01.251 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+17-Dec-2015 23:00:01.251 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+17-Dec-2015 23:00:01.251 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+17-Dec-2015 23:00:01.252 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/conf/logging.properties
+17-Dec-2015 23:00:01.252 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+17-Dec-2015 23:00:01.252 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/endorsed
+17-Dec-2015 23:00:01.252 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+17-Dec-2015 23:00:01.252 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+17-Dec-2015 23:00:01.253 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/temp
+17-Dec-2015 23:00:01.253 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: /usr/java/packages/lib/i386:/usr/lib/i386-linux-gnu/jni:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+17-Dec-2015 23:00:02.234 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-9188"]
+17-Dec-2015 23:00:02.300 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+17-Dec-2015 23:00:02.304 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+17-Dec-2015 23:00:02.306 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+17-Dec-2015 23:00:02.308 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 2435 ms
+17-Dec-2015 23:00:02.412 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio Catalina
+17-Dec-2015 23:00:02.413 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.28
+17-Dec-2015 23:00:02.448 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/ROOT de la aplicación web
+17-Dec-2015 23:00:03.224 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/ROOT has finished in 763 ms
+17-Dec-2015 23:00:03.224 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/examples de la aplicación web
+17-Dec-2015 23:00:05.400 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/examples has finished in 2.176 ms
+17-Dec-2015 23:00:05.401 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/docs de la aplicación web
+17-Dec-2015 23:00:05.450 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/docs has finished in 49 ms
+17-Dec-2015 23:00:05.451 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/host-manager de la aplicación web
+17-Dec-2015 23:00:05.551 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/host-manager has finished in 100 ms
+17-Dec-2015 23:00:05.551 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/meetstoric de la aplicación web
+17-Dec-2015 23:00:06.065 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = BaseDatos Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "8" for "maxActive" property, which is being ignored.
+17-Dec-2015 23:00:06.112 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+17-Dec-2015 23:00:06.142 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/meetstoric has finished in 591 ms
+17-Dec-2015 23:00:06.142 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/manager de la aplicación web
+17-Dec-2015 23:00:06.218 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/manager has finished in 76 ms
+17-Dec-2015 23:00:06.233 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-9188"]
+17-Dec-2015 23:00:06.244 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+17-Dec-2015 23:00:06.245 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 3936 ms
+
+	[DBManager]:
+
+Bienvenido
+
+ [mainView]:
+
+
+	[DBManager]:
+
+	citas Length: 5
+	citas Length: 2
+	com.mysql.jdbc.JDBC4PreparedStatement@1b57fd8: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year AND Usuario.id<>1 ORDER BY RAND() LIMIT 5
+	Josefina
+	Diana de Gales
+	María Magdalena
+	Lola
+	Isabel I de Inglaterra
+	usuarios Length: 5
+ fecha_error: false
+ errorCProp: false
+ errorCRec: false
+ Redirección a mainView.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 5
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1d402d6: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year AND Usuario.id<>1 ORDER BY RAND() LIMIT 5
+	Lola
+	María Magdalena
+	Josefina
+	Isabel I de Inglaterra
+	Diana de Gales
+	usuarios Length: 5
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 5
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+	[DBManager]:
+
+	citas Length: 5
+	citas Length: 2
+	com.mysql.jdbc.JDBC4PreparedStatement@10d8215: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year AND Usuario.id<>1 ORDER BY RAND() LIMIT 5
+	Isabel I de Inglaterra
+	Josefina
+	Diana de Gales
+	Lola
+	María Magdalena
+	usuarios Length: 5
+ fecha_error: false
+ errorCProp: false
+ errorCRec: false
+ Redirección a mainView.jsp
+
+ [mainView]:
+
+
+	[DBManager]:
+
+	citas Length: 5
+	citas Length: 2
+	com.mysql.jdbc.JDBC4PreparedStatement@1417a47: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year AND Usuario.id<>1 ORDER BY RAND() LIMIT 5
+	María Magdalena
+	Josefina
+	Isabel I de Inglaterra
+	Lola
+	Diana de Gales
+	usuarios Length: 5
+ fecha_error: false
+ errorCProp: false
+ errorCRec: false
+ Redirección a mainView.jsp
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 1
+ Nombre del perfil: Emilio
+
+ Redirección a profile.jsp
+
+
+ [MeGusta]:
+
+
+	[DBManager]:
+
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+
+ [mainView]:
+
+
+	[DBManager]:
+
+	citas Length: 5
+	citas Length: 2
+	com.mysql.jdbc.JDBC4PreparedStatement@bcb14: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year AND Usuario.id<>1 ORDER BY RAND() LIMIT 5
+	Isabel I de Inglaterra
+	Diana de Gales
+	Josefina
+	María Magdalena
+	Lola
+	usuarios Length: 5
+ fecha_error: false
+ errorCProp: false
+ errorCRec: false
+ Redirección a mainView.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1173763: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year AND Usuario.id<>1 ORDER BY RAND() LIMIT 5
+	Lola
+	Diana de Gales
+	Josefina
+	Isabel I de Inglaterra
+	María Magdalena
+	usuarios Length: 5
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 5
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 1
+ Nombre del perfil: Emilio
+
+ Redirección a profile.jsp
+
+
+ [mainView]:
+
+
+	[DBManager]:
+
+	citas Length: 5
+	citas Length: 2
+	com.mysql.jdbc.JDBC4PreparedStatement@1307ef8: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year AND Usuario.id<>1 ORDER BY RAND() LIMIT 5
+	María Magdalena
+	Isabel I de Inglaterra
+	Lola
+	Diana de Gales
+	Josefina
+	usuarios Length: 5
+ fecha_error: false
+ errorCProp: false
+ errorCRec: false
+ Redirección a mainView.jsp
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 5
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [Recomendaciones]:
+
+
+	[DBManager]:
+
+	com.mysql.jdbc.JDBC4PreparedStatement@1d61702: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year AND Usuario.id<>1 ORDER BY RAND() LIMIT 5
+	Josefina
+	Diana de Gales
+	Lola
+	María Magdalena
+	Isabel I de Inglaterra
+	usuarios Length: 5
+ fecha_error: false
+
+ [Citas]:
+
+
+	[DBManager]:
+
+	citas Length: 5
+	citas Length: 2
+ errorCProp: false
+ errorCRec: false
+ Redirección a citas.jsp
+
+ [mainView]:
+
+
+	[DBManager]:
+
+	citas Length: 5
+	citas Length: 2
+	com.mysql.jdbc.JDBC4PreparedStatement@9012aa: SELECT Usuario.id, Usuario.nombre, Usuario.year, Usuario.sexo, Gustos.sexo, Gustos.yearMax, Gustos.yearMin FROM Usuario INNER JOIN Gustos ON Usuario.id=Gustos.idUsuario WHERE Gustos.sexo='MALE' AND Gustos.yearMax<'1994-11-13' AND Gustos.yearMin>'1994-11-13' AND 'FEMALE'=Usuario.sexo AND '1990-01-01'<Usuario.year AND '1997-01-01'>Usuario.year AND Usuario.id<>1 ORDER BY RAND() LIMIT 5
+	María Magdalena
+	Josefina
+	Lola
+	Diana de Gales
+	Isabel I de Inglaterra
+	usuarios Length: 5
+ fecha_error: false
+ errorCProp: false
+ errorCRec: false
+ Redirección a mainView.jsp
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 1
+ Nombre del perfil: Emilio
+
+ Redirección a profile.jsp
+
+
+ [Perfil]:
+
+
+	[DBManager]:
+
+ id del perfil: 1
+ Nombre del perfil: Emilio
+
+ Redirección a profile.jsp
+
+
+ [CerrarSesion]:
+
+18-Dec-2015 06:55:09.150 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-9188"]
+18-Dec-2015 06:55:09.152 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+18-Dec-2015 06:55:09.153 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Parando servicio Catalina
+18-Dec-2015 06:55:09.227 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [meetstoric] registró el conductor JDBC [com.mysql.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+18-Dec-2015 06:55:09.237 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [meetstoric] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:135)
+ com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+18-Dec-2015 06:55:09.263 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-9188"]
+18-Dec-2015 06:55:09.303 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+18-Dec-2015 06:55:09.305 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-9188"]
+18-Dec-2015 06:55:09.307 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+18-Dec-2015 09:23:41.678 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.28
+18-Dec-2015 09:23:41.680 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 7 2015 18:25:21 UTC
+18-Dec-2015 09:23:41.680 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.28.0
+18-Dec-2015 09:23:41.680 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+18-Dec-2015 09:23:41.680 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.1.1
+18-Dec-2015 09:23:41.680 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          i386
+18-Dec-2015 09:23:41.680 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-7-openjdk-i386/jre
+18-Dec-2015 09:23:41.680 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.7.0_79-b14
+18-Dec-2015 09:23:41.680 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+18-Dec-2015 09:23:41.680 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+18-Dec-2015 09:23:41.680 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+18-Dec-2015 09:23:41.681 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/conf/logging.properties
+18-Dec-2015 09:23:41.681 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+18-Dec-2015 09:23:41.681 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/endorsed
+18-Dec-2015 09:23:41.681 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+18-Dec-2015 09:23:41.681 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28
+18-Dec-2015 09:23:41.681 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/lab/alum/0290708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/temp
+18-Dec-2015 09:23:41.681 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: /usr/java/packages/lib/i386:/usr/lib/i386-linux-gnu/jni:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+18-Dec-2015 09:23:41.882 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-9188"]
+18-Dec-2015 09:23:41.921 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+18-Dec-2015 09:23:41.924 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+18-Dec-2015 09:23:41.945 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+18-Dec-2015 09:23:41.946 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 990 ms
+18-Dec-2015 09:23:42.005 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio Catalina
+18-Dec-2015 09:23:42.005 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.28
+18-Dec-2015 09:23:42.022 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/ROOT de la aplicación web
+18-Dec-2015 09:23:42.582 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/ROOT has finished in 560 ms
+18-Dec-2015 09:23:42.583 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/examples de la aplicación web
+18-Dec-2015 09:23:43.434 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/examples has finished in 851 ms
+18-Dec-2015 09:23:43.435 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/docs de la aplicación web
+18-Dec-2015 09:23:43.490 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/docs has finished in 54 ms
+18-Dec-2015 09:23:43.490 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/host-manager de la aplicación web
+18-Dec-2015 09:23:43.568 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/host-manager has finished in 78 ms
+18-Dec-2015 09:23:43.568 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/meetstoric de la aplicación web
+18-Dec-2015 09:23:43.922 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = BaseDatos Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "8" for "maxActive" property, which is being ignored.
+18-Dec-2015 09:23:43.944 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+18-Dec-2015 09:23:43.952 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/meetstoric has finished in 384 ms
+18-Dec-2015 09:23:43.952 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/manager de la aplicación web
+18-Dec-2015 09:23:44.005 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /var/home/lab/alum0/02/90/708/Documentos/Aplicaciones_Web/Proyecto/WebCitas/apache-tomcat-8.0.28/webapps/manager has finished in 52 ms
+18-Dec-2015 09:23:44.008 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-9188"]
+18-Dec-2015 09:23:44.027 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+18-Dec-2015 09:23:44.028 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 2081 ms
