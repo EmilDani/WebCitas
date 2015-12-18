@@ -26,6 +26,8 @@ public class Perfil extends HttpServlet {
 		} else {
 			try (DBManager manager = new DBManager()){
 				
+				
+				
 				// Mejor mandar el manager por session?
 				String id = request.getParameter("id");
 				System.out.println(" id del perfil: "+Integer.parseInt(id));
@@ -34,6 +36,20 @@ public class Perfil extends HttpServlet {
 				request.setAttribute("perfil", perfil);
 				System.out.println(" Nombre del perfil: "+perfil.getNickname());
 
+				//List<User> amantes = manager.amantes(user);
+				
+
+					//session.setAttribute("amantes", amantes);
+				Like mg = new Like();
+				//mg.setIdMG(0);
+				mg.setRecMG(perfil);
+				mg.setPropMG(user);
+				
+				Like like = manager.searchLike(mg);
+				
+				request.setAttribute("tieneLike",mg );
+				
+				
 				RequestDispatcher rd = request.getRequestDispatcher("profile.jsp");
 				System.out.println("\n Redirección a profile.jsp\n");
 				rd.forward(request, response);

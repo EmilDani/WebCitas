@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.text.ParseException;
+import java.util.List;
 
 import javax.naming.NamingException;
 import javax.servlet.RequestDispatcher;
@@ -32,11 +33,14 @@ public class MeGusta extends HttpServlet {
 			try (DBManager manager = new DBManager()){
 				
 				String idRecMG = request.getParameter("recId");
+				System.out.println(" idRec"+idRecMG.toString());
+				
 				User recMG = manager.searchId(Integer.parseInt(idRecMG));
+				System.out.println(" usuarioquepidecita"+recMG.getId());
 				request.getParameter("gustar");
 				
 				Like mg = new Like();
-				mg.setIdMG(0);
+				//mg.setIdMG(0);
 				mg.setRecMG(recMG);
 				mg.setPropMG(user);
 				
@@ -44,14 +48,12 @@ public class MeGusta extends HttpServlet {
 				
 				if (like.getIdMG() == 0){
 					manager.gustar(like);
-				} else {
-					manager.toggleGustar(like);
-				}
+					
+
+					}
 				
-				request.setAttribute("like", like);
-				RequestDispatcher rd = request.getRequestDispatcher("profile.jsp");
-				System.out.println(" Redirección a profile.jsp");
-				rd.forward(request, response);
+				
+				response.sendRedirect("profile?id=" +idRecMG);
 				
 			} catch (SQLException | NamingException e) {
 				

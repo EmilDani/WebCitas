@@ -35,8 +35,12 @@ public class Citar extends HttpServlet {
 				try (DBManager manager = new DBManager()){
 					
 				String receiverId = request.getParameter("recId");
+				System.out.println("perfilId:"+receiverId);
+				System.out.println("userId:"+user.getId());
 				String citaId = request.getParameter("citaID");
 				String citaEstado = request.getParameter("cita_estado");
+				
+						
 				
 				if (receiverId != null) { //CREAR CITA
 					
@@ -78,7 +82,7 @@ public class Citar extends HttpServlet {
 					    }
 					}
 					
-				} else if (citaId != null && citaEstado!=null) { //GESTIONAR CITA
+				} else if (citaId != null && citaEstado!=null ) { //GESTIONAR CITA
 					
 					DinnerDate toAnswerDate = manager.idToDinnerDate(Integer.parseInt(citaId));
 					meetState state;
@@ -107,8 +111,8 @@ public class Citar extends HttpServlet {
 					manager.answerDate(toAnswerDate);
 					response.sendRedirect("citas");
 				
-				} else {
-					request.getRequestDispatcher("error-login.jsp").forward(request, response);
+				}else {
+					request.getRequestDispatcher("error-jsp.html").forward(request, response);
 				}
 			} catch (SQLException | NamingException | ParseException e) {
 				

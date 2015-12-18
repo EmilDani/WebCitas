@@ -4,17 +4,12 @@
 <%@ page import="java.util.*" %>
 <%@ page import="java.sql.SQLException"%>
 <%@ page import="javax.naming.NamingException"%>
-
+<%@ page import="java.util.Date"%>
+<%@ page import="java.util.Calendar"%>
+<%@ page import="java.text.*"%>
 <%
 	User user = (User) session.getAttribute("usuario");
 	User perfil = (User) request.getAttribute("perfil");
-	List<User> amantes = (List<User>) session.getAttribute("amantes");
-	
-	boolean isAmor = false;
-	for (User amante : amantes){
-		if (amante.getId()==perfil.getId())
-			isAmor = true;
-	}
 %>
 
 
@@ -34,7 +29,15 @@
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="megusta.js" type="text/javascript"></script>
-	
+	<script type="text/javascript" lang="JavaScript">
+	function pulsarMeGusta() {
+
+		var usuario = document.getElementById("gustaUsuario");
+		//if(usuario.value==pefil.getId())
+			alert("Ahora este usuario te gusta.");
+
+	}
+</script>
 </head>
 <body class="body_back">
 
@@ -78,18 +81,33 @@
 			
 				<div align="center">
 			
-				<form action="megusta">
+				
 				
 				<% 
-				String heart = "glyphicon glyphicon-heart-empty";
-				if (isAmor) 
-					heart = "glyphicon glyphicon-heart";
-				
+				Like like=(Like)request.getAttribute("tieneLike");
+				String heart ;
+				if(user.getId()!=perfil.getId()){
+					System.out.println("dfadsgfasdgasdgasdgasdgasdga"+like.isHeart());
+				if (!like.isHeart()){
+					//like.toggleHeart();
 				%>
+				
+				<form action="megusta" onsubmit="return pulsarMeGusta();">
+				<input type="hidden" name="recId" value="<%=perfil.getId()%>">
+				<button class="btn btn-danger" id="mg_button" type="submit" name="gustar" id="gustaUsuario" value="<%=perfil.getId() %>"><i class=" glyphicon glyphicon-heart" id="corazon"></i></button> <!-- Hay que añadir que con JavaScript se rellene el botón -->
+				
+						
+					<%--  <% heart = "glyphicon glyphicon-heart-empty"; %> --%>
+				<%}else{%>
+				
+					<p>Este usuario me gusta</p>
+					<!-- heart = "glyphicon glyphicon-heart";%> -->
+				<% }%>
 					
-					<input type="hidden" name="recId"
-						value="<%=perfil.getId()%>">
-					<button class="btn btn-danger" id="mg_button" type="submit" name="gustar"><i class=" <%= heart %>" id="corazon"></i></button> <!-- Hay que añadir que con JavaScript se rellene el botón -->
+				
+				<%} %>
+					
+					
 				
 				</form>
 				
@@ -147,6 +165,65 @@
 			</div>
 		</div>
 	</div>
+	
+	<%if(user.getId()!=perfil.getId()){ %>
+	<div id="texto_presentation_container" class="container jumbotron jumbotron_even">
+		
+		<h3>Pedir Cita:</h3>
+		<%
+				Date hoy = new java.util.Date();
+				Calendar calendario = Calendar.getInstance();
+				calendario.setTime(hoy);
+				calendario.add(Calendar.DAY_OF_YEAR, 14); // Sumamos los días
+				DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		%>
+		
+		
+		<table class="table table-striped">
+			<thead>
+				<tr class="row">
+					<th class="col-md-1">NickName</th>
+					<th class="col-md-1">Año de nacimiento</th>
+					<th class="col-md-1">Interesado/a en</th>
+					<th class="col-md-1">Edad Máxima</th>
+					<th class="col-md-1">Edad Mínima</th>
+					<th class="col-md-1"></th>
+					<th class="col-md-1">Elija una fecha para su cita</th>
+				</tr>
+			</thead>
 
+			<div class="row">
+
+				<p></p>
+
+			</div>
+			
+				<tr class="row">
+					<td class="col-md-1"><a
+						href="<%=response.encodeURL("profile?id=" + perfil.getId())%>"><%=perfil.getNickname()%></a></td>
+					<td class="col-md-1"><%=perfil.getYear()%></td>
+					<td class="col-md-1"><%=perfil.getDesired_sex()%></td>
+					<td class="col-md-1"><%=perfil.getDesired_year_max()%></td>
+					<td class="col-md-1"><%=perfil.getDesired_year_min()%></td>
+					<td class="col-md-1">
+					<form class="form-group" action="citar" method="get"></td>
+					<td class="col-md-1">
+						
+						<input type="hidden" name="recId"
+						value="<%=perfil.getId()%>">
+					<input class="input-group" type="date" name="fecha"
+						min="<%=df.format(hoy)%>"
+						max="<%=df.format(calendario.getTime())%>">
+						</td>
+					<!-- class="form-control" -->
+					<td class="col-md-1"><input class="btn success_button" type="submit" value="Pedir Cita"
+						style="font-size: 14px;"></form>
+					</td>
+
+				</tr>
+
+		</table>
+	</div>
+	<%} %>
 </body>
 </html>

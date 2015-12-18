@@ -4,7 +4,7 @@ public class Like {
 	
 	private User RecMG;
 	private User PropMG;
-	private boolean heart = false;
+	private boolean heart;
 	private int idMG;
 	public User getRecMG() {
 		return RecMG;

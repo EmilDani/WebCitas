@@ -10,7 +10,7 @@
 
 <% 
 User user = (User) session.getAttribute("usuario");
-List<User> amantes = (List<User>) session.getAttribute("amantes");
+//List<User> amantes = (List<User>) session.getAttribute("amantes");
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -123,8 +123,23 @@ List<User> amantes = (List<User>) session.getAttribute("amantes");
 
 			</div>
 			<div class="col-md-4 col-md-offset-2 container jumbotron" id="main_me_gusta">
+		<h3>Notificaciones de "Me gusta"</h3>
+			
+			<% boolean noMeGustas = (boolean) request.getAttribute("noMeGustas");%>
+			
+			<% 
+			if (noMeGustas) {
+		%>
 
-			<%
+		<h4>No tienes Me Gusta.</h4>
+
+		<%
+			} else {
+				List<User> amantes = (List<User>) session.getAttribute("amantes");
+			
+		%>
+			
+		<%
 			
 			for (User amante : amantes){
 				%>
@@ -139,8 +154,7 @@ List<User> amantes = (List<User>) session.getAttribute("amantes");
 			<%
 				}
 			%>
-			
-			<h3>Notificaciones de "Me gusta"</h3>
+		<%} %>	
 			
 				</div>
 			</div>

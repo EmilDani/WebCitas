@@ -34,10 +34,13 @@ public class mainView extends HttpServlet {
         				boolean errorCRec = false;
         				boolean fecha_error;
         				boolean recomendaciones_error = false;
+        				boolean noMeGustas=false;
         				
         				List<DinnerDate> citasProp = manager.listDatesPropOf(user);
         				List<DinnerDate> citasRec = manager.listDatesRecOf(user);
         				List<User> usuarios= manager.listRecommendedUsers(user);
+        				List<User> amantes = manager.amantes(user);
+        				session.setAttribute("amantes", amantes);
         				
         				/* MINI SUGERENCIAS*/
         				
@@ -57,7 +60,13 @@ public class mainView extends HttpServlet {
         				request.setAttribute("fecha_error", fecha_error);
         				
         				/* MINI ME GUSTA*/
-        				
+        				//List<User> amantes=(List<User>)session.getAttribute("amantes");
+        				if (amantes == null){
+        					System.out.println(" No tienes me gusta");
+        					noMeGustas=true;
+        				} 
+        				request.setAttribute("noMeGustas", noMeGustas);
+
         				
         				
         				/* MINI CITAS*/

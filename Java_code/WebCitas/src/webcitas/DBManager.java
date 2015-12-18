@@ -536,11 +536,12 @@ public class DBManager implements AutoCloseable {
     	connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
     	connection.setAutoCommit(false);
 
-    	try (PreparedStatement stmt = connection.prepareStatement("INSERT INTO MeGusta (idPropMG, idRecMG) VALUES (?, ?, '1')")) {
+    	try (PreparedStatement stmt = connection.prepareStatement("INSERT INTO MeGusta (idPropMG, idRecMG, heart) VALUES (?, ?, '1')")) {
 
     		// int changes = stmt.executeUpdate("UPDATE Citas SET EstadoProp="+date.getState().toString()+" WHERE idProp="+date.getId());
     		stmt.setInt(1, like.getPropMG().getId());
     		stmt.setInt(2, like.getRecMG().getId());
+    		stmt.executeUpdate();
     		System.out.println(stmt.toString());
     	} finally {
 
@@ -554,7 +555,7 @@ public class DBManager implements AutoCloseable {
 
     }
     
-    public boolean toggleGustar(Like like) throws SQLException {
+  /*  public boolean toggleGustar(Like like) throws SQLException {
 
     	boolean achieved = false;
     	
@@ -563,7 +564,7 @@ public class DBManager implements AutoCloseable {
     	connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
     	connection.setAutoCommit(false);
 
-    	try (PreparedStatement stmt = connection.prepareStatement("UPDATE Citas SET heart = ? WHERE idPropMG = ? AND idRecMG = ?")) {
+    	try (PreparedStatement stmt = connection.prepareStatement("UPDATE MeGusta SET heart = ? WHERE idPropMG = ? AND idRecMG = ?")) {
 
     		// int changes = stmt.executeUpdate("UPDATE Citas SET EstadoProp="+date.getState().toString()+" WHERE idProp="+date.getId());
     		if(like.isHeart())
@@ -572,6 +573,7 @@ public class DBManager implements AutoCloseable {
     			stmt.setString(1, "0");
     		stmt.setInt(2, like.getPropMG().getId());
     		stmt.setInt(3, like.getRecMG().getId());
+    		int changes = stmt.executeUpdate();
     		System.out.println(stmt.toString());
     	} finally {
 
@@ -583,7 +585,7 @@ public class DBManager implements AutoCloseable {
 
     	return achieved;
 
-    }
+    }*/
     
     public Like searchLike(Like like) throws SQLException {
     	
@@ -591,7 +593,7 @@ public class DBManager implements AutoCloseable {
     	
     	try (PreparedStatement stmt = connection.prepareStatement("SELECT * FROM MeGusta WHERE idRecMG=? AND idPropMG=?")) {
     		stmt.setInt(1, like.getRecMG().getId());
-    		stmt.setInt(1, like.getPropMG().getId());
+    		stmt.setInt(2, like.getPropMG().getId());
     		System.out.println("\t"+stmt);
     		ResultSet rs = stmt.executeQuery();
     		if(rs.next()){
@@ -600,9 +602,9 @@ public class DBManager implements AutoCloseable {
     			int idPropMG = rs.getInt("idPropMG");
     			int idRecMG = rs.getInt("idRecMG");
     			String heart = rs.getString("heart");
-    			
-    			boolean love = false;
-    			if(heart == "1") {
+    			System.out.println("\t"+heart);
+    			boolean love=false;
+    			if(heart.equals("1")) {
     				love=true;
     			}
     			

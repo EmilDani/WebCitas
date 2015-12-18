@@ -3,3 +3,5 @@ javac -d ../classes -cp ../classes/:../../../apache-tomcat-8.0.28/lib/servlet-ap
 
 javac -d ../../../apache-tomcat-8.0.28/webapps/meetstoric/WEB-INF/classes -cp ../classes/:../../../apache-tomcat-8.0.28/lib/servlet-api.jar webcitas/*.java
 
+ mysql -h mysql.lab.it.uc3m.es -u 16_compweb_24 -p -D 16_compweb_24c
+ FTgv7f2B

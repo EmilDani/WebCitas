@@ -39,8 +39,8 @@ public class inicioSesion  extends HttpServlet{
 				HttpSession session = request.getSession();
 				session.setAttribute("usuario",usuarioLogueado);
 				
-				List<User> amantes = manager.amantes(usuarioLogueado);
-				session.setAttribute("amantes", amantes);
+				//List<User> amantes = manager.amantes(usuarioLogueado);
+				//session.setAttribute("amantes", amantes);
 				
 				response.sendRedirect("mainView");
 			}
