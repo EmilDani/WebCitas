@@ -36,8 +36,8 @@ public class MeGusta extends HttpServlet {
 				System.out.println(" idRec"+idRecMG.toString());
 				
 				User recMG = manager.searchId(Integer.parseInt(idRecMG));
-				System.out.println(" usuarioquepidecita"+recMG.getId());
-				request.getParameter("gustar");
+				//System.out.println(" usuarioquepidecita"+recMG.getId());
+				//request.getParameter("gustar");
 				
 				Like mg = new Like();
 				//mg.setIdMG(0);

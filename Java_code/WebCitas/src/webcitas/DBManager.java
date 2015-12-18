@@ -602,20 +602,20 @@ public class DBManager implements AutoCloseable {
     			int idPropMG = rs.getInt("idPropMG");
     			int idRecMG = rs.getInt("idRecMG");
     			String heart = rs.getString("heart");
-    			System.out.println("\t"+heart);
-    			boolean love=false;
-    			if(heart.equals("1")) {
-    				love=true;
-    			}
+    			
+    			
     			
     			mg.setIdMG(idMG);
     			mg.setPropMG(searchId(idPropMG));
     			mg.setRecMG(searchId(idRecMG));
-    			mg.setHeart(love);
+    			mg.setHeart(false);
+    			System.out.println("Este me gusta ya esta en la base de datos por lo tanto existe\t"+heart);
     		} else {
 //    			like.setHeart(false);
     			mg=like;
     			mg.setIdMG(0);
+    			mg.setHeart(true);
+    			System.out.println("Este me gusta no esta en la base de datos por lo tanto lo tenemos que crear \t");
     		}
     	}
     	

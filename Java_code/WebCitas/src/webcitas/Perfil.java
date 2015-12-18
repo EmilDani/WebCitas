@@ -26,8 +26,7 @@ public class Perfil extends HttpServlet {
 		} else {
 			try (DBManager manager = new DBManager()){
 				
-				
-				
+				boolean meGustaParaSiempre=false;
 				// Mejor mandar el manager por session?
 				String id = request.getParameter("id");
 				System.out.println(" id del perfil: "+Integer.parseInt(id));
@@ -36,10 +35,7 @@ public class Perfil extends HttpServlet {
 				request.setAttribute("perfil", perfil);
 				System.out.println(" Nombre del perfil: "+perfil.getNickname());
 
-				//List<User> amantes = manager.amantes(user);
-				
-
-					//session.setAttribute("amantes", amantes);
+		
 				Like mg = new Like();
 				//mg.setIdMG(0);
 				mg.setRecMG(perfil);
@@ -47,8 +43,13 @@ public class Perfil extends HttpServlet {
 				
 				Like like = manager.searchLike(mg);
 				
-				request.setAttribute("tieneLike",mg );
+				//if (like.getIdMG() == 0){
+					//manager.gustar(mg);
+					//meGustaParaSiempre=true;
+				//}
 				
+				request.setAttribute("tieneLike",like );
+				request.setAttribute("meGustaParaSiempre", meGustaParaSiempre);
 				
 				RequestDispatcher rd = request.getRequestDispatcher("profile.jsp");
 				System.out.println("\n Redirección a profile.jsp\n");

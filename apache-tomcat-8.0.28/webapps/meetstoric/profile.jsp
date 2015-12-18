@@ -85,10 +85,11 @@
 				
 				<% 
 				Like like=(Like)request.getAttribute("tieneLike");
+				//boolean meGustaParaSiempre=(boolean)request.getAttribute("meGustaParaSiempre");
 				String heart ;
 				if(user.getId()!=perfil.getId()){
-					System.out.println("dfadsgfasdgasdgasdgasdgasdga"+like.isHeart());
-				if (!like.isHeart()){
+					//System.out.println("dfadsgfasdgasdgasdgasdgasdga"+meGustaParaSiempre);
+					if (like.getIdMG() == 0){
 					//like.toggleHeart();
 				%>
 				
@@ -100,7 +101,7 @@
 					<%--  <% heart = "glyphicon glyphicon-heart-empty"; %> --%>
 				<%}else{%>
 				
-					<p>Este usuario me gusta</p>
+					<p>Este usuario te gusta</p>
 					<!-- heart = "glyphicon glyphicon-heart";%> -->
 				<% }%>
 					
